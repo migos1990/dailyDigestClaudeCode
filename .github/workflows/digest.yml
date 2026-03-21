@@ -57,5 +57,9 @@ jobs:
           git commit -m "Daily digest: ${DATE}"
 
           # Pull-rebase in case obsidian-git pushed concurrently
-          git pull --rebase origin main || true
+          # If rebase conflicts, abort and use merge instead
+          if ! git pull --rebase origin main; then
+            git rebase --abort
+            git pull --no-rebase origin main --no-edit
+          fi
           git push origin main
