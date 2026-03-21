@@ -33,6 +33,8 @@ export interface UserProfile {
   currentProjects: string[];
 }
 
+export type SourceWeights = Record<"github" | "youtube" | "reddit", number>;
+
 export interface DigestItem {
   id: string;
   source: "github" | "youtube" | "reddit";
@@ -46,6 +48,8 @@ export interface DigestItem {
   relevance?: "High" | "Medium" | "Low";
   relevanceReason?: string;
   installCommand?: string;
+  contentType?: "tool" | "tutorial" | "discussion" | "news" | "reference";
+  hookLine?: string;
   // Enriched by velocity engine
   velocity?: Record<string, number>;
   isNew?: boolean;
@@ -84,4 +88,6 @@ export interface SummarizerResponse {
   relevance: "High" | "Medium" | "Low";
   relevanceReason: string;
   installCommand: string | null;
+  contentType?: "tool" | "tutorial" | "discussion" | "news" | "reference";
+  hookLine?: string;
 }

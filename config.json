@@ -8,14 +8,14 @@
       "searchTerms": ["claude code skill", "claude-code", "anthropic claude cli", "claude mcp server"],
       "maxItems": 5,
       "weight": 3,
-      "minStars": 3,
+      "minStars": 10,
       "searchWindow": 168
     },
     "youtube": {
       "searchTerms": ["claude code", "claude code tutorial", "anthropic claude cli"],
       "maxItems": 5,
       "weight": 2,
-      "minViews": 100,
+      "minViews": 500,
       "searchWindow": 72
     },
     "reddit": {
@@ -23,7 +23,7 @@
       "searchTerms": ["claude code", "claude cli", "claude skills"],
       "maxItems": 5,
       "weight": 1,
-      "minScore": 3
+      "minScore": 5
     }
   },
   "profile": {
