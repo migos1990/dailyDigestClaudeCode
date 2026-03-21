@@ -1,4 +1,5 @@
 import { DigestItem, RedditSourceConfig } from "../types.js";
+import { delay } from "../utils.js";
 
 const USER_AGENT = "daily-digest-claude-code/1.0";
 const RATE_LIMIT_DELAY_MS = 2000;
@@ -22,10 +23,6 @@ interface RedditListingResponse {
   };
 }
 
-function sleep(ms: number): Promise<void> {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
-
 async function fetchWithRetry(url: string): Promise<Response | null> {
   const headers = { "User-Agent": USER_AGENT };
 
@@ -36,7 +33,7 @@ async function fetchWithRetry(url: string): Promise<Response | null> {
       if (response.status === 429) {
         if (attempt === 0) {
           console.warn(`[reddit] Rate limited (429) on ${url}, retrying after 2s...`);
-          await sleep(RATE_LIMIT_DELAY_MS);
+          await delay(RATE_LIMIT_DELAY_MS);
           continue;
         }
         console.warn(`[reddit] Rate limited (429) on retry, giving up: ${url}`);
@@ -79,7 +76,7 @@ export async function fetchReddit(config: RedditSourceConfig): Promise<DigestIte
     for (const subreddit of config.subreddits) {
       for (const term of config.searchTerms) {
         if (!isFirstRequest) {
-          await sleep(RATE_LIMIT_DELAY_MS);
+          await delay(RATE_LIMIT_DELAY_MS);
         }
         isFirstRequest = false;
 
@@ -105,7 +102,7 @@ export async function fetchReddit(config: RedditSourceConfig): Promise<DigestIte
     // General searches (not restricted to a subreddit)
     for (const term of config.searchTerms) {
       if (!isFirstRequest) {
-        await sleep(RATE_LIMIT_DELAY_MS);
+        await delay(RATE_LIMIT_DELAY_MS);
       }
       isFirstRequest = false;
 
@@ -132,8 +129,17 @@ export async function fetchReddit(config: RedditSourceConfig): Promise<DigestIte
       (post) => post.created_utc * 1000 >= cutoff
     );
 
+    // Filter by minimum score
+    const minScore = config.minScore ?? 0;
+    const qualityPosts = minScore > 0
+      ? recentPosts.filter(post => post.score >= minScore)
+      : recentPosts;
+    if (recentPosts.length !== qualityPosts.length) {
+      console.log(`[reddit] Filtered ${recentPosts.length - qualityPosts.length}/${recentPosts.length} posts below ${minScore} score`);
+    }
+
     // Map to DigestItem
-    const items: DigestItem[] = recentPosts.map((post) => ({
+    const items: DigestItem[] = qualityPosts.map((post) => ({
       id: `reddit:${post.name}`,
       source: "reddit" as const,
       title: post.title,

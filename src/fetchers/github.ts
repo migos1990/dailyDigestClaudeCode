@@ -15,9 +15,7 @@ interface GitHubRepo {
   created_at: string;
 }
 
-function delay(ms: number): Promise<void> {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
+import { delay } from "../utils.js";
 
 export async function fetchGitHub(
   config: SourceConfig,
@@ -34,6 +32,11 @@ export async function fetchGitHub(
     headers.Authorization = `Bearer ${token}`;
   }
 
+  const windowHours = config.searchWindow ?? 168;
+  const pushedAfter = new Date(Date.now() - windowHours * 60 * 60 * 1000)
+    .toISOString().split("T")[0];
+  const minStars = config.minStars ?? 0;
+
   for (let i = 0; i < config.searchTerms.length; i++) {
     const term = config.searchTerms[i];
 
@@ -42,7 +45,7 @@ export async function fetchGitHub(
     }
 
     const params = new URLSearchParams({
-      q: term,
+      q: `${term} pushed:>${pushedAfter}`,
       sort: "stars",
       order: "desc",
       per_page: String(config.maxItems),
@@ -58,7 +61,7 @@ export async function fetchGitHub(
         `[github] Network error fetching term "${term}":`,
         err instanceof Error ? err.message : err,
       );
-      return [];
+      continue;
     }
 
     if (response.status === 403) {
@@ -72,7 +75,7 @@ export async function fetchGitHub(
       console.error(
         `[github] HTTP ${response.status} for term "${term}": ${response.statusText}`,
       );
-      return [];
+      continue;
     }
 
     let data: GitHubSearchResponse;
@@ -83,11 +86,15 @@ export async function fetchGitHub(
         `[github] Failed to parse JSON for term "${term}":`,
         err instanceof Error ? err.message : err,
       );
-      return [];
+      continue;
     }
 
     for (const repo of data.items) {
       if (seen.has(repo.full_name)) {
+        continue;
+      }
+
+      if (repo.stargazers_count < minStars) {
         continue;
       }
 

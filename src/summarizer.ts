@@ -17,14 +17,23 @@ export async function summarizeItems(
   const client = new Anthropic({ apiKey });
   const enriched = [...items];
 
+  // Build id → index map for O(1) lookups
+  const idToIndex = new Map<string, number>();
+  for (let j = 0; j < enriched.length; j++) {
+    idToIndex.set(enriched[j].id, j);
+  }
+
   // Process in batches
   for (let i = 0; i < items.length; i += config.batchSize) {
     const batch = items.slice(i, i + config.batchSize);
     try {
       const responses = await summarizeBatch(client, batch, profile, config.model);
       for (const resp of responses) {
-        const idx = enriched.findIndex((item) => item.id === resp.id);
-        if (idx !== -1) {
+        if (!isValidSummarizerResponse(resp)) {
+          continue;
+        }
+        const idx = idToIndex.get(resp.id);
+        if (idx !== undefined) {
           enriched[idx] = {
             ...enriched[idx],
             summary: resp.summary,
@@ -94,10 +103,27 @@ Use the exact id values from each item. Respond with valid JSON only.`;
   const cleaned = text.replace(/^```json?\n?/, "").replace(/\n?```$/, "").trim();
 
   try {
-    const parsed = JSON.parse(cleaned) as SummarizerResponse[];
-    return parsed;
+    const parsed = JSON.parse(cleaned);
+    if (!Array.isArray(parsed)) {
+      console.warn("Summarizer response is not an array");
+      return [];
+    }
+    return parsed as SummarizerResponse[];
   } catch (parseErr) {
     console.warn("Failed to parse summarizer response as JSON:", cleaned.slice(0, 200));
     return [];
   }
+}
+
+const VALID_RELEVANCE = new Set(["High", "Medium", "Low"]);
+
+function isValidSummarizerResponse(resp: unknown): resp is SummarizerResponse {
+  if (!resp || typeof resp !== "object") return false;
+  const r = resp as Record<string, unknown>;
+  return (
+    typeof r.id === "string" &&
+    typeof r.summary === "string" &&
+    typeof r.relevance === "string" &&
+    VALID_RELEVANCE.has(r.relevance)
+  );
 }

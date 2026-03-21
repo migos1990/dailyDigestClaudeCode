@@ -6,7 +6,13 @@ function htmlDecode(str: string): string {
     .replace(/&lt;/g, "<")
     .replace(/&gt;/g, ">")
     .replace(/&quot;/g, '"')
-    .replace(/&#39;/g, "'");
+    .replace(/&#39;/g, "'")
+    .replace(/&nbsp;/g, " ")
+    .replace(/&mdash;/g, "\u2014")
+    .replace(/&ndash;/g, "\u2013")
+    .replace(/&hellip;/g, "\u2026")
+    .replace(/&#(\d+);/g, (_, code) => String.fromCharCode(Number(code)))
+    .replace(/&#x([0-9a-fA-F]+);/g, (_, hex) => String.fromCharCode(parseInt(hex, 16)));
 }
 
 interface YouTubeSearchItem {
@@ -46,8 +52,9 @@ export async function fetchYouTube(
     return [];
   }
 
+  const windowHours = config.searchWindow ?? 72;
   const publishedAfter = new Date(
-    Date.now() - 24 * 60 * 60 * 1000,
+    Date.now() - windowHours * 60 * 60 * 1000,
   ).toISOString();
 
   const seenIds = new Set<string>();
@@ -59,7 +66,7 @@ export async function fetchYouTube(
       part: "snippet",
       q: term,
       type: "video",
-      order: "date",
+      order: "relevance",
       maxResults: String(config.maxItems),
       publishedAfter,
       key: API_KEY,
@@ -88,7 +95,7 @@ export async function fetchYouTube(
       data = (await res.json()) as YouTubeSearchResponse;
     } catch (err) {
       console.error(`[youtube] Fetch error during search for "${term}":`, err);
-      return [];
+      continue;
     }
 
     for (const item of data.items ?? []) {
@@ -135,7 +142,7 @@ export async function fetchYouTube(
     }
   } catch (err) {
     console.error("[youtube] Fetch error during statistics request:", err);
-    return [];
+    // Continue without stats rather than discarding all search results
   }
 
   // Step 3: Map results to DigestItem[]
@@ -156,6 +163,17 @@ export async function fetchYouTube(
       createdAt: item.snippet.publishedAt,
     };
   });
+
+  // Filter out low-engagement videos
+  const minViews = config.minViews ?? 0;
+  if (minViews > 0) {
+    const before = items.length;
+    const filtered = items.filter(item => item.stats.views >= minViews);
+    if (before !== filtered.length) {
+      console.log(`[youtube] Filtered ${before - filtered.length}/${before} videos below ${minViews} views`);
+    }
+    return filtered;
+  }
 
   return items;
 }

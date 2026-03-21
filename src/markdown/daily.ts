@@ -4,9 +4,9 @@ export function generateDailyDigest(result: DigestResult, profile: UserProfile):
   const { items, sourcesOk, sourcesFailed, date } = result;
 
   const trending = items
-    .filter((i) => i.source === "github" || i.source === "youtube")
+    .filter((i) => (i.source === "github" || i.source === "youtube") && i.relevance !== "Low")
     .sort((a, b) => trendScore(b) - trendScore(a));
-  const reddit = items.filter((i) => i.source === "reddit");
+  const reddit = items.filter((i) => i.source === "reddit" && i.relevance !== "Low");
   const highSignal = items.filter((i) => i.isHighSignal);
   const highRelevance = items.filter((i) => i.relevance === "High");
   const medRelevance = items.filter((i) => i.relevance === "Medium");
@@ -52,7 +52,7 @@ export function generateDailyDigest(result: DigestResult, profile: UserProfile):
  * YouTube: views / 500  (so 50K views ≈ 100 points)
  * Velocity bonus: 2x multiplier for items with velocity data
  */
-function trendScore(item: DigestItem): number {
+export function trendScore(item: DigestItem): number {
   let base = 0;
   if (item.source === "github") {
     base = (item.stats.stars ?? 0) / 100;
@@ -84,6 +84,7 @@ sources_failed:
 ${result.sourcesFailed.length > 0 ? result.sourcesFailed.map((s) => `  - ${s}`).join("\n") : "  []"}
 items_total: ${result.itemsTotal}
 items_summarized: ${result.itemsSummarized}
+items_filtered: ${result.itemsFiltered}
 high_signal_count: ${result.highSignalCount}
 runtime_seconds: ${result.runtimeSeconds}
 tags:
@@ -334,9 +335,11 @@ function buildHealthFooter(result: DigestResult): string {
     })
     .join(" ");
 
+  const filteredStr = result.itemsFiltered > 0 ? ` | Filtered: ${result.itemsFiltered}` : "";
+
   return `---
 
 > [!info] Digest Health
-> Sources: ${sourceStatus} | Items: ${result.itemsTotal} | Summarized: ${result.itemsSummarized} | Runtime: ${result.runtimeSeconds}s
+> Sources: ${sourceStatus} | Items: ${result.itemsTotal} | Summarized: ${result.itemsSummarized}${filteredStr} | Runtime: ${result.runtimeSeconds}s
 `;
 }
