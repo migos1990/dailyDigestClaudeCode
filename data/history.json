@@ -3,29 +3,29 @@
     "2026-03-21": {
       "github": {
         "github:affaan-m/everything-claude-code": {
-          "stars": 90884,
-          "forks": 11926,
-          "watchers": 90884
+          "stars": 91937,
+          "forks": 12058,
+          "watchers": 91937
         },
         "github:hesreallyhim/awesome-claude-code": {
-          "stars": 29441,
-          "forks": 1992,
-          "watchers": 29441
+          "stars": 29512,
+          "forks": 2007,
+          "watchers": 29512
         },
         "github:sickn33/antigravity-awesome-skills": {
-          "stars": 26190,
-          "forks": 4463,
-          "watchers": 26190
+          "stars": 26259,
+          "forks": 4476,
+          "watchers": 26259
         },
         "github:OthmanAdi/planning-with-files": {
-          "stars": 16654,
-          "forks": 1524,
-          "watchers": 16654
+          "stars": 16680,
+          "forks": 1526,
+          "watchers": 16680
         },
         "github:coreyhaines31/marketingskills": {
-          "stars": 15052,
-          "forks": 2246,
-          "watchers": 15052
+          "stars": 15115,
+          "forks": 2259,
+          "watchers": 15115
         },
         "github:wasp-lang/open-saas": {
           "stars": 13616,
@@ -58,9 +58,9 @@
           "watchers": 132422
         },
         "github:anthropics/claude-code": {
-          "stars": 80604,
-          "forks": 6672,
-          "watchers": 80604
+          "stars": 80744,
+          "forks": 6688,
+          "watchers": 80744
         },
         "github:nextlevelbuilder/ui-ux-pro-max-skill": {
           "stars": 46857,
@@ -73,19 +73,19 @@
           "watchers": 46455
         },
         "github:code-yeongyu/oh-my-openagent": {
-          "stars": 41936,
-          "forks": 3126,
-          "watchers": 41936
+          "stars": 42040,
+          "forks": 3130,
+          "watchers": 42040
         },
         "github:CherryHQ/cherry-studio": {
-          "stars": 41908,
-          "forks": 3892,
-          "watchers": 41908
+          "stars": 41938,
+          "forks": 3896,
+          "watchers": 41938
         },
         "github:thedotmack/claude-mem": {
-          "stars": 38776,
-          "forks": 2812,
-          "watchers": 38776
+          "stars": 38849,
+          "forks": 2819,
+          "watchers": 38849
         },
         "github:gsd-build/get-shit-done": {
           "stars": 37231,
@@ -98,9 +98,9 @@
           "watchers": 34697
         },
         "github:davila7/claude-code-templates": {
-          "stars": 23287,
-          "forks": 2229,
-          "watchers": 23287
+          "stars": 23300,
+          "forks": 2230,
+          "watchers": 23300
         },
         "github:Doriandarko/claude-engineer": {
           "stars": 11165,
@@ -108,24 +108,24 @@
           "watchers": 11165
         },
         "github:jarrodwatts/claude-hud": {
-          "stars": 9563,
-          "forks": 407,
-          "watchers": 9563
+          "stars": 9969,
+          "forks": 430,
+          "watchers": 9969
         },
         "github:siteboon/claudecodeui": {
-          "stars": 8714,
-          "forks": 1109,
-          "watchers": 8714
+          "stars": 8728,
+          "forks": 1112,
+          "watchers": 8728
         },
         "github:mukul975/Anthropic-Cybersecurity-Skills": {
-          "stars": 3555,
-          "forks": 351,
-          "watchers": 3555
+          "stars": 3565,
+          "forks": 355,
+          "watchers": 3565
         },
         "github:can1357/oh-my-pi": {
-          "stars": 2212,
+          "stars": 2225,
           "forks": 194,
-          "watchers": 2212
+          "watchers": 2225
         },
         "github:IvanMurzak/Unity-MCP": {
           "stars": 1391,
@@ -148,9 +148,9 @@
           "watchers": 738
         },
         "github:oraios/serena": {
-          "stars": 21851,
-          "forks": 1469,
-          "watchers": 21851
+          "stars": 21860,
+          "forks": 1470,
+          "watchers": 21860
         },
         "github:BeehiveInnovations/pal-mcp-server": {
           "stars": 11281,
@@ -163,9 +163,9 @@
           "watchers": 10852
         },
         "github:mcp-use/mcp-use": {
-          "stars": 9470,
-          "forks": 1165,
-          "watchers": 9470
+          "stars": 9471,
+          "forks": 1166,
+          "watchers": 9471
         },
         "github:idosal/git-mcp": {
           "stars": 7802,
@@ -178,9 +178,9 @@
           "watchers": 7584
         },
         "github:yzfly/Awesome-MCP-ZH": {
-          "stars": 6578,
+          "stars": 6584,
           "forks": 444,
-          "watchers": 6578
+          "watchers": 6584
         },
         "github:BrowserMCP/mcp": {
           "stars": 6108,
@@ -196,6 +196,16 @@
           "stars": 5742,
           "forks": 667,
           "watchers": 5742
+        },
+        "github:timescale/pg-aiguide": {
+          "stars": 1638,
+          "forks": 83,
+          "watchers": 1638
+        },
+        "github:wesammustafa/Claude-Code-Everything-You-Need-to-Know": {
+          "stars": 1308,
+          "forks": 148,
+          "watchers": 1308
         }
       },
       "youtube": {
@@ -256,8 +266,8 @@
           "likes": 0
         },
         "youtube:jiwuKOWZG2I": {
-          "views": 156,
-          "likes": 11
+          "views": 439,
+          "likes": 19
         },
         "youtube:SPlIackGBUQ": {
           "views": 0,
@@ -266,6 +276,50 @@
         "youtube:ROuaWqHmFW8": {
           "views": 1,
           "likes": 0
+        },
+        "youtube:WCuwYLVE6j8": {
+          "views": 29911,
+          "likes": 775
+        },
+        "youtube:89Fh_Ppw1A8": {
+          "views": 21614,
+          "likes": 0
+        },
+        "youtube:-u_igSQHAIo": {
+          "views": 10741,
+          "likes": 370
+        },
+        "youtube:RUyqEAXt2YQ": {
+          "views": 4964,
+          "likes": 115
+        },
+        "youtube:M4cmrdoUKxI": {
+          "views": 18511,
+          "likes": 1098
+        },
+        "youtube:hX7yG1KVYhI": {
+          "views": 34286,
+          "likes": 1237
+        },
+        "youtube:g_xXfPHfFuE": {
+          "views": 866,
+          "likes": 32
+        },
+        "youtube:KoFOPpUWi98": {
+          "views": 9769,
+          "likes": 809
+        },
+        "youtube:P1yJcMV8o90": {
+          "views": 9314,
+          "likes": 487
+        },
+        "youtube:Vx6QlEhyybQ": {
+          "views": 11009,
+          "likes": 568
+        },
+        "youtube:h06XFTJ-6I0": {
+          "views": 949,
+          "likes": 34
         }
       }
     }
