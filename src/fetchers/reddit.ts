@@ -129,8 +129,17 @@ export async function fetchReddit(config: RedditSourceConfig): Promise<DigestIte
       (post) => post.created_utc * 1000 >= cutoff
     );
 
+    // Filter by minimum score
+    const minScore = config.minScore ?? 0;
+    const qualityPosts = minScore > 0
+      ? recentPosts.filter(post => post.score >= minScore)
+      : recentPosts;
+    if (recentPosts.length !== qualityPosts.length) {
+      console.log(`[reddit] Filtered ${recentPosts.length - qualityPosts.length}/${recentPosts.length} posts below ${minScore} score`);
+    }
+
     // Map to DigestItem
-    const items: DigestItem[] = recentPosts.map((post) => ({
+    const items: DigestItem[] = qualityPosts.map((post) => ({
       id: `reddit:${post.name}`,
       source: "reddit" as const,
       title: post.title,

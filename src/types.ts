@@ -15,6 +15,10 @@ export interface SourceConfig {
   searchTerms: string[];
   maxItems: number;
   weight: number;
+  minStars?: number;
+  minViews?: number;
+  minScore?: number;
+  searchWindow?: number; // hours to look back
 }
 
 export interface RedditSourceConfig extends SourceConfig {
@@ -68,6 +72,7 @@ export interface DigestResult {
   sourcesFailed: string[];
   itemsTotal: number;
   itemsSummarized: number;
+  itemsFiltered: number;
   highSignalCount: number;
   runtimeSeconds: number;
   date: string;

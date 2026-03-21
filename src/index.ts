@@ -22,7 +22,7 @@ import { enrichWithWikilinks } from "./markdown/wikilinks.js";
 import { generateDailyDigest } from "./markdown/daily.js";
 import { generateWeeklyRollup } from "./markdown/weekly.js";
 import { getWeekNumber } from "./utils.js";
-import type { DigestItem, DigestResult } from "./types.js";
+import type { DigestItem, DigestConfig, DigestResult } from "./types.js";
 
 async function main() {
   const startTime = Date.now();
@@ -67,10 +67,22 @@ async function main() {
     return;
   }
 
+  // Step 2.5: Quality filter — remove items below engagement thresholds
+  const qualityItems = filterByQuality(allItems, config.sources);
+  const itemsFiltered = allItems.length - qualityItems.length;
+  if (itemsFiltered > 0) {
+    console.log(`Quality filter: kept ${qualityItems.length}/${allItems.length} items (removed ${itemsFiltered})`);
+  }
+
+  if (qualityItems.length === 0) {
+    console.warn("All items filtered by quality thresholds — skipping digest generation.");
+    return;
+  }
+
   // Step 3: AI Summarization + Relevance Scoring
-  const summarized = await summarizeItems(allItems, config.profile, config.summarizer);
+  const summarized = await summarizeItems(qualityItems, config.profile, config.summarizer);
   const itemsSummarized = summarized.filter((i) => i.summary).length;
-  console.log(`Summarized ${itemsSummarized}/${allItems.length} items`);
+  console.log(`Summarized ${itemsSummarized}/${qualityItems.length} items`);
 
   // Step 4: Compute velocity from historical data
   const withVelocity = computeVelocity(summarized, config.velocity, basePath);
@@ -86,8 +98,9 @@ async function main() {
     items: withLinks,
     sourcesOk,
     sourcesFailed,
-    itemsTotal: allItems.length,
+    itemsTotal: qualityItems.length,
     itemsSummarized,
+    itemsFiltered,
     highSignalCount,
     runtimeSeconds,
     date: today,
@@ -116,6 +129,21 @@ async function main() {
   const totalRuntime = Math.round((Date.now() - startTime) / 1000);
   console.log(`Done in ${totalRuntime}s. Items: ${allItems.length}, Summarized: ${itemsSummarized}, High-signal: ${highSignalCount}`);
   console.log(`Sources OK: [${sourcesOk.join(", ")}], Failed: [${sourcesFailed.join(", ")}]`);
+}
+
+function filterByQuality(items: DigestItem[], sources: DigestConfig["sources"]): DigestItem[] {
+  return items.filter(item => {
+    switch (item.source) {
+      case "github":
+        return (item.stats.stars ?? 0) >= (sources.github.minStars ?? 0);
+      case "youtube":
+        return (item.stats.views ?? 0) >= (sources.youtube.minViews ?? 0);
+      case "reddit":
+        return (item.stats.score ?? 0) >= (sources.reddit.minScore ?? 0);
+      default:
+        return true;
+    }
+  });
 }
 
 export function deduplicateByUrl(items: DigestItem[]): DigestItem[] {

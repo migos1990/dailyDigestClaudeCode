@@ -5,13 +5,14 @@ import type { DigestConfig } from "./types.js";
 const DEFAULTS: DigestConfig = {
   schedule: { timezone: "America/New_York", hour: 6 },
   sources: {
-    github: { searchTerms: ["claude code"], maxItems: 10, weight: 3 },
-    youtube: { searchTerms: ["claude code"], maxItems: 8, weight: 2 },
+    github: { searchTerms: ["claude code"], maxItems: 10, weight: 3, minStars: 3, searchWindow: 168 },
+    youtube: { searchTerms: ["claude code"], maxItems: 8, weight: 2, minViews: 100, searchWindow: 72 },
     reddit: {
       subreddits: ["ClaudeAI"],
       searchTerms: ["claude code"],
       maxItems: 8,
       weight: 1,
+      minScore: 3,
     },
   },
   profile: {

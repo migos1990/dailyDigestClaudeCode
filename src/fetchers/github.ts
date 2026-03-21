@@ -32,6 +32,11 @@ export async function fetchGitHub(
     headers.Authorization = `Bearer ${token}`;
   }
 
+  const windowHours = config.searchWindow ?? 168;
+  const pushedAfter = new Date(Date.now() - windowHours * 60 * 60 * 1000)
+    .toISOString().split("T")[0];
+  const minStars = config.minStars ?? 0;
+
   for (let i = 0; i < config.searchTerms.length; i++) {
     const term = config.searchTerms[i];
 
@@ -40,7 +45,7 @@ export async function fetchGitHub(
     }
 
     const params = new URLSearchParams({
-      q: term,
+      q: `${term} pushed:>${pushedAfter}`,
       sort: "stars",
       order: "desc",
       per_page: String(config.maxItems),
@@ -86,6 +91,10 @@ export async function fetchGitHub(
 
     for (const repo of data.items) {
       if (seen.has(repo.full_name)) {
+        continue;
+      }
+
+      if (repo.stargazers_count < minStars) {
         continue;
       }
 

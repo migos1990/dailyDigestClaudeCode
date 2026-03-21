@@ -52,8 +52,9 @@ export async function fetchYouTube(
     return [];
   }
 
+  const windowHours = config.searchWindow ?? 72;
   const publishedAfter = new Date(
-    Date.now() - 24 * 60 * 60 * 1000,
+    Date.now() - windowHours * 60 * 60 * 1000,
   ).toISOString();
 
   const seenIds = new Set<string>();
@@ -65,7 +66,7 @@ export async function fetchYouTube(
       part: "snippet",
       q: term,
       type: "video",
-      order: "date",
+      order: "relevance",
       maxResults: String(config.maxItems),
       publishedAfter,
       key: API_KEY,
@@ -162,6 +163,17 @@ export async function fetchYouTube(
       createdAt: item.snippet.publishedAt,
     };
   });
+
+  // Filter out low-engagement videos
+  const minViews = config.minViews ?? 0;
+  if (minViews > 0) {
+    const before = items.length;
+    const filtered = items.filter(item => item.stats.views >= minViews);
+    if (before !== filtered.length) {
+      console.log(`[youtube] Filtered ${before - filtered.length}/${before} videos below ${minViews} views`);
+    }
+    return filtered;
+  }
 
   return items;
 }
