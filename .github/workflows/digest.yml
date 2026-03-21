@@ -54,12 +54,20 @@ jobs:
           fi
 
           DATE=$(date +%Y-%m-%d)
-          git commit -m "Daily digest: ${DATE}"
 
-          # Pull-rebase in case obsidian-git pushed concurrently
-          # If rebase conflicts, abort and use merge instead
-          if ! git pull --rebase origin main; then
-            git rebase --abort
-            git pull --no-rebase origin main --no-edit
+          # Pull latest before committing to minimize conflicts
+          git stash
+          git pull --no-rebase origin main --no-edit
+          git stash pop || true
+
+          # Re-stage in case pull changed things
+          git add Daily/ data/
+          [ -d Weekly ] && git add Weekly/ || true
+
+          if git diff --staged --quiet; then
+            echo "No changes to commit after pull"
+            exit 0
           fi
+
+          git commit -m "Daily digest: ${DATE}"
           git push origin main
