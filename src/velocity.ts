@@ -1,5 +1,5 @@
-import { readFileSync, writeFileSync, copyFileSync } from "fs";
-import { resolve } from "path";
+import { readFileSync, writeFileSync, copyFileSync, mkdirSync } from "fs";
+import { resolve, dirname } from "path";
 import type { DigestItem, HistoryData } from "./types.js";
 
 /*
@@ -103,6 +103,7 @@ function loadHistory(path: string): HistoryData {
 
 function saveHistory(path: string, data: HistoryData): void {
   try {
+    mkdirSync(dirname(path), { recursive: true });
     writeFileSync(path, JSON.stringify(data, null, 2));
   } catch (err) {
     console.warn(`Failed to save history: ${(err as Error).message}`);

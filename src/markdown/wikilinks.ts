@@ -1,5 +1,5 @@
-import { readFileSync, writeFileSync } from "fs";
-import { resolve } from "path";
+import { readFileSync, writeFileSync, mkdirSync } from "fs";
+import { resolve, dirname } from "path";
 import type { DigestItem, SeenItems } from "../types.js";
 
 const SEEN_FILE = "data/seen-items.json";
@@ -47,6 +47,7 @@ function loadSeen(path: string): SeenItems {
 
 function saveSeen(path: string, data: SeenItems): void {
   try {
+    mkdirSync(dirname(path), { recursive: true });
     writeFileSync(path, JSON.stringify(data, null, 2));
   } catch (err) {
     console.warn(`Failed to save seen-items: ${(err as Error).message}`);
