@@ -3,8 +3,9 @@ import type { DigestItem, DigestResult, UserProfile } from "../types.js";
 export function generateDailyDigest(result: DigestResult, profile: UserProfile): string {
   const { items, sourcesOk, sourcesFailed, date } = result;
 
-  const github = items.filter((i) => i.source === "github");
-  const youtube = items.filter((i) => i.source === "youtube");
+  const trending = items
+    .filter((i) => i.source === "github" || i.source === "youtube")
+    .sort((a, b) => trendScore(b) - trendScore(a));
   const reddit = items.filter((i) => i.source === "reddit");
   const highSignal = items.filter((i) => i.isHighSignal);
   const highRelevance = items.filter((i) => i.relevance === "High");
@@ -31,19 +32,46 @@ export function generateDailyDigest(result: DigestResult, profile: UserProfile):
     buildRecommendations(highRelevance, medRelevance, profile, items)
   );
 
-  // Trending GitHub Skills
-  sections.push(buildSourceSection("Trending GitHub Skills", github, "github", sourcesFailed));
+  // Unified Trending section (GitHub + YouTube sorted by trend score)
+  sections.push(buildTrendingSection(trending, sourcesFailed));
 
-  // YouTube Highlights
-  sections.push(buildSourceSection("YouTube Highlights", youtube, "youtube", sourcesFailed));
-
-  // Community Pulse
+  // Community Pulse (Reddit)
   sections.push(buildSourceSection("Community Pulse", reddit, "reddit", sourcesFailed));
 
   // Digest Health footer
   sections.push(buildHealthFooter(result));
 
   return sections.filter(Boolean).join("\n");
+}
+
+/**
+ * Computes a unified trend score across sources so GitHub repos
+ * and YouTube videos can be ranked together.
+ *
+ * GitHub:  stars / 100  (so 10K stars ≈ 100 points)
+ * YouTube: views / 500  (so 50K views ≈ 100 points)
+ * Velocity bonus: 2x multiplier for items with velocity data
+ */
+function trendScore(item: DigestItem): number {
+  let base = 0;
+  if (item.source === "github") {
+    base = (item.stats.stars ?? 0) / 100;
+  } else if (item.source === "youtube") {
+    base = (item.stats.views ?? 0) / 500;
+  }
+
+  // Velocity bonus: items that are accelerating rank higher
+  if (item.velocity) {
+    const maxVelocity = Math.max(...Object.values(item.velocity), 0);
+    base += maxVelocity;
+  }
+
+  // New items get a small boost so they don't get buried
+  if (item.isNew) {
+    base *= 1.2;
+  }
+
+  return base;
 }
 
 function buildFrontmatter(result: DigestResult): string {
@@ -84,7 +112,6 @@ No notable activity in Claude Code today. Check back tomorrow.
 `;
   }
 
-  // Use AI summary if available on first item, otherwise generate from data
   const summaryParts: string[] = [];
 
   if (sourcesFailed.length > 0) {
@@ -93,25 +120,21 @@ No notable activity in Claude Code today. Check back tomorrow.
     );
   }
 
-  // Build summary from available items
   const github = items.filter((i) => i.source === "github");
   const youtube = items.filter((i) => i.source === "youtube");
   const reddit = items.filter((i) => i.source === "reddit");
 
-  if (github.length > 0) {
-    const top = github[0];
+  const trendingCount = github.length + youtube.length;
+  if (trendingCount > 0) {
+    const topItem = [...github, ...youtube].sort((a, b) => trendScore(b) - trendScore(a))[0];
+    const sourceTag = topItem.source === "github" ? "repo" : "video";
     summaryParts.push(
-      `${github.length} GitHub ${github.length === 1 ? "skill" : "skills"} trending — top: **${top.title}** (${formatStats(top)}).`
-    );
-  }
-  if (youtube.length > 0) {
-    summaryParts.push(
-      `${youtube.length} new ${youtube.length === 1 ? "video" : "videos"} on YouTube.`
+      `${trendingCount} trending items today — top ${sourceTag}: **${topItem.title}** (${formatStats(topItem)}).`
     );
   }
   if (reddit.length > 0) {
     summaryParts.push(
-      `${reddit.length} ${reddit.length === 1 ? "discussion" : "discussions"} trending on Reddit.`
+      `${reddit.length} ${reddit.length === 1 ? "discussion" : "discussions"} on Reddit.`
     );
   }
 
@@ -128,7 +151,6 @@ function buildRecommendations(
   allItems: DigestItem[]
 ): string {
   if (high.length === 0 && medium.length === 0) {
-    // If no relevance scoring, show top items by source weight
     if (allItems.every((i) => !i.relevance)) {
       return `## Recommended for You
 
@@ -144,6 +166,10 @@ function buildRecommendations(
 `;
   }
 
+  // Sort recommendations by trend score too
+  const sortedHigh = [...high].sort((a, b) => trendScore(b) - trendScore(a));
+  const sortedMed = [...medium].sort((a, b) => trendScore(b) - trendScore(a));
+
   const parts: string[] = [
     `## Recommended for You`,
     "",
@@ -151,21 +177,58 @@ function buildRecommendations(
     "",
   ];
 
-  if (high.length > 0) {
+  if (sortedHigh.length > 0) {
     parts.push("### High Relevance", "");
-    for (const item of high) {
+    for (const item of sortedHigh) {
       parts.push(formatDigestItem(item));
     }
   }
 
-  if (medium.length > 0) {
+  if (sortedMed.length > 0) {
     parts.push("### Medium Relevance", "");
-    for (const item of medium) {
+    for (const item of sortedMed) {
       parts.push(formatDigestItem(item));
     }
   }
 
   return parts.join("\n") + "\n";
+}
+
+function buildTrendingSection(
+  items: DigestItem[],
+  sourcesFailed: string[]
+): string {
+  const githubFailed = sourcesFailed.includes("github");
+  const youtubeFailed = sourcesFailed.includes("youtube");
+
+  if (githubFailed && youtubeFailed) {
+    return `## Trending Now
+
+> [!warning] GitHub and YouTube were unavailable
+> This section will return tomorrow. The rest of the digest is unaffected.
+`;
+  }
+
+  const warnings: string[] = [];
+  if (githubFailed) warnings.push("> [!warning] GitHub was unavailable — showing YouTube only\n");
+  if (youtubeFailed) warnings.push("> [!warning] YouTube was unavailable — showing GitHub only\n");
+
+  if (items.length === 0) {
+    return `## Trending Now
+
+${warnings.join("\n")}No trending Claude Code repos or videos found today.
+`;
+  }
+
+  const lines = [`## Trending Now`, ""];
+  if (warnings.length > 0) {
+    lines.push(...warnings);
+  }
+
+  for (const item of items) {
+    lines.push(formatDigestItem(item));
+  }
+  return lines.join("\n") + "\n";
 }
 
 function buildSourceSection(
@@ -175,8 +238,7 @@ function buildSourceSection(
   sourcesFailed: string[]
 ): string {
   if (sourcesFailed.includes(source)) {
-    const sourceLabel =
-      source === "github" ? "GitHub" : source === "youtube" ? "YouTube" : "Reddit";
+    const sourceLabel = "Reddit";
     return `## ${title}
 
 > [!warning] ${sourceLabel} was unavailable
@@ -185,15 +247,9 @@ function buildSourceSection(
   }
 
   if (items.length === 0) {
-    const emptyMsg =
-      source === "github"
-        ? "No new Claude Code skills trending today."
-        : source === "youtube"
-          ? "No new Claude Code videos found today."
-          : "No Claude Code discussions trending today.";
     return `## ${title}
 
-${emptyMsg}
+No Claude Code discussions trending today.
 `;
   }
 
@@ -207,9 +263,15 @@ ${emptyMsg}
 function formatDigestItem(item: DigestItem): string {
   const lines: string[] = [];
 
-  // Title + summary
+  // Source badge + title + summary
+  const badge = item.source === "github" ? "repo" : item.source === "youtube" ? "video" : "discussion";
   const summary = item.summary || item.description?.slice(0, 150) || "No description available.";
-  lines.push(`- **${item.title}** — ${summary}`);
+  lines.push(`- **${item.title}** \`${badge}\` — ${summary}`);
+
+  // Relevance reason
+  if (item.relevanceReason) {
+    lines.push(`  Relevance: *${item.relevanceReason}*`);
+  }
 
   // Stats + velocity + install command
   const metaParts: string[] = [];
@@ -222,17 +284,12 @@ function formatDigestItem(item: DigestItem): string {
     metaParts.push(`\`${item.installCommand}\``);
   }
 
-  // Relevance reason
-  if (item.relevanceReason) {
-    lines.push(`  Relevance: *${item.relevanceReason}*`);
-  }
-
   lines.push(`  ${metaParts.join(" | ")} | [Link](${item.url})`);
 
   // Wikilinks
   if (item.priorAppearances && item.priorAppearances.length > 0) {
     const links = item.priorAppearances
-      .slice(-3) // Show last 3 appearances max
+      .slice(-3)
       .map((d) => `[[${d}-claude-code-digest|${d}]]`)
       .join(", ");
     lines.push(`  Also seen: ${links}`);
