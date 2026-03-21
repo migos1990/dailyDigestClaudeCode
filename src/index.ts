@@ -22,7 +22,7 @@ import { enrichWithWikilinks } from "./markdown/wikilinks.js";
 import { generateDailyDigest } from "./markdown/daily.js";
 import { generateWeeklyRollup } from "./markdown/weekly.js";
 import { getWeekNumber } from "./utils.js";
-import type { DigestItem, DigestConfig, DigestResult } from "./types.js";
+import type { DigestItem, DigestConfig, DigestResult, SourceWeights } from "./types.js";
 
 async function main() {
   const startTime = Date.now();
@@ -106,7 +106,12 @@ async function main() {
     date: today,
   };
 
-  const dailyMd = generateDailyDigest(result, config.profile);
+  const sourceWeights: SourceWeights = {
+    github: config.sources.github.weight,
+    youtube: config.sources.youtube.weight,
+    reddit: config.sources.reddit.weight,
+  };
+  const dailyMd = generateDailyDigest(result, config.profile, sourceWeights);
   const dailyDir = resolve(basePath, config.output.dailyFolder);
   mkdirSync(dailyDir, { recursive: true });
   const dailyPath = resolve(dailyDir, `${today}-claude-code-digest.md`);

@@ -1,7 +1,7 @@
 import { DigestItem, RedditSourceConfig } from "../types.js";
 import { delay } from "../utils.js";
 
-const USER_AGENT = "daily-digest-claude-code/1.0";
+const USER_AGENT = "daily-digest-claude-code/1.0 (by /u/dailydigest)";
 const RATE_LIMIT_DELAY_MS = 2000;
 const RECENT_HOURS = 48;
 
@@ -23,9 +23,79 @@ interface RedditListingResponse {
   };
 }
 
-async function fetchWithRetry(url: string): Promise<Response | null> {
-  const headers = { "User-Agent": USER_AGENT };
+/**
+ * Obtain an OAuth access token using Reddit's "application only" flow.
+ * Requires REDDIT_CLIENT_ID and REDDIT_CLIENT_SECRET env vars.
+ * Falls back to unauthenticated www.reddit.com if credentials are missing.
+ */
+async function getOAuthToken(): Promise<string | null> {
+  const clientId = process.env.REDDIT_CLIENT_ID;
+  const clientSecret = process.env.REDDIT_CLIENT_SECRET ?? "";
 
+  if (!clientId) {
+    return null;
+  }
+
+  const credentials = Buffer.from(`${clientId}:${clientSecret}`).toString("base64");
+
+  try {
+    const response = await fetch("https://www.reddit.com/api/v1/access_token", {
+      method: "POST",
+      headers: {
+        Authorization: `Basic ${credentials}`,
+        "User-Agent": USER_AGENT,
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: "grant_type=client_credentials",
+    });
+
+    if (!response.ok) {
+      console.warn(`[reddit] OAuth token request failed: HTTP ${response.status}`);
+      return null;
+    }
+
+    const data = (await response.json()) as { access_token?: string };
+    if (!data.access_token) {
+      console.warn("[reddit] OAuth response missing access_token");
+      return null;
+    }
+
+    return data.access_token;
+  } catch (err) {
+    console.warn("[reddit] OAuth token request error:", (err as Error).message);
+    return null;
+  }
+}
+
+interface RedditClient {
+  baseUrl: string;
+  headers: Record<string, string>;
+}
+
+async function createRedditClient(): Promise<RedditClient> {
+  const token = await getOAuthToken();
+
+  if (token) {
+    console.log("[reddit] Using OAuth API (oauth.reddit.com)");
+    return {
+      baseUrl: "https://oauth.reddit.com",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "User-Agent": USER_AGENT,
+      },
+    };
+  }
+
+  console.warn("[reddit] No REDDIT_CLIENT_ID set — falling back to www.reddit.com (may be blocked)");
+  return {
+    baseUrl: "https://www.reddit.com",
+    headers: {
+      "User-Agent": USER_AGENT,
+    },
+  };
+}
+
+async function fetchWithRetry(url: string, headers: Record<string, string>): Promise<Response | null> {
   for (let attempt = 0; attempt < 2; attempt++) {
     try {
       const response = await fetch(url, { headers });
@@ -71,6 +141,8 @@ export async function fetchReddit(config: RedditSourceConfig): Promise<DigestIte
   const cutoff = Date.now() - RECENT_HOURS * 60 * 60 * 1000;
   let isFirstRequest = true;
 
+  const client = await createRedditClient();
+
   try {
     // Subreddit-scoped searches
     for (const subreddit of config.subreddits) {
@@ -82,10 +154,10 @@ export async function fetchReddit(config: RedditSourceConfig): Promise<DigestIte
 
         const encodedTerm = encodeURIComponent(term);
         const url =
-          `https://www.reddit.com/r/${encodeURIComponent(subreddit)}/search.json` +
+          `${client.baseUrl}/r/${encodeURIComponent(subreddit)}/search.json` +
           `?q=${encodedTerm}&sort=new&t=day&limit=${config.maxItems}&restrict_sr=on`;
 
-        const response = await fetchWithRetry(url);
+        const response = await fetchWithRetry(url, client.headers);
         if (!response) continue;
 
         const json = (await response.json()) as RedditListingResponse;
@@ -108,10 +180,10 @@ export async function fetchReddit(config: RedditSourceConfig): Promise<DigestIte
 
       const encodedTerm = encodeURIComponent(term);
       const url =
-        `https://www.reddit.com/search.json` +
+        `${client.baseUrl}/search.json` +
         `?q=${encodedTerm}&sort=new&t=day&limit=${config.maxItems}`;
 
-      const response = await fetchWithRetry(url);
+      const response = await fetchWithRetry(url, client.headers);
       if (!response) continue;
 
       const json = (await response.json()) as RedditListingResponse;

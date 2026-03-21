@@ -40,6 +40,8 @@ export async function summarizeItems(
             relevance: resp.relevance,
             relevanceReason: resp.relevanceReason,
             installCommand: resp.installCommand ?? enriched[idx].installCommand,
+            contentType: resp.contentType ?? enriched[idx].contentType,
+            hookLine: resp.hookLine ?? enriched[idx].hookLine,
           };
         }
       }
@@ -65,28 +67,30 @@ async function summarizeBatch(
     )
     .join("\n");
 
-  const prompt = `You are a Claude Code ecosystem analyst writing a daily intelligence briefing.
+  const prompt = `You are a sharp-eyed newsletter editor curating a daily Claude Code intelligence briefing. Your reader has 5 minutes — every item must earn its place.
 
-User Profile:
+Reader Profile:
 - Name: ${profile.name}
 - Goals: ${profile.goals.join(", ")}
 - Skill Level: ${profile.skillLevel}
 - Interests: ${profile.interests.join(", ")}
 - Current Projects: ${profile.currentProjects.join(", ")}
 
-Analyze these ${items.length} trending items. For each, provide:
-1. A 2-sentence summary: what it IS and why it MATTERS. Be specific — name the capability, not "useful tool for developers."
-2. Relevance to this user: High, Medium, or Low
-3. A one-line reason WHY it's relevant, referencing the user's specific goals/interests
-4. An install command if it's a GitHub repo (git clone URL), otherwise null
+For each of the ${items.length} items below, provide:
+1. **hookLine**: A single punchy sentence (max 15 words) that makes the reader stop scrolling. Lead with the "so what" — what can they DO with this today?
+2. **summary**: 2 sentences: what it IS and why it MATTERS right now. Be specific — name the capability, not "useful tool for developers."
+3. **relevance**: High, Medium, or Low — based on fit with the reader's goals and current projects
+4. **relevanceReason**: One line referencing their specific goals/interests
+5. **contentType**: Classify as one of: "tool" (installable software), "tutorial" (how-to/guide), "discussion" (community thread/opinion), "news" (announcement/update), "reference" (docs/list/resource)
+6. **installCommand**: git clone URL if it's a GitHub repo, otherwise null
 
-Write like a newsletter editor, not a content generator. No "In today's digest..." or "Here are the highlights..." — lead with specifics.
+Write like a newsletter editor, not a content generator. No "In today's digest..." or "Here are the highlights..." — lead with specifics. Be ruthlessly honest in relevance scoring — only mark High if it directly impacts their current projects.
 
 Items:
 ${itemDescriptions}
 
 Respond with ONLY a JSON array (no markdown fencing):
-[{"id": "${items[0]?.id}", "summary": "...", "relevance": "High|Medium|Low", "relevanceReason": "...", "installCommand": "..." or null}]
+[{"id": "${items[0]?.id}", "hookLine": "...", "summary": "...", "relevance": "High|Medium|Low", "relevanceReason": "...", "contentType": "tool|tutorial|discussion|news|reference", "installCommand": "..." or null}]
 
 Use the exact id values from each item. Respond with valid JSON only.`;
 
