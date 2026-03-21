@@ -1,0 +1,44 @@
+{
+  "schedule": {
+    "timezone": "America/New_York",
+    "hour": 6
+  },
+  "sources": {
+    "github": {
+      "searchTerms": ["claude code skill", "claude-code", "anthropic claude cli", "claude mcp server"],
+      "maxItems": 10,
+      "weight": 3
+    },
+    "youtube": {
+      "searchTerms": ["claude code", "claude code tutorial", "anthropic claude cli"],
+      "maxItems": 8,
+      "weight": 2
+    },
+    "reddit": {
+      "subreddits": ["ClaudeAI", "ChatGPTCoding", "LocalLLaMA"],
+      "searchTerms": ["claude code", "claude cli", "claude skills"],
+      "maxItems": 8,
+      "weight": 1
+    }
+  },
+  "profile": {
+    "name": "Julie",
+    "goals": ["learn automation workflows", "improve coding speed with AI", "stay current on Claude Code ecosystem"],
+    "skillLevel": "intermediate",
+    "interests": ["skills", "MCP servers", "workflows", "automation", "productivity"],
+    "currentProjects": ["daily digest automation", "claude code skill exploration"]
+  },
+  "velocity": {
+    "highSignalThreshold": 100,
+    "historyDays": 90
+  },
+  "summarizer": {
+    "model": "claude-haiku-4-5-20251001",
+    "batchSize": 15
+  },
+  "output": {
+    "vaultPath": ".",
+    "dailyFolder": "Daily",
+    "weeklyFolder": "Weekly"
+  }
+}

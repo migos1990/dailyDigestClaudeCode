@@ -1,0 +1,11 @@
+src/
+data/
+node_modules/
+dist/
+logs/
+package.json
+package-lock.json
+tsconfig.json
+.github/
+.gitignore
+.obsidianignore
