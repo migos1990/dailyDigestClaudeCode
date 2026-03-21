@@ -1,13 +1,14 @@
 /*
   DAILY DIGEST ORCHESTRATOR — Pipeline Flow:
 
-  CONFIG ──▶ FETCH (parallel) ──▶ DEDUP ──▶ SUMMARIZE ──▶ VELOCITY ──▶ WIKILINKS ──▶ MARKDOWN ──▶ WRITE
+  CONFIG ──▶ FETCH (parallel) ──▶ DEDUP ──▶ SUMMARIZE ──▶ CLUSTER ──▶ VELOCITY ──▶ WIKILINKS ──▶ MARKDOWN ──▶ NOTIFY ──▶ WRITE
     │              │                                                                      │
-    │         ┌────┴────┐                                                            ┌────┴────┐
-    │         │ GitHub  │                                                            │ Daily   │
-    │         │ YouTube │                                                            │ Weekly  │
-    │         │ Reddit  │                                                            │ (Sun)   │
-    │         └─────────┘                                                            └─────────┘
+    │         ┌────┴────────┐                                                        ┌────┴────┐
+    │         │ GitHub      │                                                        │ Daily   │
+    │         │ YouTube     │                                                        │ Weekly  │
+    │         │ Reddit      │                                                        │ (Sun)   │
+    │         │ Hacker News │                                                        └─────────┘
+    │         └─────────────┘
 */
 
 import { mkdirSync, writeFileSync } from "fs";
@@ -16,11 +17,14 @@ import { loadConfig } from "./config.js";
 import { fetchGitHub } from "./fetchers/github.js";
 import { fetchYouTube } from "./fetchers/youtube.js";
 import { fetchReddit } from "./fetchers/reddit.js";
+import { fetchHackerNews } from "./fetchers/hackernews.js";
 import { summarizeItems } from "./summarizer.js";
+import { clusterItems } from "./clustering.js";
 import { computeVelocity } from "./velocity.js";
 import { enrichWithWikilinks } from "./markdown/wikilinks.js";
 import { generateDailyDigest } from "./markdown/daily.js";
 import { generateWeeklyRollup } from "./markdown/weekly.js";
+import { sendNotifications } from "./notify.js";
 import { getWeekNumber } from "./utils.js";
 import type { DigestItem, DigestConfig, DigestResult, SourceWeights } from "./types.js";
 
@@ -37,9 +41,10 @@ async function main() {
     fetchGitHub(config.sources.github),
     fetchYouTube(config.sources.youtube),
     fetchReddit(config.sources.reddit),
+    fetchHackerNews(config.sources.hackernews),
   ]);
 
-  const sourceNames = ["github", "youtube", "reddit"] as const;
+  const sourceNames = ["github", "youtube", "reddit", "hackernews"] as const;
   const sourcesOk: string[] = [];
   const sourcesFailed: string[] = [];
   const fetched: DigestItem[][] = [];
@@ -56,11 +61,11 @@ async function main() {
     }
   }
 
-  const [githubItems, youtubeItems, redditItems] = fetched;
+  const [githubItems, youtubeItems, redditItems, hackernewsItems] = fetched;
 
   // Step 2: Combine and deduplicate by URL
-  const allItems = deduplicateByUrl([...githubItems, ...youtubeItems, ...redditItems]);
-  console.log(`Fetched ${allItems.length} items (${githubItems.length} GH, ${youtubeItems.length} YT, ${redditItems.length} Reddit)`);
+  const allItems = deduplicateByUrl([...githubItems, ...youtubeItems, ...redditItems, ...hackernewsItems]);
+  console.log(`Fetched ${allItems.length} items (${githubItems.length} GH, ${youtubeItems.length} YT, ${redditItems.length} Reddit, ${hackernewsItems.length} HN)`);
 
   if (allItems.length === 0) {
     console.warn("No items fetched from any source — skipping digest generation.");
@@ -84,8 +89,11 @@ async function main() {
   const itemsSummarized = summarized.filter((i) => i.summary).length;
   console.log(`Summarized ${itemsSummarized}/${qualityItems.length} items`);
 
+  // Step 3.5: Topic clustering
+  const clustered = await clusterItems(summarized, config);
+
   // Step 4: Compute velocity from historical data
-  const withVelocity = computeVelocity(summarized, config.velocity, basePath);
+  const withVelocity = computeVelocity(clustered, config.velocity, basePath);
   const highSignalCount = withVelocity.filter((i) => i.isHighSignal).length;
   console.log(`Velocity computed. High-signal items: ${highSignalCount}`);
 
@@ -110,6 +118,7 @@ async function main() {
     github: config.sources.github.weight,
     youtube: config.sources.youtube.weight,
     reddit: config.sources.reddit.weight,
+    hackernews: config.sources.hackernews.weight,
   };
   const dailyMd = generateDailyDigest(result, config.profile, sourceWeights);
   const dailyDir = resolve(basePath, config.output.dailyFolder);
@@ -117,6 +126,9 @@ async function main() {
   const dailyPath = resolve(dailyDir, `${today}-claude-code-digest.md`);
   writeFileSync(dailyPath, dailyMd);
   console.log(`Daily digest written: ${dailyPath}`);
+
+  // Step 6.5: Send notifications (best-effort, after file is persisted)
+  await sendNotifications(result, config, dailyPath);
 
   // Step 7: Generate weekly rollup (Sundays only)
   const weeklyMd = await generateWeeklyRollup(basePath, config.profile, config.summarizer.model);
@@ -145,6 +157,8 @@ function filterByQuality(items: DigestItem[], sources: DigestConfig["sources"]):
         return (item.stats.views ?? 0) >= (sources.youtube.minViews ?? 0);
       case "reddit":
         return (item.stats.score ?? 0) >= (sources.reddit.minScore ?? 0);
+      case "hackernews":
+        return (item.stats.points ?? 0) >= (sources.hackernews.minPoints ?? 0);
       default:
         return true;
     }

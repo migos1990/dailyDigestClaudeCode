@@ -4,11 +4,14 @@ export interface DigestConfig {
     github: SourceConfig;
     youtube: SourceConfig;
     reddit: RedditSourceConfig;
+    hackernews: HackerNewsSourceConfig;
   };
   profile: UserProfile;
   velocity: { highSignalThreshold: number; historyDays: number };
   summarizer: { model: string; batchSize: number };
   output: { vaultPath: string; dailyFolder: string; weeklyFolder: string };
+  clustering?: { enabled: boolean; minItems?: number };
+  notifications?: { discord?: { webhookUrl?: string } };
 }
 
 export interface SourceConfig {
@@ -25,6 +28,10 @@ export interface RedditSourceConfig extends SourceConfig {
   subreddits: string[];
 }
 
+export interface HackerNewsSourceConfig extends SourceConfig {
+  minPoints?: number;
+}
+
 export interface UserProfile {
   name: string;
   goals: string[];
@@ -33,11 +40,11 @@ export interface UserProfile {
   currentProjects: string[];
 }
 
-export type SourceWeights = Record<"github" | "youtube" | "reddit", number>;
+export type SourceWeights = Record<"github" | "youtube" | "reddit" | "hackernews", number>;
 
 export interface DigestItem {
   id: string;
-  source: "github" | "youtube" | "reddit";
+  source: "github" | "youtube" | "reddit" | "hackernews";
   title: string;
   description: string;
   url: string;
@@ -56,6 +63,8 @@ export interface DigestItem {
   isHighSignal?: boolean;
   // Enriched by wikilinks engine
   priorAppearances?: string[];
+  // Enriched by clustering engine
+  cluster?: string;
 }
 
 export interface HistorySnapshot {

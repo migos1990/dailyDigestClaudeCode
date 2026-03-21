@@ -118,6 +118,9 @@ Write a newsletter with these sections. Write like a thoughtful human editor, no
 ## The Big Picture
 One paragraph: what was the overarching theme or most important development this week?
 
+## Themes This Week
+If the items naturally cluster into 2-3 themes, give each theme a short heading (### level) with 1-2 sentences explaining the theme and naming key items. If no clear themes emerge, skip this section.
+
 ## Top 5 of the Week
 Numbered list of the 5 most notable items with a one-sentence description each.
 

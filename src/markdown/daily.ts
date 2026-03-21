@@ -79,6 +79,8 @@ export function compositeScore(item: DigestItem, weights: SourceWeights): number
     engagementBase = (item.stats.views ?? 0) / 500;
   } else if (item.source === "reddit") {
     engagementBase = ((item.stats.score ?? 0) + (item.stats.comments ?? 0)) / 20;
+  } else if (item.source === "hackernews") {
+    engagementBase = ((item.stats.points ?? 0) + (item.stats.comments ?? 0)) / 30;
   }
 
   // Velocity bonus — items accelerating in engagement rank higher
@@ -121,7 +123,7 @@ export function selectDigestItems(
   const mainBudget = budget - 1; // reserve 1 slot for wildcard
 
   const selected: DigestItem[] = [];
-  const sourceCounts: Record<string, number> = { github: 0, youtube: 0, reddit: 0 };
+  const sourceCounts: Record<string, number> = { github: 0, youtube: 0, reddit: 0, hackernews: 0 };
   const skipped: Array<{ item: DigestItem; score: number }> = [];
 
   // Fill main slots with diversity cap
@@ -214,7 +216,7 @@ No notable activity in Claude Code today. Check back tomorrow.
   }
 
   const topItem = [...items].sort((a, b) => compositeScore(b, weights) - compositeScore(a, weights))[0];
-  const sourceTag = topItem.source === "github" ? "repo" : topItem.source === "youtube" ? "video" : "discussion";
+  const sourceTag = topItem.source === "github" ? "repo" : topItem.source === "youtube" ? "video" : topItem.source === "hackernews" ? "discussion" : "discussion";
   summaryParts.push(
     `${items.length} curated items today — top ${sourceTag}: **${topItem.title}** (${formatStats(topItem)}).`
   );
@@ -286,7 +288,7 @@ function buildTodaysPicks(
   sourcesFailed: string[],
   weights: SourceWeights
 ): string {
-  const allFailed = sourcesFailed.includes("github") && sourcesFailed.includes("youtube") && sourcesFailed.includes("reddit");
+  const allFailed = sourcesFailed.includes("github") && sourcesFailed.includes("youtube") && sourcesFailed.includes("reddit") && sourcesFailed.includes("hackernews");
 
   if (allFailed) {
     return `## Today's Picks
@@ -298,7 +300,7 @@ function buildTodaysPicks(
 
   const warnings: string[] = [];
   for (const src of sourcesFailed) {
-    const label = src === "github" ? "GitHub" : src === "youtube" ? "YouTube" : "Reddit";
+    const label = src === "github" ? "GitHub" : src === "youtube" ? "YouTube" : src === "hackernews" ? "Hacker News" : "Reddit";
     warnings.push(`> [!warning] ${label} was unavailable\n`);
   }
 
@@ -317,8 +319,25 @@ ${warnings.join("\n")}No items made the cut today. All curated content is in the
     lines.push(...warnings);
   }
 
-  for (const item of sorted) {
-    lines.push(formatDigestItem(item));
+  // Group by cluster if items have clusters
+  const hasClusters = sorted.some((i) => i.cluster);
+  if (hasClusters) {
+    const clusters = new Map<string, DigestItem[]>();
+    for (const item of sorted) {
+      const key = item.cluster || "Other";
+      if (!clusters.has(key)) clusters.set(key, []);
+      clusters.get(key)!.push(item);
+    }
+    for (const [clusterName, clusterItems] of clusters) {
+      lines.push(`### ${clusterName}`, "");
+      for (const item of clusterItems) {
+        lines.push(formatDigestItem(item));
+      }
+    }
+  } else {
+    for (const item of sorted) {
+      lines.push(formatDigestItem(item));
+    }
   }
   return lines.join("\n") + "\n";
 }
@@ -328,7 +347,7 @@ function formatDigestItem(item: DigestItem): string {
 
   // Content-type badge (prefer contentType, fall back to source)
   const badge = item.contentType
-    ?? (item.source === "github" ? "tool" : item.source === "youtube" ? "video" : "discussion");
+    ?? (item.source === "github" ? "tool" : item.source === "youtube" ? "video" : item.source === "hackernews" ? "discussion" : "discussion");
 
   // Lead with hookLine if available, otherwise summary
   const lead = item.hookLine || item.summary || item.description?.slice(0, 150) || "No description available.";
@@ -378,6 +397,8 @@ function formatStats(item: DigestItem): string {
       return `${item.stats.views?.toLocaleString() ?? "?"} views`;
     case "reddit":
       return `${item.stats.score ?? "?"} upvotes, ${item.stats.comments ?? "?"} comments`;
+    case "hackernews":
+      return `${item.stats.points ?? "?"} pts, ${item.stats.comments ?? "?"} comments`;
     default:
       return "";
   }
@@ -397,10 +418,10 @@ function formatVelocity(item: DigestItem): string {
 }
 
 function buildHealthFooter(result: DigestResult): string {
-  const sourceStatus = ["github", "youtube", "reddit"]
+  const sourceStatus = ["github", "youtube", "reddit", "hackernews"]
     .map((s) => {
       const ok = result.sourcesOk.includes(s);
-      const label = s === "github" ? "GitHub" : s === "youtube" ? "YouTube" : "Reddit";
+      const label = s === "github" ? "GitHub" : s === "youtube" ? "YouTube" : s === "hackernews" ? "HN" : "Reddit";
       return `${label} ${ok ? "✓" : "✗"}`;
     })
     .join(" ");
@@ -419,7 +440,7 @@ function buildFilteredSection(dropped: DigestItem[]): string {
 
   const lines = dropped.slice(0, 10).map((item) => {
     const reason = item.relevance === "Low" ? "Low relevance" : "Below budget cutoff";
-    const badge = item.source === "github" ? "repo" : item.source === "youtube" ? "video" : "discussion";
+    const badge = item.source === "github" ? "repo" : item.source === "youtube" ? "video" : item.source === "hackernews" ? "discussion" : "discussion";
     return `- **${item.title}** \`${badge}\` — ${reason}`;
   });
 
