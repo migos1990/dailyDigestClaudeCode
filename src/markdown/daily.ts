@@ -52,7 +52,7 @@ export function generateDailyDigest(result: DigestResult, profile: UserProfile):
  * YouTube: views / 500  (so 50K views ≈ 100 points)
  * Velocity bonus: 2x multiplier for items with velocity data
  */
-function trendScore(item: DigestItem): number {
+export function trendScore(item: DigestItem): number {
   let base = 0;
   if (item.source === "github") {
     base = (item.stats.stars ?? 0) / 100;

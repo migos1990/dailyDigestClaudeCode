@@ -21,6 +21,7 @@ import { computeVelocity } from "./velocity.js";
 import { enrichWithWikilinks } from "./markdown/wikilinks.js";
 import { generateDailyDigest } from "./markdown/daily.js";
 import { generateWeeklyRollup } from "./markdown/weekly.js";
+import { getWeekNumber } from "./utils.js";
 import type { DigestItem, DigestResult } from "./types.js";
 
 async function main() {
@@ -32,39 +33,39 @@ async function main() {
   console.log(`[${today}] Starting Claude Code daily digest...`);
 
   // Step 1: Fetch from all sources in parallel
+  const results = await Promise.allSettled([
+    fetchGitHub(config.sources.github),
+    fetchYouTube(config.sources.youtube),
+    fetchReddit(config.sources.reddit),
+  ]);
+
+  const sourceNames = ["github", "youtube", "reddit"] as const;
   const sourcesOk: string[] = [];
   const sourcesFailed: string[] = [];
+  const fetched: DigestItem[][] = [];
 
-  const [githubItems, youtubeItems, redditItems] = await Promise.all([
-    fetchGitHub(config.sources.github).then((items) => {
-      if (items.length > 0 || !sourcesFailed.includes("github")) sourcesOk.push("github");
-      return items;
-    }).catch((err) => {
-      console.error("GitHub fetch failed:", err);
-      sourcesFailed.push("github");
-      return [] as DigestItem[];
-    }),
-    fetchYouTube(config.sources.youtube).then((items) => {
-      if (items.length > 0 || !sourcesFailed.includes("youtube")) sourcesOk.push("youtube");
-      return items;
-    }).catch((err) => {
-      console.error("YouTube fetch failed:", err);
-      sourcesFailed.push("youtube");
-      return [] as DigestItem[];
-    }),
-    fetchReddit(config.sources.reddit).then((items) => {
-      if (items.length > 0 || !sourcesFailed.includes("reddit")) sourcesOk.push("reddit");
-      return items;
-    }).catch((err) => {
-      console.error("Reddit fetch failed:", err);
-      sourcesFailed.push("reddit");
-      return [] as DigestItem[];
-    }),
-  ]);
+  for (let i = 0; i < results.length; i++) {
+    const result = results[i];
+    if (result.status === "fulfilled") {
+      sourcesOk.push(sourceNames[i]);
+      fetched.push(result.value);
+    } else {
+      console.error(`${sourceNames[i]} fetch failed:`, result.reason);
+      sourcesFailed.push(sourceNames[i]);
+      fetched.push([]);
+    }
+  }
+
+  const [githubItems, youtubeItems, redditItems] = fetched;
 
   // Step 2: Combine and deduplicate by URL
   const allItems = deduplicateByUrl([...githubItems, ...youtubeItems, ...redditItems]);
   console.log(`Fetched ${allItems.length} items (${githubItems.length} GH, ${youtubeItems.length} YT, ${redditItems.length} Reddit)`);
+
+  if (allItems.length === 0) {
+    console.warn("No items fetched from any source — skipping digest generation.");
+    return;
+  }
 
   // Step 3: AI Summarization + Relevance Scoring
   const summarized = await summarizeItems(allItems, config.profile, config.summarizer);
@@ -117,7 +118,7 @@ async function main() {
   console.log(`Sources OK: [${sourcesOk.join(", ")}], Failed: [${sourcesFailed.join(", ")}]`);
 }
 
-function deduplicateByUrl(items: DigestItem[]): DigestItem[] {
+export function deduplicateByUrl(items: DigestItem[]): DigestItem[] {
   const seen = new Map<string, DigestItem>();
   for (const item of items) {
     if (!seen.has(item.url)) {
@@ -125,13 +126,6 @@ function deduplicateByUrl(items: DigestItem[]): DigestItem[] {
     }
   }
   return Array.from(seen.values());
-}
-
-function getWeekNumber(date: Date): number {
-  const d = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
-  d.setUTCDate(d.getUTCDate() + 4 - (d.getUTCDay() || 7));
-  const yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
-  return Math.ceil(((d.getTime() - yearStart.getTime()) / 86400000 + 1) / 7);
 }
 
 main().catch((err) => {

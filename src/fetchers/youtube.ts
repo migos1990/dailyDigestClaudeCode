@@ -6,7 +6,13 @@ function htmlDecode(str: string): string {
     .replace(/&lt;/g, "<")
     .replace(/&gt;/g, ">")
     .replace(/&quot;/g, '"')
-    .replace(/&#39;/g, "'");
+    .replace(/&#39;/g, "'")
+    .replace(/&nbsp;/g, " ")
+    .replace(/&mdash;/g, "\u2014")
+    .replace(/&ndash;/g, "\u2013")
+    .replace(/&hellip;/g, "\u2026")
+    .replace(/&#(\d+);/g, (_, code) => String.fromCharCode(Number(code)))
+    .replace(/&#x([0-9a-fA-F]+);/g, (_, hex) => String.fromCharCode(parseInt(hex, 16)));
 }
 
 interface YouTubeSearchItem {
@@ -88,7 +94,7 @@ export async function fetchYouTube(
       data = (await res.json()) as YouTubeSearchResponse;
     } catch (err) {
       console.error(`[youtube] Fetch error during search for "${term}":`, err);
-      return [];
+      continue;
     }
 
     for (const item of data.items ?? []) {
@@ -135,7 +141,7 @@ export async function fetchYouTube(
     }
   } catch (err) {
     console.error("[youtube] Fetch error during statistics request:", err);
-    return [];
+    // Continue without stats rather than discarding all search results
   }
 
   // Step 3: Map results to DigestItem[]
