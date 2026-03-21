@@ -11,6 +11,8 @@ function filterByQuality(items: DigestItem[], sources: DigestConfig["sources"]):
         return (item.stats.views ?? 0) >= (sources.youtube.minViews ?? 0);
       case "reddit":
         return (item.stats.score ?? 0) >= (sources.reddit.minScore ?? 0);
+      case "hackernews":
+        return (item.stats.points ?? 0) >= (sources.hackernews.minPoints ?? 0);
       default:
         return true;
     }
@@ -21,9 +23,10 @@ const defaultSources: DigestConfig["sources"] = {
   github: { searchTerms: ["test"], maxItems: 5, weight: 3, minStars: 10 },
   youtube: { searchTerms: ["test"], maxItems: 5, weight: 2, minViews: 100 },
   reddit: { subreddits: ["test"], searchTerms: ["test"], maxItems: 5, weight: 1, minScore: 5 },
+  hackernews: { searchTerms: ["test"], maxItems: 5, weight: 1, minPoints: 10 },
 };
 
-function makeItem(source: "github" | "youtube" | "reddit", stats: Record<string, number>): DigestItem {
+function makeItem(source: "github" | "youtube" | "reddit" | "hackernews", stats: Record<string, number>): DigestItem {
   return {
     id: `${source}:test`,
     source,
@@ -87,5 +90,15 @@ describe("filterByQuality", () => {
   it("passes items at exactly the threshold", () => {
     const items = [makeItem("github", { stars: 10 })];
     expect(filterByQuality(items, defaultSources)).toHaveLength(1);
+  });
+
+  it("keeps HN stories above minPoints", () => {
+    const items = [makeItem("hackernews", { points: 50 })];
+    expect(filterByQuality(items, defaultSources)).toHaveLength(1);
+  });
+
+  it("filters HN stories below minPoints", () => {
+    const items = [makeItem("hackernews", { points: 2 })];
+    expect(filterByQuality(items, defaultSources)).toHaveLength(0);
   });
 });

@@ -2,7 +2,7 @@ import { describe, it, expect } from "vitest";
 import { compositeScore, selectDigestItems } from "../markdown/daily.js";
 import type { DigestItem, SourceWeights } from "../types.js";
 
-const defaultWeights: SourceWeights = { github: 3, youtube: 2, reddit: 1 };
+const defaultWeights: SourceWeights = { github: 3, youtube: 2, reddit: 1, hackernews: 1 };
 
 function makeItem(overrides: Partial<DigestItem> = {}): DigestItem {
   return {
@@ -83,6 +83,12 @@ describe("compositeScore", () => {
       priorAppearances: ["2025-01-01"],
     });
     expect(compositeScore(seen, defaultWeights)).toBe(compositeScore(fresh, defaultWeights) * 0.85);
+  });
+
+  it("scores HN items using points + comments", () => {
+    const item = makeItem({ source: "hackernews", stats: { points: 150, comments: 60 }, relevance: "High" });
+    // High=3 * hackernews_weight=1 * ((150+60)/30) * 1.0 = 21
+    expect(compositeScore(item, defaultWeights)).toBe(21);
   });
 
   it("uses source weights from config", () => {

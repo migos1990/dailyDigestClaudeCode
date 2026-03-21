@@ -14,6 +14,13 @@ const DEFAULTS: DigestConfig = {
       weight: 1,
       minScore: 3,
     },
+    hackernews: {
+      searchTerms: ["claude code"],
+      maxItems: 8,
+      weight: 1,
+      minPoints: 5,
+      searchWindow: 72,
+    },
   },
   profile: {
     name: "User",
@@ -25,6 +32,7 @@ const DEFAULTS: DigestConfig = {
   velocity: { highSignalThreshold: 100, historyDays: 90 },
   summarizer: { model: "claude-haiku-4-5-20251001", batchSize: 15 },
   output: { vaultPath: ".", dailyFolder: "Daily", weeklyFolder: "Weekly" },
+  clustering: { enabled: true, minItems: 6 },
 };
 
 export function loadConfig(configPath?: string): DigestConfig {

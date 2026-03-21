@@ -24,6 +24,12 @@
       "maxItems": 5,
       "weight": 1,
       "minScore": 5
+    },
+    "hackernews": {
+      "searchTerms": ["claude code", "anthropic claude", "claude cli"],
+      "maxItems": 5,
+      "weight": 1,
+      "minPoints": 10
     }
   },
   "profile": {
@@ -45,5 +51,8 @@
     "vaultPath": ".",
     "dailyFolder": "Daily",
     "weeklyFolder": "Weekly"
+  },
+  "notifications": {
+    "discord": {}
   }
 }
