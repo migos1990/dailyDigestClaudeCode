@@ -7,8 +7,8 @@ sources_ok:
   - reddit
 sources_failed:
   []
-items_total: 54
-items_summarized: 53
+items_total: 53
+items_summarized: 52
 high_signal_count: 0
 runtime_seconds: 89
 tags:
@@ -21,7 +21,7 @@ tags:
 
 ## Executive Summary
 
-39 GitHub skills trending — top: **affaan-m/everything-claude-code** (Stars: 90,869). 15 new videos on YouTube.
+53 trending items today — top repo: **x1xhlol/system-prompts-and-models-of-ai-tools** (Stars: 132,422).
 
 ## Recommended for You
 
@@ -29,412 +29,385 @@ tags:
 
 ### High Relevance
 
-- **affaan-m/everything-claude-code** — Comprehensive performance optimization system covering skills, instincts, memory, security, and research-first development across Claude Code and competing agents. Directly addresses the architectural patterns Julie needs to master for automation workflows and coding speed improvements.
-  Relevance: *Core reference for understanding Claude Code ecosystem architecture and optimization—essential for her skill exploration and workflow automation goals.*
-  Stars: 90,869 | NEW | `git clone https://github.com/affaan-m/everything-claude-code.git` | [Link](https://github.com/affaan-m/everything-claude-code)
+- **affaan-m/everything-claude-code** `repo` — A performance optimization system for Claude Code that covers skills, memory management, security protocols, and research-first development patterns. This directly addresses how to structure agentic workflows for speed and reliability—core to your automation goals.
+  Relevance: *Teaches the architectural patterns behind high-performance Claude Code agents, accelerating your automation workflow mastery.*
+  Stars: 90,884 | NEW | `git clone https://github.com/affaan-m/everything-claude-code.git` | [Link](https://github.com/affaan-m/everything-claude-code)
 
-- **hesreallyhim/awesome-claude-code** — Curated index of skills, hooks, slash-commands, agent orchestrators, and plugins specifically for Claude Code. Serves as a discovery layer for the fragmented skill ecosystem.
-  Relevance: *Directly maps available MCP servers and skills—critical for staying current on Claude Code ecosystem and finding automation building blocks.*
-  Stars: 29,440 | NEW | `git clone https://github.com/hesreallyhim/awesome-claude-code.git` | [Link](https://github.com/hesreallyhim/awesome-claude-code)
+- **anthropics/claude-code** `repo` — The official Claude Code CLI tool repository—the agentic coding agent you run in your terminal. This is the canonical source for installation, updates, and understanding the platform's core capabilities.
+  Relevance: *Essential reference for your daily Claude Code usage; official docs ensure you're leveraging current features for automation and speed.*
+  Stars: 80,604 | NEW | `git clone https://github.com/anthropics/claude-code.git` | [Link](https://github.com/anthropics/claude-code)
 
-- **sickn33/antigravity-awesome-skills** — Installable library of 1,273+ cross-compatible agentic skills with CLI installer and workflow bundles for Claude Code, Cursor, and alternatives. Dramatically expands accessible skill inventory beyond single platforms.
-  Relevance: *Enables rapid skill discovery and installation for her automation workflows—directly accelerates coding speed by providing pre-built skill catalog.*
-  Stars: 26,189 | NEW | `git clone https://github.com/sickn33/antigravity-awesome-skills.git` | [Link](https://github.com/sickn33/antigravity-awesome-skills)
+- **ComposioHQ/awesome-claude-skills** `repo` — A Composio-maintained curation of Claude Skills and workflow customization resources. Similar scope to other curated lists but tied to the Composio MCP ecosystem.
+  Relevance: *MCP server integration with Claude Code is part of your interest in ecosystem depth; this connects skills to MCP-based orchestration.*
+  Stars: 46,455 | NEW | `git clone https://github.com/ComposioHQ/awesome-claude-skills.git` | [Link](https://github.com/ComposioHQ/awesome-claude-skills)
 
-- **OthmanAdi/planning-with-files** — Claude Code skill implementing persistent markdown planning (the workflow pattern underlying a $2B acquisition). Codifies the persistent file-based planning methodology that separates high-efficiency agents from reactive ones.
-  Relevance: *Teaches the exact workflow pattern Julie needs to automate daily digests and complex projects—the skill bridges planning and execution automation.*
-  Stars: 16,654 | NEW | `git clone https://github.com/OthmanAdi/planning-with-files.git` | [Link](https://github.com/OthmanAdi/planning-with-files)
+- **code-yeongyu/oh-my-openagent** `repo` — An agent harness framework (previously oh-my-opencode) for structuring complex agent workflows with utilities and patterns. Provides architectural scaffolding for multi-step automation.
+  Relevance: *Agent harness patterns are foundational to building robust daily digest automation workflows with proper separation of concerns.*
+  Stars: 41,936 | NEW | `git clone https://github.com/code-yeongyu/oh-my-openagent.git` | [Link](https://github.com/code-yeongyu/oh-my-openagent)
 
-- **VoltAgent/awesome-agent-skills** — Catalog of 500+ agent skills compatible with Claude Code, Codex, Antigravity, and Cursor. Another aggregation point for cross-platform skill discovery.
-  Relevance: *Complements other skill catalogs and ensures she discovers ecosystem breadth—critical for staying current on MCP servers and available automation primitives.*
-  Stars: 12,142 | NEW | `git clone https://github.com/VoltAgent/awesome-agent-skills.git` | [Link](https://github.com/VoltAgent/awesome-agent-skills)
+- **thedotmack/claude-mem** `repo` — Claude-mem is a Claude Code plugin that auto-captures session history, compresses it with AI, and injects relevant context into future sessions using Claude's agent-sdk. Matters directly because it solves session continuity and context management—core bottlenecks when building daily digest automation workflows.
+  Relevance: *Directly addresses your automation workflow goal by enabling Claude Code to maintain persistent memory across sessions, essential for daily digest projects.*
+  Stars: 38,776 | NEW | `git clone https://github.com/thedotmack/claude-mem.git` | [Link](https://github.com/thedotmack/claude-mem)
 
-- **anthropics/claude-code** — Official Claude Code repository—the terminal-based agentic coding agent that understands codebases, executes routine tasks, explains code, and handles git workflows. This is the primary tool she's building skills around.
-  Relevance: *The canonical reference for Claude Code's capabilities, design, and limitations—essential for deepening her skill exploration and understanding how to leverage it for automation.*
-  Stars: 80,598 | NEW | `git clone https://github.com/anthropics/claude-code.git` | [Link](https://github.com/anthropics/claude-code)
+- **gsd-build/get-shit-done** `repo` — Get-Shit-Done is a meta-prompting and context engineering framework designed specifically for Claude Code that enforces spec-driven development patterns. Matters because it systematizes how you structure prompts and requirements, directly improving coding speed through better Claude Code task decomposition.
+  Relevance: *Core to your goal of improving coding speed with AI—this framework teaches spec-driven patterns that maximize Claude Code's ability to understand and execute your automation workflows.*
+  Stars: 37,231 | NEW | `git clone https://github.com/gsd-build/get-shit-done.git` | [Link](https://github.com/gsd-build/get-shit-done)
 
-- **CherryHQ/cherry-studio** — Cherry Studio unifies access to 300+ AI assistants and frontier LLMs through a single chat interface with autonomous agent capabilities. Matters because it centralizes multi-model workflows and agent orchestration—directly applicable to automation systems Julie is building.
-  Relevance: *Supports learning autonomous agent patterns and multi-LLM workflows for her daily digest automation and broader automation goals.*
-  Stars: 41,908 | NEW | `git clone https://github.com/CherryHQ/cherry-studio.git` | [Link](https://github.com/CherryHQ/cherry-studio)
+- **shareAI-lab/learn-claude-code** `repo` — Learn-Claude-Code is a minimal agent harness built in bash that teaches Claude Code internals from first principles without heavy frameworks. Matters because understanding the underlying agent pattern helps you architect better automation workflows and debug Claude Code behavior.
+  Relevance: *Directly supports your goal to explore Claude Code skills by teaching the agent architecture you'll use in daily digest automation.*
+  Stars: 34,697 | NEW | `git clone https://github.com/shareAI-lab/learn-claude-code.git` | [Link](https://github.com/shareAI-lab/learn-claude-code)
 
-- **thedotmack/claude-mem** — Claude-mem is a Claude Code plugin that auto-captures session context, compresses it with AI, and reinjects relevant details into future sessions using agent-sdk. Matters because it eliminates context reconstruction overhead—critical for improving coding speed and continuity in multi-session projects.
-  Relevance: *Directly accelerates coding speed with AI by automating context management across sessions, a core productivity goal.*
-  Stars: 38,775 | NEW | `git clone https://github.com/thedotmack/claude-mem.git` | [Link](https://github.com/thedotmack/claude-mem)
+- **hesreallyhim/awesome-claude-code** `repo` — A curated index of Claude Code skills, hooks, slash-commands, and agent orchestrators organized by category. This is your discovery layer for understanding what pre-built components exist before building custom automation.
+  Relevance: *Essential reference to stay current on Claude Code ecosystem capabilities and avoid reinventing skills you can reuse.*
+  Stars: 29,441 | NEW | `git clone https://github.com/hesreallyhim/awesome-claude-code.git` | [Link](https://github.com/hesreallyhim/awesome-claude-code)
 
-- **gsd-build/get-shit-done** — Get-Shit-Done is a meta-prompting and spec-driven development framework for Claude Code that optimizes context engineering and prompt composition. Matters because it systematizes how prompts are structured—immediately applicable to Julie's skill exploration and workflow automation.
-  Relevance: *Teaches advanced Claude Code techniques and spec-driven patterns essential for automation workflow design.*
-  Stars: 37,228 | NEW | `git clone https://github.com/gsd-build/get-shit-done.git` | [Link](https://github.com/gsd-build/get-shit-done)
+- **sickn33/antigravity-awesome-skills** `repo` — A 1,273+ skill library with an installer CLI, pre-built bundles, and workflow templates for Claude Code and other agents. This removes friction from skill discovery and installation for rapid integration.
+  Relevance: *Directly accelerates your coding speed by providing battle-tested, installable skills you can plug into your daily digest automation.*
+  Stars: 26,190 | NEW | `git clone https://github.com/sickn33/antigravity-awesome-skills.git` | [Link](https://github.com/sickn33/antigravity-awesome-skills)
 
-- **shareAI-lab/learn-claude-code** — Learn-Claude-Code provides a minimal bash-based agent harness for understanding Claude Code mechanics from first principles. Matters because it builds foundational knowledge of how agent loops work—perfect for intermediate developers wanting to master underlying systems.
-  Relevance: *Aligns with staying current on Claude Code ecosystem fundamentals while building understanding of agent harness architecture.*
-  Stars: 34,694 | NEW | `git clone https://github.com/shareAI-lab/learn-claude-code.git` | [Link](https://github.com/shareAI-lab/learn-claude-code)
+- **davila7/claude-code-templates** `repo` — Claude-Code-Templates provides a CLI tool for configuring and monitoring Claude Code instances, with pre-built project templates. Matters because templates accelerate your automation workflows and the monitoring capability helps you track and optimize Claude Code performance.
+  Relevance: *Templates and monitoring align perfectly with your daily digest automation project and productivity improvement goals.*
+  Stars: 23,287 | NEW | `git clone https://github.com/davila7/claude-code-templates.git` | [Link](https://github.com/davila7/claude-code-templates)
 
-- **Doriandarko/claude-engineer** — Claude-Engineer wraps Claude 3.5 Sonnet in an interactive CLI for software development tasks, offering a structured agent-driven development loop. Matters because it demonstrates practical agent pattern implementation and shows how to build development-specific automation.
-  Relevance: *Demonstrates production agent patterns and CLI-based automation that directly inform her Claude Code workflow learning.*
-  Stars: 11,164 | NEW | `git clone https://github.com/Doriandarko/claude-engineer.git` | [Link](https://github.com/Doriandarko/claude-engineer)
-
-- **jarrodwatts/claude-hud** — Claude-HUD is a Claude Code plugin that provides real-time visibility into context usage, active tools, running agents, and task progress. Matters because it eliminates blind spots during AI-assisted coding—improving debugging and optimization of automation workflows.
-  Relevance: *Directly improves coding speed with AI by providing transparency into agent behavior and resource consumption.*
-  Stars: 9,549 | NEW | `git clone https://github.com/jarrodwatts/claude-hud.git` | [Link](https://github.com/jarrodwatts/claude-hud)
-
-- **can1357/oh-my-pi** — Oh-My-Pi is a terminal-based AI coding agent featuring hash-anchored edits, optimized tool harness, LSP integration, and subagent support. Matters because it shows advanced agent architecture patterns with efficient token usage—directly relevant to building fast, reliable automation systems.
-  Relevance: *Demonstrates advanced agent patterns and optimization techniques essential for building efficient automation workflows.*
-  Stars: 2,211 | NEW | `git clone https://github.com/can1357/oh-my-pi.git` | [Link](https://github.com/can1357/oh-my-pi)
-
-- **oraios/serena** — Serena is a coding agent toolkit providing semantic retrieval and editing capabilities through MCP server and other integrations for code manipulation. Matters because it demonstrates MCP server implementation patterns and shows how to build domain-specific agent capabilities.
-  Relevance: *Directly relevant to learning MCP servers and building extensible automation systems, core interests for her skill development.*
+- **oraios/serena** `repo` — Serena is a coding agent toolkit providing semantic code retrieval and editing via MCP server integration, enabling Claude Code to understand and modify code based on meaning rather than syntax alone. Matters because semantic understanding directly improves automation accuracy—your daily digest parser can find relevant code patterns without fragile string matching.
+  Relevance: *Teaches MCP server patterns and semantic code manipulation, both core to improving automation workflows and staying current on Claude ecosystem capabilities.*
   Stars: 21,851 | NEW | `git clone https://github.com/oraios/serena.git` | [Link](https://github.com/oraios/serena)
 
-- **BeehiveInnovations/pal-mcp-server** — PAL is a unified MCP server that integrates Claude Code with multiple LLM providers (Gemini, OpenAI, Grok, Ollama, custom models) into a single orchestration layer. This matters because it eliminates vendor lock-in and lets you automate workflows across different AI models without rewriting integrations.
-  Relevance: *Directly addresses your goal to master MCP servers and automation workflows by providing a multi-model integration framework for Claude Code automation.*
-  Stars: 11,281 | NEW | `git clone https://github.com/BeehiveInnovations/pal-mcp-server` | [Link](https://github.com/BeehiveInnovations/pal-mcp-server)
+- **OthmanAdi/planning-with-files** `repo` — A Claude Code skill implementing persistent markdown planning (the Manus acquisition pattern) for structured agent workflows. This technique separates planning from execution for more reliable, auditable automation.
+  Relevance: *The planning-with-files pattern is a proven workflow methodology that will improve your daily digest automation's reliability and maintainability.*
+  Stars: 16,654 | NEW | `git clone https://github.com/OthmanAdi/planning-with-files.git` | [Link](https://github.com/OthmanAdi/planning-with-files)
 
-- **hangwin/mcp-chrome** — Chrome MCP Server exposes browser automation capabilities to Claude through an extension-based MCP interface, enabling AI to control tabs, execute JavaScript, and interact with web pages directly. This matters for automating browser-based tasks and web scraping workflows without manual intervention.
-  Relevance: *Essential MCP server for your daily digest automation project and browser-based workflow automation goals.*
-  Stars: 10,852 | NEW | `git clone https://github.com/hangwin/mcp-chrome` | [Link](https://github.com/hangwin/mcp-chrome)
+- **VoltAgent/awesome-agent-skills** `repo` — A 500+ skill collection across multiple agent platforms (Claude Code, Codex, Antigravity, Gemini CLI). Broader than Claude-specific but valuable for cross-platform skill patterns.
+  Relevance: *Expands your skill discovery across agents and shows which patterns are portable—useful for understanding automation design that transcends platforms.*
+  Stars: 12,142 | NEW | `git clone https://github.com/VoltAgent/awesome-agent-skills.git` | [Link](https://github.com/VoltAgent/awesome-agent-skills)
 
-- **mcp-use/mcp-use** — MCP-Use is a fullstack framework for building MCP applications and servers compatible with Claude and ChatGPT, abstracting the complexity of MCP protocol implementation. This matters because it accelerates your ability to develop custom MCP servers and Claude Code integrations from scratch.
-  Relevance: *Directly supports your skill exploration in MCP servers and enables faster development of automation workflows.*
-  Stars: 9,470 | NEW | `git clone https://github.com/mcp-use/mcp-use` | [Link](https://github.com/mcp-use/mcp-use)
+- **BeehiveInnovations/pal-mcp-server** `repo` — PAL MCP Server unifies Claude Code, Gemini, and OpenAI APIs into a single MCP interface, supporting 7+ LLM providers simultaneously. This matters because it eliminates vendor lock-in and lets you orchestrate multi-model workflows—critical for automation pipelines that need fallback logic or cost optimization.
+  Relevance: *Directly enables the multi-model automation workflows you're building while keeping you agnostic to LLM provider changes.*
+  Stars: 11,281 | NEW | `git clone https://github.com/BeehiveInnovations/pal-mcp-server.git` | [Link](https://github.com/BeehiveInnovations/pal-mcp-server)
 
-- **idosal/git-mcp** — GitMCP is an MCP server that provides Claude real-time access to any GitHub repository's code, commits, and context without hallucination. This matters because it grounds AI-assisted coding in actual repository state, eliminating false assumptions during automation or refactoring tasks.
-  Relevance: *Improves Claude Code accuracy for your automation projects and aligns with your focus on staying current with ecosystem tools.*
-  Stars: 7,802 | NEW | `git clone https://github.com/idosal/git-mcp` | [Link](https://github.com/idosal/git-mcp)
+- **hangwin/mcp-chrome** `repo` — Chrome MCP Server bridges Claude to your browser via a Chrome extension, exposing automation capabilities like clicking, form-filling, and DOM manipulation through MCP. This matters for daily digest automation because it lets Claude interact with web pages directly without external APIs.
+  Relevance: *Solves browser automation for your digest project and expands Claude's autonomous action capabilities beyond API calls.*
+  Stars: 10,852 | NEW | `git clone https://github.com/hangwin/mcp-chrome.git` | [Link](https://github.com/hangwin/mcp-chrome)
 
-- **BrowserMCP/mcp** — Browser MCP is a standardized MCP server enabling AI to control browser instances, navigate pages, and interact with the DOM programmatically. This matters because it's a more general-purpose alternative to Chrome MCP for headless and full browser automation.
-  Relevance: *Core MCP server for browser automation workflows and your daily digest automation project.*
-  Stars: 6,108 | NEW | `git clone https://github.com/BrowserMCP/mcp` | [Link](https://github.com/BrowserMCP/mcp)
+- **jarrodwatts/claude-hud** `repo` — Claude-HUD is a plugin that provides real-time visibility into Claude Code's internal state—context usage, active tools, running agents, and todo tracking. Matters because it directly addresses the visibility gap when running automation workflows, letting you monitor resource consumption and agent behavior.
+  Relevance: *Essential for debugging and optimizing your daily digest automation; shows exactly what Claude Code is doing and how much context it's using.*
+  Stars: 9,563 | NEW | `git clone https://github.com/jarrodwatts/claude-hud.git` | [Link](https://github.com/jarrodwatts/claude-hud)
 
-- **firecrawl/firecrawl-mcp-server** — Firecrawl MCP Server adds web scraping and intelligent search indexing to Claude and Cursor, with built-in handling for dynamic content and JavaScript-rendered pages. This matters because it simplifies data extraction workflows and powers content aggregation without writing custom scrapers.
-  Relevance: *Directly applicable to your daily digest automation—enables AI-powered content collection and summarization.*
-  Stars: 5,813 | NEW | `git clone https://github.com/firecrawl/firecrawl-mcp-server` | [Link](https://github.com/firecrawl/firecrawl-mcp-server)
+- **mcp-use/mcp-use** `repo` — MCP-Use is a fullstack framework for building MCP applications and servers that work across ChatGPT and Claude with standardized patterns. This matters because it abstracts away MCP protocol complexity, letting you focus on building automation logic instead of boilerplate.
+  Relevance: *Accelerates your Claude Code skill exploration by providing proven scaffolding for MCP server development.*
+  Stars: 9,470 | NEW | `git clone https://github.com/mcp-use/mcp-use.git` | [Link](https://github.com/mcp-use/mcp-use)
 
-- **wonderwhy-er/DesktopCommanderMCP** — DesktopCommanderMCP grants Claude terminal execution, filesystem search, and diff-based file editing capabilities through MCP. This matters because it bridges Claude Code to your local development environment, enabling automated code modifications and system-level automation.
-  Relevance: *Critical for your automation workflow goals—enables Claude to execute terminal commands and modify files autonomously.*
-  Stars: 5,742 | NEW | `git clone https://github.com/wonderwhy-er/DesktopCommanderMCP` | [Link](https://github.com/wonderwhy-er/DesktopCommanderMCP)
+- **travisvn/awesome-claude-skills** `repo` — A curated list of Claude Skills and workflow customization resources focused on Claude Code. Overlaps with other curation lists but provides targeted, digestible Claude-specific recommendations.
+  Relevance: *Streamlined Claude Code resource list keeps you current on the ecosystem without the sprawl of larger multi-platform collections.*
+  Stars: 9,353 | NEW | `git clone https://github.com/travisvn/awesome-claude-skills.git` | [Link](https://github.com/travisvn/awesome-claude-skills)
 
-- **Claude Code Just Added Recurring Cloud Tasks That Run Without Your Laptop** — Video highlighting Claude Code's new recurring cloud-based task execution capability that runs autonomously without active laptop sessions. This matters because background agents represent the next evolution of Claude Code automation—critical for your productivity goals.
-  Relevance: *Demonstrates advanced Claude Code automation at scale (recurring cloud tasks); directly relevant to learning next-level workflow automation.*
-  1 views | NEW | [Link](https://www.youtube.com/watch?v=hbu1sI3PxlQ)
+- **idosal/git-mcp** `repo` — GitMCP provides Claude with read-access to any GitHub repository's code, commits, and pull requests via MCP, eliminating hallucinations about your codebase. This matters for coding speed because Claude can reference your actual code context without manual copying.
+  Relevance: *Reduces hallucinations in your daily digest automation by grounding Claude in real GitHub project state.*
+  Stars: 7,802 | NEW | `git clone https://github.com/idosal/git-mcp.git` | [Link](https://github.com/idosal/git-mcp)
 
-- **Claude Code Channels Just Replaced OpenClaw (Run It From Your Phone)** — Video covering Claude Code Channels as a replacement for OpenClaw's remote access functionality, enabling mobile-based control and interaction. This matters because it expands Claude Code's accessibility and enables distributed automation workflows.
-  Relevance: *Channels feature directly supports your productivity and automation goals; enables remote workflow management aligned with your skill-building focus.*
-  15 views | NEW | [Link](https://www.youtube.com/watch?v=fkSAE0wkGUU)
+- **BrowserMCP/mcp** `repo` — Browser MCP is a Model Context Provider that gives Claude full browser control (navigation, clicking, form submission, screenshot capture). This matters for workflow automation because it enables end-to-end browser task completion without manual intervention.
+  Relevance: *Core capability for your digest automation—lets Claude autonomously navigate and extract web content.*
+  Stars: 6,108 | NEW | `git clone https://github.com/BrowserMCP/mcp.git` | [Link](https://github.com/BrowserMCP/mcp)
 
-- **This 9 GitHub repo will 10x your next Claude code project #Shorts** — A curated collection of 9 GitHub repositories specifically selected to accelerate Claude Code projects. Matters because it surfaces battle-tested repos that directly integrate with Claude Code workflows rather than generic development tools.
-  Relevance: *Directly supports your goal to explore Claude Code ecosystem and discover MCP servers/automation patterns for your daily digest project.*
-  0 views | NEW | [Link](https://www.youtube.com/watch?v=8AeWPLN-DVU)
+- **firecrawl/firecrawl-mcp-server** `repo` — Firecrawl MCP Server integrates web scraping and semantic search into Claude via MCP, extracting structured data from any URL. This matters because it's purpose-built for digest automation—scraping sources and intelligently filtering content.
+  Relevance: *Purpose-built for your daily digest project; Firecrawl handles scale and structure better than raw browser automation.*
+  Stars: 5,813 | NEW | `git clone https://github.com/firecrawl/firecrawl-mcp-server.git` | [Link](https://github.com/firecrawl/firecrawl-mcp-server)
 
-- **Claude Code가 일할 때 나는 뭘 할까? #Shorts** — Explores the developer's role when Claude Code handles autonomous coding—positioning development work around strategy, communication, and skill growth rather than pure execution. Matters because it reframes how intermediate developers should leverage AI coding assistants to maximize productivity gains.
-  Relevance: *Directly addresses your goal to improve coding speed with AI while maintaining strategic control—essential for understanding where automation fits in your workflow.*
-  4 views | NEW | [Link](https://www.youtube.com/watch?v=gX6kj79z3HQ)
+- **wonderwhy-er/DesktopCommanderMCP** `repo` — DesktopCommanderMCP grants Claude terminal access, file system search, and diff-based file editing capabilities through MCP. This matters for improving coding speed because it lets Claude modify local files and run build/test commands autonomously.
+  Relevance: *Unlocks local development automation—Claude can edit code, run tests, and manage your filesystem directly.*
+  Stars: 5,742 | NEW | `git clone https://github.com/wonderwhy-er/DesktopCommanderMCP.git` | [Link](https://github.com/wonderwhy-er/DesktopCommanderMCP)
 
-- **Setting up Claude Code security guardrails** — Step-by-step guide for implementing security guardrails within Claude Code projects, covering safe code execution boundaries. Matters because unsecured automated workflows create production risks—critical for anyone building daily automation systems.
-  Relevance: *Essential for your daily digest automation project; security guardrails are non-negotiable when deploying autonomous Claude Code workflows.*
+- **Prat011/awesome-llm-skills** `repo` — Awesome-LLM-Skills is a curated list of 1000+ reusable AI agent skills and MCP resources for Claude Code, Gemini, and custom agents. Matters because it's a living reference for building extensible workflows—catalog of pre-built tools and patterns you can compose into your automation projects.
+  Relevance: *Directly supports your goal to stay current on Claude Code ecosystem and build automation workflows by mapping available MCP skills and tools.*
+  Stars: 1,019 | NEW | `git clone https://github.com/Prat011/awesome-llm-skills.git` | [Link](https://github.com/Prat011/awesome-llm-skills)
+
+- **Claude Code 2.0 is FINALLY here (4 tips)** `video` — Claude Code 2.0 release highlights four core productivity tips with linked resources including GSD Mode and Vibe Combine tools. This matters because it provides immediate tactical guidance and tool recommendations for accelerating your coding speed with AI.
+  Relevance: *Directly supports your goal to improve coding speed with AI and stay current on Claude Code ecosystem through actionable tips and ecosystem tool recommendations.*
+  645 views | NEW | [Link](https://www.youtube.com/watch?v=fUShvacDLtw)
+
+- **NEW Claude Code Channels Update is INSANE! 🤯** `video` — Claude Code Channels update introduces significant new capabilities that fundamentally change how remote execution and workflow automation function. This matters because high engagement (309 views, 13 likes) signals meaningful feature changes affecting your daily automation toolkit.
+  Relevance: *Critical for staying current on Claude Code ecosystem changes that directly impact your daily digest automation and workflow productivity.*
+  309 views | NEW | [Link](https://www.youtube.com/watch?v=qGzkor5Vfw0)
+
+- **Claude Code Channels Just Replaced OpenClaw (Run It From Your Phone)** `video` — Claude Code Channels now provides remote access functionality directly from mobile devices, replacing the need for OpenClaw's separate remote execution tool. This matters because it consolidates your automation infrastructure into a single platform with native mobile support.
+  Relevance: *Directly addresses your daily digest automation project and workflow automation goals by enabling remote execution without additional tools.*
+  16 views | NEW | [Link](https://www.youtube.com/watch?v=fkSAE0wkGUU)
+
+- **Claude Code Just Added Recurring Cloud Tasks That Run Without Your Laptop** `video` — Claude Code introduced recurring cloud tasks that run autonomously without your laptop, shown in a Noah Zweben demo. This matters because it shifts Claude Code from synchronous assistance to asynchronous background agents—enabling true automation workflows.
+  Relevance: *Cloud-based recurring tasks fundamentally change what's possible with your daily digest automation; no longer requires your machine to stay on.*
+  3 views | NEW | [Link](https://www.youtube.com/watch?v=hbu1sI3PxlQ)
+
+- **Setting up Claude Code security guardrails** `video` — This guide provides step-by-step implementation of security guardrails for Claude Code projects with hands-on exercises. This matters because hardening your automation workflows prevents unintended code execution and data exposure in production environments.
+  Relevance: *Essential for your daily digest automation project to ensure safe, controlled execution of AI-powered workflows at scale.*
   3 views | NEW | [Link](https://www.youtube.com/watch?v=-Awaa2oUWYY)
 
-- **NEW Claude Code Channels Update is INSANE! 🤯** — Covers Claude Code Channels—a new research preview allowing interaction with Claude Code via Telegram and other messaging platforms. Matters because it expands deployment channels for automated workflows beyond traditional interfaces, enabling workflow triggers from messaging apps.
-  Relevance: *Directly relevant to your daily digest automation project; Channels offer new ways to trigger and integrate Claude Code workflows into existing productivity systems.*
-  294 views | NEW | [Link](https://www.youtube.com/watch?v=qGzkor5Vfw0)
+- **Claude Code + NotebookLM = Ultimate AI Agent 🚀** `video` — Claude Code combined with NotebookLM creates an autonomous AI agent capable of both coding and research synthesis tasks. This matters because it extends Claude Code beyond code generation into multi-modal automation, amplifying productivity for complex workflows.
+  Relevance: *Aligns with your automation workflows and productivity goals by showing how to combine Claude Code with other AI systems for enhanced agent capabilities.*
+  1 views | NEW | [Link](https://www.youtube.com/watch?v=CkdzNKbRtaU)
 
-- **Claude Code 2.0 is FINALLY here (4 tips)** — Covers Claude Code 2.0 release with 4 actionable implementation tips and references GSD Mode and Vibe Combine GitHub repos. Matters because it unpacks the latest Claude Code capabilities and immediately applicable patterns with documented, cloneable implementations.
-  Relevance: *Highest engagement (606 views) signals validated content; directly supports staying current on Claude Code ecosystem and discovering specific repos for skill exploration.*
-  606 views | NEW | [Link](https://www.youtube.com/watch?v=fUShvacDLtw)
-
-- **Claude Code Channels: Setup & What You Should Know** — Setup guide for Claude Code Channels research preview—covering configuration and operational requirements for messaging platform integration. Matters because Channels represent the operational boundary for deploying autonomous workflows outside traditional development environments.
-  Relevance: *Complements your daily digest automation project; Channels enable trigger-based workflow activation from messaging platforms you likely already use.*
-  156 views | NEW | [Link](https://www.youtube.com/watch?v=jiwuKOWZG2I)
+- **Claude Code Skills Setup: 10 Must-Have Skills Every Dev Needs** `video` — "Claude Code Skills Setup" covers the 26,000+ available Claude Code Skills and how to select the 10 essential ones for developers. This matters because most developers don't know skills exist—this video maps the skill ecosystem for practical selection.
+  Relevance: *Directly addresses your goal to stay current on Claude Code ecosystem and explore available skills systematically.*
+  0 views | NEW | [Link](https://www.youtube.com/watch?v=SPlIackGBUQ)
 
 ### Medium Relevance
 
-- **liyupi/ai-guide** — Chinese-language comprehensive AI resource guide covering OpenClaw, DeepSeek, GPT, Gemini, Claude, with sections on Agent Skills, RAG, MCP, and AI coding tools including Cursor and Claude Code. Ecosystem education in alternative language.
-  Relevance: *Covers MCP and Agent Skills taxonomy she's interested in, though language barrier and geographic focus may limit utility—useful for comparative ecosystem understanding.*
-  Stars: 9,921 | NEW | `git clone https://github.com/liyupi/ai-guide.git` | [Link](https://github.com/liyupi/ai-guide)
-
-- **travisvn/awesome-claude-skills** — Curated list of Claude Skills, resources, and tools with emphasis on Claude Code workflows. Another aggregation index in an increasingly crowded discovery space.
-  Relevance: *Provides skill ecosystem visibility, but overlaps significantly with other curated lists—useful as secondary reference for comprehensive coverage.*
-  Stars: 9,353 | NEW | `git clone https://github.com/travisvn/awesome-claude-skills.git` | [Link](https://github.com/travisvn/awesome-claude-skills)
-
-- **nextlevelbuilder/ui-ux-pro-max-skill** — AI skill providing design intelligence and professional UI/UX guidance across multiple platforms. Extends Claude Code into design systems rather than general automation.
-  Relevance: *If Julie's automation workflows include design or frontend tasks, this skill could accelerate that work—otherwise tangential to core coding and workflow automation.*
-  Stars: 46,856 | NEW | `git clone https://github.com/nextlevelbuilder/ui-ux-pro-max-skill.git` | [Link](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill)
-
-- **ComposioHQ/awesome-claude-skills** — Another curated skill aggregation list emphasizing Claude Code workflows and customization. Yet another discovery index competing for the same editorial space.
-  Relevance: *Provides additional skill visibility, but is redundant with other curated lists—useful only if seeking exhaustive coverage of ecosystem options.*
-  Stars: 46,453 | NEW | `git clone https://github.com/ComposioHQ/awesome-claude-skills.git` | [Link](https://github.com/ComposioHQ/awesome-claude-skills)
-
-- **code-yeongyu/oh-my-openagent** — Agent harness framework ('omo') positioning itself as the best agent runtime, formerly oh-my-opencode. Represents alternative orchestration architecture for agentic workflow execution.
-  Relevance: *Offers alternative to Claude Code's native orchestration—valuable for understanding workflow architecture patterns, though direct applicability depends on her infrastructure decisions.*
-  Stars: 41,935 | NEW | `git clone https://github.com/code-yeongyu/oh-my-openagent.git` | [Link](https://github.com/code-yeongyu/oh-my-openagent)
-
-- **davila7/claude-code-templates** — Claude-Code-Templates is a CLI for configuring and monitoring Claude Code instances, providing configuration-as-code management. Matters because it enables templated, reproducible workflows—essential infrastructure for Julie's automation and productivity goals.
-  Relevance: *Supports workflow automation and configuration management but less directly tied to her primary learning and skill-building focus.*
-  Stars: 23,287 | NEW | `git clone https://github.com/davila7/claude-code-templates.git` | [Link](https://github.com/davila7/claude-code-templates)
-
-- **siteboon/claudecodeui** — ClaudeCodeUI provides web-based and mobile access to Claude Code, Cursor CLI, and Codex through a remote management interface. Matters because it extends Claude Code workflows beyond desktop—enabling flexibility in development environments and remote automation management.
-  Relevance: *Extends Claude Code accessibility but is more about environment flexibility than core skill-building or automation workflow design.*
-  Stars: 8,714 | NEW | `git clone https://github.com/siteboon/claudecodeui.git` | [Link](https://github.com/siteboon/claudecodeui)
-
-- **mukul975/Anthropic-Cybersecurity-Skills** — This repository provides 734+ structured cybersecurity skills mapped to MITRE ATT&CK for use with Claude Code and other AI agents via the agentskills.io standard. Matters because it demonstrates domain-specific skill composition patterns applicable to any vertical automation.
-  Relevance: *Shows skill architecture patterns relevant to understanding extensible agent systems, but cybersecurity domain is not her stated interest.*
-  Stars: 3,555 | NEW | `git clone https://github.com/mukul975/Anthropic-Cybersecurity-Skills.git` | [Link](https://github.com/mukul975/Anthropic-Cybersecurity-Skills)
-
-- **IvanMurzak/Unity-MCP** — Unity-MCP provides MCP tools and CLI for AI-driven Unity Engine development with efficient token usage and C# method-to-tool conversion via single-line annotation. Matters because it shows MCP server construction and domain-specific tool composition—key for understanding extensible agent systems.
-  Relevance: *Teaches MCP server patterns and tool composition, interests Julie, but Unity-specific implementation limits general applicability.*
-  Stars: 1,391 | NEW | `git clone https://github.com/IvanMurzak/Unity-MCP.git` | [Link](https://github.com/IvanMurzak/Unity-MCP)
-
-- **m0n0x41d/quint-code** — Quint-Code is an engineering decisions engine that tracks decision staleness and evidence decay with parity enforcement across Claude Code, Cursor, and other agents. Matters because it introduces decision management patterns for long-lived automation systems—preventing outdated configurations and choices.
-  Relevance: *Offers novel decision-tracking patterns for automation, but application to her daily digest automation is indirect.*
-  Stars: 1,225 | NEW | `git clone https://github.com/m0n0x41d/quint-code.git` | [Link](https://github.com/m0n0x41d/quint-code)
-
-- **Prat011/awesome-llm-skills** — Awesome-LLM-Skills is a curated registry of agent skills and resources compatible with Claude Code, Gemini CLI, and custom agents, focused on skill composition and workflow extensibility. Matters because it catalogs skill patterns and composition strategies—useful reference for designing agent workflows.
-  Relevance: *Curation resource for MCP and agent skills aligns with her interests but is primarily reference material rather than learning tool.*
-  Stars: 1,019 | NEW | `git clone https://github.com/Prat011/awesome-llm-skills.git` | [Link](https://github.com/Prat011/awesome-llm-skills)
-
-- **yzfly/Awesome-MCP-ZH** — Curated Chinese-language resource collection for MCP servers, guides, and Claude integrations with categorized links and documentation. This matters as a reference library to discover and evaluate MCP servers, though limited utility if you don't read Chinese.
-  Relevance: *Useful discovery resource for staying current on the MCP ecosystem, though language barrier may limit direct value.*
-  Stars: 6,578 | NEW | `git clone https://github.com/yzfly/Awesome-MCP-ZH.git` | [Link](https://github.com/yzfly/Awesome-MCP-ZH)
-
-- **Claude Code cada vez mejor... vas a utilizar la función de Channels?** — Spanish-language video discussing Claude Code Channels feature and its usage implications. Content unclear without viewing, but Channels feature is relevant to your workflow interests.
-  Relevance: *Covers Claude Code Channels—a productivity feature relevant to your skill exploration, though language barrier and low views suggest limited production quality.*
-  23 views | NEW | [Link](https://www.youtube.com/watch?v=PFntTdRmzCU)
-
-- **Claude Code: Understand ANY Project, Even If You Don't Code! #shorts** — Short-form video about Claude Code's ability to understand projects without coding knowledge required. Positions Claude as project analysis tool rather than coding assistant.
-  Relevance: *Touches on Claude Code capabilities but minimal depth; useful as general awareness of AI-assisted project comprehension.*
-  0 views | NEW | [Link](https://www.youtube.com/watch?v=RqTrVHujMFA)
-
-- **Claude Code + NotebookLM = Ultimate AI Agent 🚀** — Combines Claude Code's autonomous coding with Google's NotebookLM for research/analysis integration, creating a multi-agent workflow. Matters because it demonstrates MCP-adjacent patterns for composing AI capabilities beyond pure code generation.
-  Relevance: *Relevant to exploring advanced Claude Code workflows and automation patterns, though less directly applicable to your current daily digest automation focus.*
-  0 views | NEW | [Link](https://www.youtube.com/watch?v=CkdzNKbRtaU)
-
-- **🚀 Claude Code Guide: Vom Chatbot zum autonomen Agenten-System** — German-language guide on building autonomous software factories with Claude Code, distinguishing professional implementation from low-quality outputs. Matters because it addresses the quality/reliability gap between toy automation and production-grade systems.
-  Relevance: *Supports your automation skills goal and understanding of Claude Code ecosystem maturity, though language barrier limits immediate applicability.*
-  2 views | NEW | [Link](https://www.youtube.com/watch?v=ZVtG1CZ07YE)
-
-- **Incepe sa inveti programare acum! Foloseste Claude Skills #claude #claudecode #code #skills** — Romanian-language intro to learning programming using Claude Skills—positioning AI as a learning accelerator for coding fundamentals. Matters because it demonstrates how Claude's skill-learning capabilities reduce friction for upskilling, relevant to intermediate developers expanding their toolkit.
-  Relevance: *Aligns with your goal to learn automation workflows through Claude Code, though language barrier and beginner-focused content limit direct utility.*
-  40 views | NEW | [Link](https://www.youtube.com/watch?v=B2M5OxAbUPo)
-
-
-## Trending GitHub Skills
-
-- **affaan-m/everything-claude-code** — Comprehensive performance optimization system covering skills, instincts, memory, security, and research-first development across Claude Code and competing agents. Directly addresses the architectural patterns Julie needs to master for automation workflows and coding speed improvements.
-  Relevance: *Core reference for understanding Claude Code ecosystem architecture and optimization—essential for her skill exploration and workflow automation goals.*
-  Stars: 90,869 | NEW | `git clone https://github.com/affaan-m/everything-claude-code.git` | [Link](https://github.com/affaan-m/everything-claude-code)
-
-- **hesreallyhim/awesome-claude-code** — Curated index of skills, hooks, slash-commands, agent orchestrators, and plugins specifically for Claude Code. Serves as a discovery layer for the fragmented skill ecosystem.
-  Relevance: *Directly maps available MCP servers and skills—critical for staying current on Claude Code ecosystem and finding automation building blocks.*
-  Stars: 29,440 | NEW | `git clone https://github.com/hesreallyhim/awesome-claude-code.git` | [Link](https://github.com/hesreallyhim/awesome-claude-code)
-
-- **sickn33/antigravity-awesome-skills** — Installable library of 1,273+ cross-compatible agentic skills with CLI installer and workflow bundles for Claude Code, Cursor, and alternatives. Dramatically expands accessible skill inventory beyond single platforms.
-  Relevance: *Enables rapid skill discovery and installation for her automation workflows—directly accelerates coding speed by providing pre-built skill catalog.*
-  Stars: 26,189 | NEW | `git clone https://github.com/sickn33/antigravity-awesome-skills.git` | [Link](https://github.com/sickn33/antigravity-awesome-skills)
-
-- **OthmanAdi/planning-with-files** — Claude Code skill implementing persistent markdown planning (the workflow pattern underlying a $2B acquisition). Codifies the persistent file-based planning methodology that separates high-efficiency agents from reactive ones.
-  Relevance: *Teaches the exact workflow pattern Julie needs to automate daily digests and complex projects—the skill bridges planning and execution automation.*
-  Stars: 16,654 | NEW | `git clone https://github.com/OthmanAdi/planning-with-files.git` | [Link](https://github.com/OthmanAdi/planning-with-files)
-
-- **coreyhaines31/marketingskills** — Specialized skill set for CRO, copywriting, SEO, analytics, and growth engineering on Claude Code. Domain-specific skills that extend Claude Code beyond generic coding tasks.
-  Relevance: *Marketing-focused; not aligned with Julie's automation, coding speed, or infrastructure goals unless she's building marketing automation workflows.*
-  Stars: 15,049 | NEW | `git clone https://github.com/coreyhaines31/marketingskills.git` | [Link](https://github.com/coreyhaines31/marketingskills)
-
-- **wasp-lang/open-saas** — Production-ready SaaS boilerplate (React/NodeJS/Prisma) with auth, payments, and email—a fully-assembled stack rather than a Claude Code skill or automation primitive. Represents the downstream output of coding acceleration, not the acceleration mechanism itself.
-  Relevance: *Project template, not an automation tool or skill ecosystem component—tangential to her focus on workflow and coding speed improvements.*
-  Stars: 13,616 | NEW | `git clone https://github.com/wasp-lang/open-saas.git` | [Link](https://github.com/wasp-lang/open-saas)
-
-- **VoltAgent/awesome-agent-skills** — Catalog of 500+ agent skills compatible with Claude Code, Codex, Antigravity, and Cursor. Another aggregation point for cross-platform skill discovery.
-  Relevance: *Complements other skill catalogs and ensures she discovers ecosystem breadth—critical for staying current on MCP servers and available automation primitives.*
-  Stars: 12,142 | NEW | `git clone https://github.com/VoltAgent/awesome-agent-skills.git` | [Link](https://github.com/VoltAgent/awesome-agent-skills)
-
-- **blader/humanizer** — Claude Code skill that post-processes generated text to remove AI signatures. Narrow-use skill for content polishing rather than workflow or productivity acceleration.
-  Relevance: *Output formatting skill—not relevant to Julie's core goals of learning automation workflows, improving coding speed, or exploring the ecosystem architecture.*
-  Stars: 10,306 | NEW | `git clone https://github.com/blader/humanizer.git` | [Link](https://github.com/blader/humanizer)
-
-- **liyupi/ai-guide** — Chinese-language comprehensive AI resource guide covering OpenClaw, DeepSeek, GPT, Gemini, Claude, with sections on Agent Skills, RAG, MCP, and AI coding tools including Cursor and Claude Code. Ecosystem education in alternative language.
-  Relevance: *Covers MCP and Agent Skills taxonomy she's interested in, though language barrier and geographic focus may limit utility—useful for comparative ecosystem understanding.*
-  Stars: 9,921 | NEW | `git clone https://github.com/liyupi/ai-guide.git` | [Link](https://github.com/liyupi/ai-guide)
-
-- **travisvn/awesome-claude-skills** — Curated list of Claude Skills, resources, and tools with emphasis on Claude Code workflows. Another aggregation index in an increasingly crowded discovery space.
-  Relevance: *Provides skill ecosystem visibility, but overlaps significantly with other curated lists—useful as secondary reference for comprehensive coverage.*
-  Stars: 9,353 | NEW | `git clone https://github.com/travisvn/awesome-claude-skills.git` | [Link](https://github.com/travisvn/awesome-claude-skills)
-
-- **x1xhlol/system-prompts-and-models-of-ai-tools** — FULL Augment Code, Claude Code, Cluely, CodeBuddy, Comet, Cursor, Devin AI, Junie, Kiro, Leap.new, Lovable, Manus, NotionAI, Orchids.app, Perplexity, 
-  Stars: 132,420 | NEW | `git clone https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools.git` | [Link](https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools)
-
-- **anthropics/claude-code** — Official Claude Code repository—the terminal-based agentic coding agent that understands codebases, executes routine tasks, explains code, and handles git workflows. This is the primary tool she's building skills around.
-  Relevance: *The canonical reference for Claude Code's capabilities, design, and limitations—essential for deepening her skill exploration and understanding how to leverage it for automation.*
-  Stars: 80,598 | NEW | `git clone https://github.com/anthropics/claude-code.git` | [Link](https://github.com/anthropics/claude-code)
-
-- **nextlevelbuilder/ui-ux-pro-max-skill** — AI skill providing design intelligence and professional UI/UX guidance across multiple platforms. Extends Claude Code into design systems rather than general automation.
-  Relevance: *If Julie's automation workflows include design or frontend tasks, this skill could accelerate that work—otherwise tangential to core coding and workflow automation.*
-  Stars: 46,856 | NEW | `git clone https://github.com/nextlevelbuilder/ui-ux-pro-max-skill.git` | [Link](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill)
-
-- **ComposioHQ/awesome-claude-skills** — Another curated skill aggregation list emphasizing Claude Code workflows and customization. Yet another discovery index competing for the same editorial space.
-  Relevance: *Provides additional skill visibility, but is redundant with other curated lists—useful only if seeking exhaustive coverage of ecosystem options.*
-  Stars: 46,453 | NEW | `git clone https://github.com/ComposioHQ/awesome-claude-skills.git` | [Link](https://github.com/ComposioHQ/awesome-claude-skills)
-
-- **code-yeongyu/oh-my-openagent** — Agent harness framework ('omo') positioning itself as the best agent runtime, formerly oh-my-opencode. Represents alternative orchestration architecture for agentic workflow execution.
-  Relevance: *Offers alternative to Claude Code's native orchestration—valuable for understanding workflow architecture patterns, though direct applicability depends on her infrastructure decisions.*
-  Stars: 41,935 | NEW | `git clone https://github.com/code-yeongyu/oh-my-openagent.git` | [Link](https://github.com/code-yeongyu/oh-my-openagent)
-
-- **CherryHQ/cherry-studio** — Cherry Studio unifies access to 300+ AI assistants and frontier LLMs through a single chat interface with autonomous agent capabilities. Matters because it centralizes multi-model workflows and agent orchestration—directly applicable to automation systems Julie is building.
-  Relevance: *Supports learning autonomous agent patterns and multi-LLM workflows for her daily digest automation and broader automation goals.*
+- **CherryHQ/cherry-studio** `repo` — Cherry Studio unifies access to 300+ frontier LLMs (Claude, GPT, Gemini, etc.) in a single IDE with autonomous agents and smart chat. Matters because it consolidates your AI toolchain into one workspace, reducing context switching when exploring Claude Code alongside other models.
+  Relevance: *Useful for staying current on the broader Claude ecosystem and comparing Claude Code against alternatives, but your focus is Claude-specific automation rather than multi-model comparison.*
   Stars: 41,908 | NEW | `git clone https://github.com/CherryHQ/cherry-studio.git` | [Link](https://github.com/CherryHQ/cherry-studio)
 
-- **thedotmack/claude-mem** — Claude-mem is a Claude Code plugin that auto-captures session context, compresses it with AI, and reinjects relevant details into future sessions using agent-sdk. Matters because it eliminates context reconstruction overhead—critical for improving coding speed and continuity in multi-session projects.
-  Relevance: *Directly accelerates coding speed with AI by automating context management across sessions, a core productivity goal.*
-  Stars: 38,775 | NEW | `git clone https://github.com/thedotmack/claude-mem.git` | [Link](https://github.com/thedotmack/claude-mem)
+- **Doriandarko/claude-engineer** `repo` — Claude-Engineer is a CLI wrapper around Claude 3.5 Sonnet that adds interactive command-line scaffolding and structured prompting for software development tasks. Matters because it demonstrates how to build performant Claude Code workflows outside the IDE, expanding where you can apply automation.
+  Relevance: *Useful for understanding Claude Code CLI patterns and building standalone automation, but less directly tied to your daily digest project than framework-specific tools.*
+  Stars: 11,165 | NEW | `git clone https://github.com/Doriandarko/claude-engineer.git` | [Link](https://github.com/Doriandarko/claude-engineer)
 
-- **gsd-build/get-shit-done** — Get-Shit-Done is a meta-prompting and spec-driven development framework for Claude Code that optimizes context engineering and prompt composition. Matters because it systematizes how prompts are structured—immediately applicable to Julie's skill exploration and workflow automation.
-  Relevance: *Teaches advanced Claude Code techniques and spec-driven patterns essential for automation workflow design.*
-  Stars: 37,228 | NEW | `git clone https://github.com/gsd-build/get-shit-done.git` | [Link](https://github.com/gsd-build/get-shit-done)
+- **liyupi/ai-guide** `repo` — A Chinese-language comprehensive AI resource guide covering Claude Code, Cursor, RAG, MCP, Agent Skills, and prompting tutorials. Valuable for breadth but language-dependent.
+  Relevance: *Covers MCP servers and Agent Skills ecosystem (your interests), but Chinese-language documentation may limit immediate accessibility.*
+  Stars: 9,922 | NEW | `git clone https://github.com/liyupi/ai-guide.git` | [Link](https://github.com/liyupi/ai-guide)
 
-- **shareAI-lab/learn-claude-code** — Learn-Claude-Code provides a minimal bash-based agent harness for understanding Claude Code mechanics from first principles. Matters because it builds foundational knowledge of how agent loops work—perfect for intermediate developers wanting to master underlying systems.
-  Relevance: *Aligns with staying current on Claude Code ecosystem fundamentals while building understanding of agent harness architecture.*
-  Stars: 34,694 | NEW | `git clone https://github.com/shareAI-lab/learn-claude-code.git` | [Link](https://github.com/shareAI-lab/learn-claude-code)
-
-- **davila7/claude-code-templates** — Claude-Code-Templates is a CLI for configuring and monitoring Claude Code instances, providing configuration-as-code management. Matters because it enables templated, reproducible workflows—essential infrastructure for Julie's automation and productivity goals.
-  Relevance: *Supports workflow automation and configuration management but less directly tied to her primary learning and skill-building focus.*
-  Stars: 23,287 | NEW | `git clone https://github.com/davila7/claude-code-templates.git` | [Link](https://github.com/davila7/claude-code-templates)
-
-- **Doriandarko/claude-engineer** — Claude-Engineer wraps Claude 3.5 Sonnet in an interactive CLI for software development tasks, offering a structured agent-driven development loop. Matters because it demonstrates practical agent pattern implementation and shows how to build development-specific automation.
-  Relevance: *Demonstrates production agent patterns and CLI-based automation that directly inform her Claude Code workflow learning.*
-  Stars: 11,164 | NEW | `git clone https://github.com/Doriandarko/claude-engineer.git` | [Link](https://github.com/Doriandarko/claude-engineer)
-
-- **jarrodwatts/claude-hud** — Claude-HUD is a Claude Code plugin that provides real-time visibility into context usage, active tools, running agents, and task progress. Matters because it eliminates blind spots during AI-assisted coding—improving debugging and optimization of automation workflows.
-  Relevance: *Directly improves coding speed with AI by providing transparency into agent behavior and resource consumption.*
-  Stars: 9,549 | NEW | `git clone https://github.com/jarrodwatts/claude-hud.git` | [Link](https://github.com/jarrodwatts/claude-hud)
-
-- **siteboon/claudecodeui** — ClaudeCodeUI provides web-based and mobile access to Claude Code, Cursor CLI, and Codex through a remote management interface. Matters because it extends Claude Code workflows beyond desktop—enabling flexibility in development environments and remote automation management.
-  Relevance: *Extends Claude Code accessibility but is more about environment flexibility than core skill-building or automation workflow design.*
-  Stars: 8,714 | NEW | `git clone https://github.com/siteboon/claudecodeui.git` | [Link](https://github.com/siteboon/claudecodeui)
-
-- **mukul975/Anthropic-Cybersecurity-Skills** — This repository provides 734+ structured cybersecurity skills mapped to MITRE ATT&CK for use with Claude Code and other AI agents via the agentskills.io standard. Matters because it demonstrates domain-specific skill composition patterns applicable to any vertical automation.
-  Relevance: *Shows skill architecture patterns relevant to understanding extensible agent systems, but cybersecurity domain is not her stated interest.*
-  Stars: 3,555 | NEW | `git clone https://github.com/mukul975/Anthropic-Cybersecurity-Skills.git` | [Link](https://github.com/mukul975/Anthropic-Cybersecurity-Skills)
-
-- **can1357/oh-my-pi** — Oh-My-Pi is a terminal-based AI coding agent featuring hash-anchored edits, optimized tool harness, LSP integration, and subagent support. Matters because it shows advanced agent architecture patterns with efficient token usage—directly relevant to building fast, reliable automation systems.
-  Relevance: *Demonstrates advanced agent patterns and optimization techniques essential for building efficient automation workflows.*
-  Stars: 2,211 | NEW | `git clone https://github.com/can1357/oh-my-pi.git` | [Link](https://github.com/can1357/oh-my-pi)
-
-- **IvanMurzak/Unity-MCP** — Unity-MCP provides MCP tools and CLI for AI-driven Unity Engine development with efficient token usage and C# method-to-tool conversion via single-line annotation. Matters because it shows MCP server construction and domain-specific tool composition—key for understanding extensible agent systems.
-  Relevance: *Teaches MCP server patterns and tool composition, interests Julie, but Unity-specific implementation limits general applicability.*
-  Stars: 1,391 | NEW | `git clone https://github.com/IvanMurzak/Unity-MCP.git` | [Link](https://github.com/IvanMurzak/Unity-MCP)
-
-- **m0n0x41d/quint-code** — Quint-Code is an engineering decisions engine that tracks decision staleness and evidence decay with parity enforcement across Claude Code, Cursor, and other agents. Matters because it introduces decision management patterns for long-lived automation systems—preventing outdated configurations and choices.
-  Relevance: *Offers novel decision-tracking patterns for automation, but application to her daily digest automation is indirect.*
-  Stars: 1,225 | NEW | `git clone https://github.com/m0n0x41d/quint-code.git` | [Link](https://github.com/m0n0x41d/quint-code)
-
-- **Prat011/awesome-llm-skills** — Awesome-LLM-Skills is a curated registry of agent skills and resources compatible with Claude Code, Gemini CLI, and custom agents, focused on skill composition and workflow extensibility. Matters because it catalogs skill patterns and composition strategies—useful reference for designing agent workflows.
-  Relevance: *Curation resource for MCP and agent skills aligns with her interests but is primarily reference material rather than learning tool.*
-  Stars: 1,019 | NEW | `git clone https://github.com/Prat011/awesome-llm-skills.git` | [Link](https://github.com/Prat011/awesome-llm-skills)
-
-- **jwadow/kiro-gateway** — Kiro-Gateway is a proxy API gateway enabling free Claude models to work with AWS CodeWhisperer/Amazon Q Developer clients. Matters because it allows cost-effective multi-client access to Claude—useful for testing automation workflows across environments.
-  Relevance: *Utility for multi-client access but doesn't directly support skill learning, workflow design, or Claude Code ecosystem understanding.*
-  Stars: 738 | NEW | `git clone https://github.com/jwadow/kiro-gateway.git` | [Link](https://github.com/jwadow/kiro-gateway)
-
-- **oraios/serena** — Serena is a coding agent toolkit providing semantic retrieval and editing capabilities through MCP server and other integrations for code manipulation. Matters because it demonstrates MCP server implementation patterns and shows how to build domain-specific agent capabilities.
-  Relevance: *Directly relevant to learning MCP servers and building extensible automation systems, core interests for her skill development.*
-  Stars: 21,851 | NEW | `git clone https://github.com/oraios/serena.git` | [Link](https://github.com/oraios/serena)
-
-- **BeehiveInnovations/pal-mcp-server** — PAL is a unified MCP server that integrates Claude Code with multiple LLM providers (Gemini, OpenAI, Grok, Ollama, custom models) into a single orchestration layer. This matters because it eliminates vendor lock-in and lets you automate workflows across different AI models without rewriting integrations.
-  Relevance: *Directly addresses your goal to master MCP servers and automation workflows by providing a multi-model integration framework for Claude Code automation.*
-  Stars: 11,281 | NEW | `git clone https://github.com/BeehiveInnovations/pal-mcp-server` | [Link](https://github.com/BeehiveInnovations/pal-mcp-server)
-
-- **hangwin/mcp-chrome** — Chrome MCP Server exposes browser automation capabilities to Claude through an extension-based MCP interface, enabling AI to control tabs, execute JavaScript, and interact with web pages directly. This matters for automating browser-based tasks and web scraping workflows without manual intervention.
-  Relevance: *Essential MCP server for your daily digest automation project and browser-based workflow automation goals.*
-  Stars: 10,852 | NEW | `git clone https://github.com/hangwin/mcp-chrome` | [Link](https://github.com/hangwin/mcp-chrome)
-
-- **mcp-use/mcp-use** — MCP-Use is a fullstack framework for building MCP applications and servers compatible with Claude and ChatGPT, abstracting the complexity of MCP protocol implementation. This matters because it accelerates your ability to develop custom MCP servers and Claude Code integrations from scratch.
-  Relevance: *Directly supports your skill exploration in MCP servers and enables faster development of automation workflows.*
-  Stars: 9,470 | NEW | `git clone https://github.com/mcp-use/mcp-use` | [Link](https://github.com/mcp-use/mcp-use)
-
-- **idosal/git-mcp** — GitMCP is an MCP server that provides Claude real-time access to any GitHub repository's code, commits, and context without hallucination. This matters because it grounds AI-assisted coding in actual repository state, eliminating false assumptions during automation or refactoring tasks.
-  Relevance: *Improves Claude Code accuracy for your automation projects and aligns with your focus on staying current with ecosystem tools.*
-  Stars: 7,802 | NEW | `git clone https://github.com/idosal/git-mcp` | [Link](https://github.com/idosal/git-mcp)
-
-- **0x4m4/hexstrike-ai** — HexStrike AI MCP Agents is a specialized MCP server providing 150+ cybersecurity tools (pentesting, vulnerability scanning, bug bounty automation) accessible to Claude and other LLMs. This matters less for general coding but highly relevant if security automation is part of your workflow expansion.
-  Relevance: *Not aligned with your stated goals of general automation and productivity; niche cybersecurity focus.*
-  Stars: 7,584 | NEW | `git clone https://github.com/0x4m4/hexstrike-ai` | [Link](https://github.com/0x4m4/hexstrike-ai)
-
-- **yzfly/Awesome-MCP-ZH** — Curated Chinese-language resource collection for MCP servers, guides, and Claude integrations with categorized links and documentation. This matters as a reference library to discover and evaluate MCP servers, though limited utility if you don't read Chinese.
-  Relevance: *Useful discovery resource for staying current on the MCP ecosystem, though language barrier may limit direct value.*
+- **yzfly/Awesome-MCP-ZH** `repo` — Awesome-MCP-ZH is a curated Chinese-language directory of MCP resources, servers, and clients with 6500+ stars. This matters as a reference catalog, though language barriers may limit immediate utility for English-speaking developers.
+  Relevance: *Valuable for discovering emerging MCP servers to expand your automation toolkit, though Chinese content may require translation.*
   Stars: 6,578 | NEW | `git clone https://github.com/yzfly/Awesome-MCP-ZH.git` | [Link](https://github.com/yzfly/Awesome-MCP-ZH)
 
-- **BrowserMCP/mcp** — Browser MCP is a standardized MCP server enabling AI to control browser instances, navigate pages, and interact with the DOM programmatically. This matters because it's a more general-purpose alternative to Chrome MCP for headless and full browser automation.
-  Relevance: *Core MCP server for browser automation workflows and your daily digest automation project.*
-  Stars: 6,108 | NEW | `git clone https://github.com/BrowserMCP/mcp` | [Link](https://github.com/BrowserMCP/mcp)
+- **mukul975/Anthropic-Cybersecurity-Skills** `repo` — This repo provides 734+ structured cybersecurity skills mapped to MITRE ATT&CK, designed as composable tools for AI agents across platforms including Claude Code. Matters because it demonstrates the MCP server pattern for extending Claude Code with domain-specific capabilities.
+  Relevance: *Good reference for understanding how to build and integrate custom MCP servers into Claude Code, though cybersecurity focus is outside your stated interests.*
+  Stars: 3,555 | NEW | `git clone https://github.com/mukul975/Anthropic-Cybersecurity-Skills.git` | [Link](https://github.com/mukul975/Anthropic-Cybersecurity-Skills)
 
-- **firecrawl/firecrawl-mcp-server** — Firecrawl MCP Server adds web scraping and intelligent search indexing to Claude and Cursor, with built-in handling for dynamic content and JavaScript-rendered pages. This matters because it simplifies data extraction workflows and powers content aggregation without writing custom scrapers.
-  Relevance: *Directly applicable to your daily digest automation—enables AI-powered content collection and summarization.*
-  Stars: 5,813 | NEW | `git clone https://github.com/firecrawl/firecrawl-mcp-server` | [Link](https://github.com/firecrawl/firecrawl-mcp-server)
+- **can1357/oh-my-pi** `repo` — Oh-My-Pi is a terminal-based AI coding agent with hash-anchored edits, LSP integration, subagents, and optimized tool harness for efficient token usage. Matters because it shows advanced agent patterns (subagents, LSP integration) that improve coding speed and could inform how you structure your automation workflows.
+  Relevance: *Demonstrates intermediate-to-advanced Claude Code patterns, particularly useful for understanding token optimization in your daily digest project.*
+  Stars: 2,212 | NEW | `git clone https://github.com/can1357/oh-my-pi.git` | [Link](https://github.com/can1357/oh-my-pi)
 
-- **wonderwhy-er/DesktopCommanderMCP** — DesktopCommanderMCP grants Claude terminal execution, filesystem search, and diff-based file editing capabilities through MCP. This matters because it bridges Claude Code to your local development environment, enabling automated code modifications and system-level automation.
-  Relevance: *Critical for your automation workflow goals—enables Claude to execute terminal commands and modify files autonomously.*
-  Stars: 5,742 | NEW | `git clone https://github.com/wonderwhy-er/DesktopCommanderMCP` | [Link](https://github.com/wonderwhy-er/DesktopCommanderMCP)
+- **IvanMurzak/Unity-MCP** `repo` — Unity-MCP bridges Claude Code with the Unity game engine via MCP tools and CLI, allowing any C# method to become a Claude-accessible tool with one line. Matters because it demonstrates MCP server architecture and tool abstraction patterns applicable to any domain, not just games.
+  Relevance: *Teaches MCP server design and tool integration patterns relevant to your skill exploration, though Unity-specific unless you're building game automation.*
+  Stars: 1,391 | NEW | `git clone https://github.com/IvanMurzak/Unity-MCP.git` | [Link](https://github.com/IvanMurzak/Unity-MCP)
 
+- **m0n0x41d/quint-code** `repo` — Quint-Code is an engineering decisions engine that tracks when architectural decisions become stale, enforcing evidence-based decision-making with parity checks across Claude Code, Cursor, and Gemini. Matters because it systematizes how Claude Code handles long-term project context and decision history—crucial for sustained automation workflows.
+  Relevance: *Relevant to maintaining code quality in your daily digest automation over time, but more architectural than directly tied to coding speed or MCP skill learning.*
+  Stars: 1,225 | NEW | `git clone https://github.com/m0n0x41d/quint-code.git` | [Link](https://github.com/m0n0x41d/quint-code)
 
-## YouTube Highlights
+- **OpenClaw und Claude Code - KI-Agenten zwischen Technologie-Hype und professioneller Realität** `video` — German-language discussion of OpenClaw and Claude Code maturity, comparing hype versus real-world deployment readiness for autonomous AI agents. This matters if you're evaluating production-readiness of agent workflows.
+  Relevance: *Useful reality-check on Claude Code agents before shipping automation, though German-language content may require translation.*
+  1 views | NEW | [Link](https://www.youtube.com/watch?v=ROuaWqHmFW8)
 
-- **#claude #code #running #tech #consistency #motivation** — Minimal metadata video about Claude Code, consistency, and motivation with extremely low engagement. Insufficient information to evaluate relevance or content depth.
-  Relevance: *No description; negligible engagement suggests low production value or niche appeal.*
-  3 views | NEW | [Link](https://www.youtube.com/watch?v=ja1n4goZei8)
+- **🚀 Claude Code Guide: Vom Chatbot zum autonomen Agenten-System** `video` — This German-language guide covers building autonomous software factories using Claude Code as the execution engine, emphasizing avoiding low-quality AI outputs. This matters because it frames Claude Code as infrastructure for scaling development rather than a single-task tool.
+  Relevance: *Relevant to your automation and workflow interests, though language barrier and enterprise focus may limit immediate applicability to your current projects.*
+  1 views | NEW | [Link](https://www.youtube.com/watch?v=ZVtG1CZ07YE)
 
-- **Claude Code cada vez mejor... vas a utilizar la función de Channels?** — Spanish-language video discussing Claude Code Channels feature and its usage implications. Content unclear without viewing, but Channels feature is relevant to your workflow interests.
-  Relevance: *Covers Claude Code Channels—a productivity feature relevant to your skill exploration, though language barrier and low views suggest limited production quality.*
-  23 views | NEW | [Link](https://www.youtube.com/watch?v=PFntTdRmzCU)
-
-- **Claude Code Just Added Recurring Cloud Tasks That Run Without Your Laptop** — Video highlighting Claude Code's new recurring cloud-based task execution capability that runs autonomously without active laptop sessions. This matters because background agents represent the next evolution of Claude Code automation—critical for your productivity goals.
-  Relevance: *Demonstrates advanced Claude Code automation at scale (recurring cloud tasks); directly relevant to learning next-level workflow automation.*
-  1 views | NEW | [Link](https://www.youtube.com/watch?v=hbu1sI3PxlQ)
-
-- **Claude Code just made $2.5B — every dev needs.** — Sensationalist video claiming Claude Code achieved $2.5B milestone with vague developer implications; minimal engagement and clickbait framing. Content quality and accuracy unclear without viewing.
-  Relevance: *Appears to be clickbait with no substantive technical content related to your learning goals.*
-  20 views | NEW | [Link](https://www.youtube.com/watch?v=iyd3GGYgOAY)
-
-- **Claude Code: Understand ANY Project, Even If You Don't Code! #shorts** — Short-form video about Claude Code's ability to understand projects without coding knowledge required. Positions Claude as project analysis tool rather than coding assistant.
-  Relevance: *Touches on Claude Code capabilities but minimal depth; useful as general awareness of AI-assisted project comprehension.*
+- **Claude Code: Understand ANY Project, Even If You Don't Code! #shorts** `video` — Claude Code can analyze and explain complex projects without requiring coding knowledge from the user. This matters because it democratizes code comprehension, enabling non-coders to understand architecture and make informed decisions about automation workflows.
+  Relevance: *Supports your goal to explore Claude Code capabilities, though you're already intermediate-skilled and focused on coding speed rather than project comprehension.*
   0 views | NEW | [Link](https://www.youtube.com/watch?v=RqTrVHujMFA)
 
-- **Claude Code Channels Just Replaced OpenClaw (Run It From Your Phone)** — Video covering Claude Code Channels as a replacement for OpenClaw's remote access functionality, enabling mobile-based control and interaction. This matters because it expands Claude Code's accessibility and enables distributed automation workflows.
-  Relevance: *Channels feature directly supports your productivity and automation goals; enables remote workflow management aligned with your skill-building focus.*
-  15 views | NEW | [Link](https://www.youtube.com/watch?v=fkSAE0wkGUU)
 
-- **This 9 GitHub repo will 10x your next Claude code project #Shorts** — A curated collection of 9 GitHub repositories specifically selected to accelerate Claude Code projects. Matters because it surfaces battle-tested repos that directly integrate with Claude Code workflows rather than generic development tools.
-  Relevance: *Directly supports your goal to explore Claude Code ecosystem and discover MCP servers/automation patterns for your daily digest project.*
-  0 views | NEW | [Link](https://www.youtube.com/watch?v=8AeWPLN-DVU)
+## Trending Now
 
-- **Claude Code가 일할 때 나는 뭘 할까? #Shorts** — Explores the developer's role when Claude Code handles autonomous coding—positioning development work around strategy, communication, and skill growth rather than pure execution. Matters because it reframes how intermediate developers should leverage AI coding assistants to maximize productivity gains.
-  Relevance: *Directly addresses your goal to improve coding speed with AI while maintaining strategic control—essential for understanding where automation fits in your workflow.*
-  4 views | NEW | [Link](https://www.youtube.com/watch?v=gX6kj79z3HQ)
+- **x1xhlol/system-prompts-and-models-of-ai-tools** `repo` — FULL Augment Code, Claude Code, Cluely, CodeBuddy, Comet, Cursor, Devin AI, Junie, Kiro, Leap.new, Lovable, Manus, NotionAI, Orchids.app, Perplexity, 
+  Stars: 132,422 | NEW | `git clone https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools.git` | [Link](https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools)
 
-- **Setting up Claude Code security guardrails** — Step-by-step guide for implementing security guardrails within Claude Code projects, covering safe code execution boundaries. Matters because unsecured automated workflows create production risks—critical for anyone building daily automation systems.
-  Relevance: *Essential for your daily digest automation project; security guardrails are non-negotiable when deploying autonomous Claude Code workflows.*
+- **affaan-m/everything-claude-code** `repo` — A performance optimization system for Claude Code that covers skills, memory management, security protocols, and research-first development patterns. This directly addresses how to structure agentic workflows for speed and reliability—core to your automation goals.
+  Relevance: *Teaches the architectural patterns behind high-performance Claude Code agents, accelerating your automation workflow mastery.*
+  Stars: 90,884 | NEW | `git clone https://github.com/affaan-m/everything-claude-code.git` | [Link](https://github.com/affaan-m/everything-claude-code)
+
+- **anthropics/claude-code** `repo` — The official Claude Code CLI tool repository—the agentic coding agent you run in your terminal. This is the canonical source for installation, updates, and understanding the platform's core capabilities.
+  Relevance: *Essential reference for your daily Claude Code usage; official docs ensure you're leveraging current features for automation and speed.*
+  Stars: 80,604 | NEW | `git clone https://github.com/anthropics/claude-code.git` | [Link](https://github.com/anthropics/claude-code)
+
+- **nextlevelbuilder/ui-ux-pro-max-skill** `repo` — A Claude Code skill providing multi-platform UI/UX design intelligence for professional interfaces. Specialized skill for design workflows, not automation or productivity coding.
+  Relevance: *Design-focused skill doesn't align with your automation and coding-speed objectives.*
+  Stars: 46,857 | NEW | `git clone https://github.com/nextlevelbuilder/ui-ux-pro-max-skill.git` | [Link](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill)
+
+- **ComposioHQ/awesome-claude-skills** `repo` — A Composio-maintained curation of Claude Skills and workflow customization resources. Similar scope to other curated lists but tied to the Composio MCP ecosystem.
+  Relevance: *MCP server integration with Claude Code is part of your interest in ecosystem depth; this connects skills to MCP-based orchestration.*
+  Stars: 46,455 | NEW | `git clone https://github.com/ComposioHQ/awesome-claude-skills.git` | [Link](https://github.com/ComposioHQ/awesome-claude-skills)
+
+- **code-yeongyu/oh-my-openagent** `repo` — An agent harness framework (previously oh-my-opencode) for structuring complex agent workflows with utilities and patterns. Provides architectural scaffolding for multi-step automation.
+  Relevance: *Agent harness patterns are foundational to building robust daily digest automation workflows with proper separation of concerns.*
+  Stars: 41,936 | NEW | `git clone https://github.com/code-yeongyu/oh-my-openagent.git` | [Link](https://github.com/code-yeongyu/oh-my-openagent)
+
+- **CherryHQ/cherry-studio** `repo` — Cherry Studio unifies access to 300+ frontier LLMs (Claude, GPT, Gemini, etc.) in a single IDE with autonomous agents and smart chat. Matters because it consolidates your AI toolchain into one workspace, reducing context switching when exploring Claude Code alongside other models.
+  Relevance: *Useful for staying current on the broader Claude ecosystem and comparing Claude Code against alternatives, but your focus is Claude-specific automation rather than multi-model comparison.*
+  Stars: 41,908 | NEW | `git clone https://github.com/CherryHQ/cherry-studio.git` | [Link](https://github.com/CherryHQ/cherry-studio)
+
+- **thedotmack/claude-mem** `repo` — Claude-mem is a Claude Code plugin that auto-captures session history, compresses it with AI, and injects relevant context into future sessions using Claude's agent-sdk. Matters directly because it solves session continuity and context management—core bottlenecks when building daily digest automation workflows.
+  Relevance: *Directly addresses your automation workflow goal by enabling Claude Code to maintain persistent memory across sessions, essential for daily digest projects.*
+  Stars: 38,776 | NEW | `git clone https://github.com/thedotmack/claude-mem.git` | [Link](https://github.com/thedotmack/claude-mem)
+
+- **gsd-build/get-shit-done** `repo` — Get-Shit-Done is a meta-prompting and context engineering framework designed specifically for Claude Code that enforces spec-driven development patterns. Matters because it systematizes how you structure prompts and requirements, directly improving coding speed through better Claude Code task decomposition.
+  Relevance: *Core to your goal of improving coding speed with AI—this framework teaches spec-driven patterns that maximize Claude Code's ability to understand and execute your automation workflows.*
+  Stars: 37,231 | NEW | `git clone https://github.com/gsd-build/get-shit-done.git` | [Link](https://github.com/gsd-build/get-shit-done)
+
+- **shareAI-lab/learn-claude-code** `repo` — Learn-Claude-Code is a minimal agent harness built in bash that teaches Claude Code internals from first principles without heavy frameworks. Matters because understanding the underlying agent pattern helps you architect better automation workflows and debug Claude Code behavior.
+  Relevance: *Directly supports your goal to explore Claude Code skills by teaching the agent architecture you'll use in daily digest automation.*
+  Stars: 34,697 | NEW | `git clone https://github.com/shareAI-lab/learn-claude-code.git` | [Link](https://github.com/shareAI-lab/learn-claude-code)
+
+- **hesreallyhim/awesome-claude-code** `repo` — A curated index of Claude Code skills, hooks, slash-commands, and agent orchestrators organized by category. This is your discovery layer for understanding what pre-built components exist before building custom automation.
+  Relevance: *Essential reference to stay current on Claude Code ecosystem capabilities and avoid reinventing skills you can reuse.*
+  Stars: 29,441 | NEW | `git clone https://github.com/hesreallyhim/awesome-claude-code.git` | [Link](https://github.com/hesreallyhim/awesome-claude-code)
+
+- **sickn33/antigravity-awesome-skills** `repo` — A 1,273+ skill library with an installer CLI, pre-built bundles, and workflow templates for Claude Code and other agents. This removes friction from skill discovery and installation for rapid integration.
+  Relevance: *Directly accelerates your coding speed by providing battle-tested, installable skills you can plug into your daily digest automation.*
+  Stars: 26,190 | NEW | `git clone https://github.com/sickn33/antigravity-awesome-skills.git` | [Link](https://github.com/sickn33/antigravity-awesome-skills)
+
+- **davila7/claude-code-templates** `repo` — Claude-Code-Templates provides a CLI tool for configuring and monitoring Claude Code instances, with pre-built project templates. Matters because templates accelerate your automation workflows and the monitoring capability helps you track and optimize Claude Code performance.
+  Relevance: *Templates and monitoring align perfectly with your daily digest automation project and productivity improvement goals.*
+  Stars: 23,287 | NEW | `git clone https://github.com/davila7/claude-code-templates.git` | [Link](https://github.com/davila7/claude-code-templates)
+
+- **oraios/serena** `repo` — Serena is a coding agent toolkit providing semantic code retrieval and editing via MCP server integration, enabling Claude Code to understand and modify code based on meaning rather than syntax alone. Matters because semantic understanding directly improves automation accuracy—your daily digest parser can find relevant code patterns without fragile string matching.
+  Relevance: *Teaches MCP server patterns and semantic code manipulation, both core to improving automation workflows and staying current on Claude ecosystem capabilities.*
+  Stars: 21,851 | NEW | `git clone https://github.com/oraios/serena.git` | [Link](https://github.com/oraios/serena)
+
+- **OthmanAdi/planning-with-files** `repo` — A Claude Code skill implementing persistent markdown planning (the Manus acquisition pattern) for structured agent workflows. This technique separates planning from execution for more reliable, auditable automation.
+  Relevance: *The planning-with-files pattern is a proven workflow methodology that will improve your daily digest automation's reliability and maintainability.*
+  Stars: 16,654 | NEW | `git clone https://github.com/OthmanAdi/planning-with-files.git` | [Link](https://github.com/OthmanAdi/planning-with-files)
+
+- **coreyhaines31/marketingskills** `repo` — Domain-specific skills for marketing workflows (CRO, copywriting, SEO, analytics) packaged as Claude Code reusables. These are less relevant to your technical focus but show the skill extensibility model.
+  Relevance: *Marketing domain expertise doesn't align with your automation and productivity goals, though it demonstrates skill composition patterns.*
+  Stars: 15,052 | NEW | `git clone https://github.com/coreyhaines31/marketingskills.git` | [Link](https://github.com/coreyhaines31/marketingskills)
+
+- **wasp-lang/open-saas** `repo` — A production-ready JavaScript SaaS boilerplate with auth, payments, and background jobs built-in. This is infrastructure, not Claude Code–specific, and focuses on product deployment rather than automation.
+  Relevance: *Useful if you're shipping a Claude Code product, but outside your focus on learning workflows and improving personal coding speed.*
+  Stars: 13,616 | NEW | `git clone https://github.com/wasp-lang/open-saas.git` | [Link](https://github.com/wasp-lang/open-saas)
+
+- **VoltAgent/awesome-agent-skills** `repo` — A 500+ skill collection across multiple agent platforms (Claude Code, Codex, Antigravity, Gemini CLI). Broader than Claude-specific but valuable for cross-platform skill patterns.
+  Relevance: *Expands your skill discovery across agents and shows which patterns are portable—useful for understanding automation design that transcends platforms.*
+  Stars: 12,142 | NEW | `git clone https://github.com/VoltAgent/awesome-agent-skills.git` | [Link](https://github.com/VoltAgent/awesome-agent-skills)
+
+- **BeehiveInnovations/pal-mcp-server** `repo` — PAL MCP Server unifies Claude Code, Gemini, and OpenAI APIs into a single MCP interface, supporting 7+ LLM providers simultaneously. This matters because it eliminates vendor lock-in and lets you orchestrate multi-model workflows—critical for automation pipelines that need fallback logic or cost optimization.
+  Relevance: *Directly enables the multi-model automation workflows you're building while keeping you agnostic to LLM provider changes.*
+  Stars: 11,281 | NEW | `git clone https://github.com/BeehiveInnovations/pal-mcp-server.git` | [Link](https://github.com/BeehiveInnovations/pal-mcp-server)
+
+- **Doriandarko/claude-engineer** `repo` — Claude-Engineer is a CLI wrapper around Claude 3.5 Sonnet that adds interactive command-line scaffolding and structured prompting for software development tasks. Matters because it demonstrates how to build performant Claude Code workflows outside the IDE, expanding where you can apply automation.
+  Relevance: *Useful for understanding Claude Code CLI patterns and building standalone automation, but less directly tied to your daily digest project than framework-specific tools.*
+  Stars: 11,165 | NEW | `git clone https://github.com/Doriandarko/claude-engineer.git` | [Link](https://github.com/Doriandarko/claude-engineer)
+
+- **hangwin/mcp-chrome** `repo` — Chrome MCP Server bridges Claude to your browser via a Chrome extension, exposing automation capabilities like clicking, form-filling, and DOM manipulation through MCP. This matters for daily digest automation because it lets Claude interact with web pages directly without external APIs.
+  Relevance: *Solves browser automation for your digest project and expands Claude's autonomous action capabilities beyond API calls.*
+  Stars: 10,852 | NEW | `git clone https://github.com/hangwin/mcp-chrome.git` | [Link](https://github.com/hangwin/mcp-chrome)
+
+- **blader/humanizer** `repo` — A Claude Code skill that post-processes AI-generated text to remove detectable AI patterns. Niche use case for content polishing, not core to automation or workflow building.
+  Relevance: *Text humanization is orthogonal to your goals in automation, workflow learning, and coding speed improvement.*
+  Stars: 10,306 | NEW | `git clone https://github.com/blader/humanizer.git` | [Link](https://github.com/blader/humanizer)
+
+- **liyupi/ai-guide** `repo` — A Chinese-language comprehensive AI resource guide covering Claude Code, Cursor, RAG, MCP, Agent Skills, and prompting tutorials. Valuable for breadth but language-dependent.
+  Relevance: *Covers MCP servers and Agent Skills ecosystem (your interests), but Chinese-language documentation may limit immediate accessibility.*
+  Stars: 9,922 | NEW | `git clone https://github.com/liyupi/ai-guide.git` | [Link](https://github.com/liyupi/ai-guide)
+
+- **jarrodwatts/claude-hud** `repo` — Claude-HUD is a plugin that provides real-time visibility into Claude Code's internal state—context usage, active tools, running agents, and todo tracking. Matters because it directly addresses the visibility gap when running automation workflows, letting you monitor resource consumption and agent behavior.
+  Relevance: *Essential for debugging and optimizing your daily digest automation; shows exactly what Claude Code is doing and how much context it's using.*
+  Stars: 9,563 | NEW | `git clone https://github.com/jarrodwatts/claude-hud.git` | [Link](https://github.com/jarrodwatts/claude-hud)
+
+- **mcp-use/mcp-use** `repo` — MCP-Use is a fullstack framework for building MCP applications and servers that work across ChatGPT and Claude with standardized patterns. This matters because it abstracts away MCP protocol complexity, letting you focus on building automation logic instead of boilerplate.
+  Relevance: *Accelerates your Claude Code skill exploration by providing proven scaffolding for MCP server development.*
+  Stars: 9,470 | NEW | `git clone https://github.com/mcp-use/mcp-use.git` | [Link](https://github.com/mcp-use/mcp-use)
+
+- **travisvn/awesome-claude-skills** `repo` — A curated list of Claude Skills and workflow customization resources focused on Claude Code. Overlaps with other curation lists but provides targeted, digestible Claude-specific recommendations.
+  Relevance: *Streamlined Claude Code resource list keeps you current on the ecosystem without the sprawl of larger multi-platform collections.*
+  Stars: 9,353 | NEW | `git clone https://github.com/travisvn/awesome-claude-skills.git` | [Link](https://github.com/travisvn/awesome-claude-skills)
+
+- **siteboon/claudecodeui** `repo` — ClaudeCodeUI is a web-based GUI for managing Claude Code sessions and projects remotely, enabling mobile and web access to your coding workflows. Matters because it extends Claude Code beyond the desktop, useful if you want to monitor or trigger your daily digest automation from anywhere.
+  Relevance: *Nice-to-have for remote access, but not core to learning automation workflows or improving coding speed with Claude Code itself.*
+  Stars: 8,714 | NEW | `git clone https://github.com/siteboon/claudecodeui.git` | [Link](https://github.com/siteboon/claudecodeui)
+
+- **idosal/git-mcp** `repo` — GitMCP provides Claude with read-access to any GitHub repository's code, commits, and pull requests via MCP, eliminating hallucinations about your codebase. This matters for coding speed because Claude can reference your actual code context without manual copying.
+  Relevance: *Reduces hallucinations in your daily digest automation by grounding Claude in real GitHub project state.*
+  Stars: 7,802 | NEW | `git clone https://github.com/idosal/git-mcp.git` | [Link](https://github.com/idosal/git-mcp)
+
+- **0x4m4/hexstrike-ai** `repo` — HexStrike AI MCP Agents wraps 150+ cybersecurity tools (Nmap, Metasploit, Burp Suite) into an MCP interface for autonomous penetration testing and vulnerability scanning. This matters if security automation is in scope, but it's specialized beyond general workflow automation.
+  Relevance: *Outside your stated interests unless you're automating security workflows specifically.*
+  Stars: 7,584 | NEW | `git clone https://github.com/0x4m4/hexstrike-ai.git` | [Link](https://github.com/0x4m4/hexstrike-ai)
+
+- **yzfly/Awesome-MCP-ZH** `repo` — Awesome-MCP-ZH is a curated Chinese-language directory of MCP resources, servers, and clients with 6500+ stars. This matters as a reference catalog, though language barriers may limit immediate utility for English-speaking developers.
+  Relevance: *Valuable for discovering emerging MCP servers to expand your automation toolkit, though Chinese content may require translation.*
+  Stars: 6,578 | NEW | `git clone https://github.com/yzfly/Awesome-MCP-ZH.git` | [Link](https://github.com/yzfly/Awesome-MCP-ZH)
+
+- **BrowserMCP/mcp** `repo` — Browser MCP is a Model Context Provider that gives Claude full browser control (navigation, clicking, form submission, screenshot capture). This matters for workflow automation because it enables end-to-end browser task completion without manual intervention.
+  Relevance: *Core capability for your digest automation—lets Claude autonomously navigate and extract web content.*
+  Stars: 6,108 | NEW | `git clone https://github.com/BrowserMCP/mcp.git` | [Link](https://github.com/BrowserMCP/mcp)
+
+- **firecrawl/firecrawl-mcp-server** `repo` — Firecrawl MCP Server integrates web scraping and semantic search into Claude via MCP, extracting structured data from any URL. This matters because it's purpose-built for digest automation—scraping sources and intelligently filtering content.
+  Relevance: *Purpose-built for your daily digest project; Firecrawl handles scale and structure better than raw browser automation.*
+  Stars: 5,813 | NEW | `git clone https://github.com/firecrawl/firecrawl-mcp-server.git` | [Link](https://github.com/firecrawl/firecrawl-mcp-server)
+
+- **wonderwhy-er/DesktopCommanderMCP** `repo` — DesktopCommanderMCP grants Claude terminal access, file system search, and diff-based file editing capabilities through MCP. This matters for improving coding speed because it lets Claude modify local files and run build/test commands autonomously.
+  Relevance: *Unlocks local development automation—Claude can edit code, run tests, and manage your filesystem directly.*
+  Stars: 5,742 | NEW | `git clone https://github.com/wonderwhy-er/DesktopCommanderMCP.git` | [Link](https://github.com/wonderwhy-er/DesktopCommanderMCP)
+
+- **mukul975/Anthropic-Cybersecurity-Skills** `repo` — This repo provides 734+ structured cybersecurity skills mapped to MITRE ATT&CK, designed as composable tools for AI agents across platforms including Claude Code. Matters because it demonstrates the MCP server pattern for extending Claude Code with domain-specific capabilities.
+  Relevance: *Good reference for understanding how to build and integrate custom MCP servers into Claude Code, though cybersecurity focus is outside your stated interests.*
+  Stars: 3,555 | NEW | `git clone https://github.com/mukul975/Anthropic-Cybersecurity-Skills.git` | [Link](https://github.com/mukul975/Anthropic-Cybersecurity-Skills)
+
+- **can1357/oh-my-pi** `repo` — Oh-My-Pi is a terminal-based AI coding agent with hash-anchored edits, LSP integration, subagents, and optimized tool harness for efficient token usage. Matters because it shows advanced agent patterns (subagents, LSP integration) that improve coding speed and could inform how you structure your automation workflows.
+  Relevance: *Demonstrates intermediate-to-advanced Claude Code patterns, particularly useful for understanding token optimization in your daily digest project.*
+  Stars: 2,212 | NEW | `git clone https://github.com/can1357/oh-my-pi.git` | [Link](https://github.com/can1357/oh-my-pi)
+
+- **IvanMurzak/Unity-MCP** `repo` — Unity-MCP bridges Claude Code with the Unity game engine via MCP tools and CLI, allowing any C# method to become a Claude-accessible tool with one line. Matters because it demonstrates MCP server architecture and tool abstraction patterns applicable to any domain, not just games.
+  Relevance: *Teaches MCP server design and tool integration patterns relevant to your skill exploration, though Unity-specific unless you're building game automation.*
+  Stars: 1,391 | NEW | `git clone https://github.com/IvanMurzak/Unity-MCP.git` | [Link](https://github.com/IvanMurzak/Unity-MCP)
+
+- **m0n0x41d/quint-code** `repo` — Quint-Code is an engineering decisions engine that tracks when architectural decisions become stale, enforcing evidence-based decision-making with parity checks across Claude Code, Cursor, and Gemini. Matters because it systematizes how Claude Code handles long-term project context and decision history—crucial for sustained automation workflows.
+  Relevance: *Relevant to maintaining code quality in your daily digest automation over time, but more architectural than directly tied to coding speed or MCP skill learning.*
+  Stars: 1,225 | NEW | `git clone https://github.com/m0n0x41d/quint-code.git` | [Link](https://github.com/m0n0x41d/quint-code)
+
+- **Prat011/awesome-llm-skills** `repo` — Awesome-LLM-Skills is a curated list of 1000+ reusable AI agent skills and MCP resources for Claude Code, Gemini, and custom agents. Matters because it's a living reference for building extensible workflows—catalog of pre-built tools and patterns you can compose into your automation projects.
+  Relevance: *Directly supports your goal to stay current on Claude Code ecosystem and build automation workflows by mapping available MCP skills and tools.*
+  Stars: 1,019 | NEW | `git clone https://github.com/Prat011/awesome-llm-skills.git` | [Link](https://github.com/Prat011/awesome-llm-skills)
+
+- **jwadow/kiro-gateway** `repo` — Kiro-Gateway is an API proxy that redirects AWS CodeWhisperer/Amazon Q clients to use free Claude models instead, enabling Claude access through any IDE or client. Matters because it expands Claude Code's reach beyond the official IDE, though it's primarily a workaround for cost reduction.
+  Relevance: *Useful only if you need Claude Code access through non-standard clients; not core to your automation skills or workflow learning.*
+  Stars: 738 | NEW | `git clone https://github.com/jwadow/kiro-gateway.git` | [Link](https://github.com/jwadow/kiro-gateway)
+
+- **Claude Code 2.0 is FINALLY here (4 tips)** `video` — Claude Code 2.0 release highlights four core productivity tips with linked resources including GSD Mode and Vibe Combine tools. This matters because it provides immediate tactical guidance and tool recommendations for accelerating your coding speed with AI.
+  Relevance: *Directly supports your goal to improve coding speed with AI and stay current on Claude Code ecosystem through actionable tips and ecosystem tool recommendations.*
+  645 views | NEW | [Link](https://www.youtube.com/watch?v=fUShvacDLtw)
+
+- **NEW Claude Code Channels Update is INSANE! 🤯** `video` — Claude Code Channels update introduces significant new capabilities that fundamentally change how remote execution and workflow automation function. This matters because high engagement (309 views, 13 likes) signals meaningful feature changes affecting your daily automation toolkit.
+  Relevance: *Critical for staying current on Claude Code ecosystem changes that directly impact your daily digest automation and workflow productivity.*
+  309 views | NEW | [Link](https://www.youtube.com/watch?v=qGzkor5Vfw0)
+
+- **Claude Code cada vez mejor... vas a utilizar la función de Channels?** `video` — Spanish-language video discussing Claude Code's Channels feature with no detailed description provided. Relevance unclear without transcript.
+  Relevance: *Language barrier and lack of description prevent assessment; likely covers a specific feature rather than broader workflow patterns.*
+  75 views | NEW | [Link](https://www.youtube.com/watch?v=PFntTdRmzCU)
+
+- **Incepe sa inveti programare acum! Foloseste Claude Skills #claude #claudecode #code #skills** `video` — Claude Skills feature enables beginners to learn programming through Claude Code's skill-building framework. This matters because it introduces a structured learning pathway for acquiring programming capabilities within the Claude ecosystem.
+  Relevance: *Targets beginners rather than intermediate developers; your focus is on automation and coding speed rather than foundational programming skills.*
+  39 views | NEW | [Link](https://www.youtube.com/watch?v=B2M5OxAbUPo)
+
+- **#claude #code #running #tech #consistency #motivation** `video` — No meaningful description available; appears to be a short clip tangentially mentioning Claude Code.
+  Relevance: *Insufficient substance for your skill-building and ecosystem learning goals.*
+  22 views | NEW | [Link](https://www.youtube.com/watch?v=ja1n4goZei8)
+
+- **Claude Code just made $2.5B — every dev needs.** `video` — Clickbait title regarding Claude Code valuation with no meaningful description; appears to be engagement-focused rather than educational content.
+  Relevance: *No substantive information provided for skill-building or workflow learning.*
+  20 views | NEW | [Link](https://www.youtube.com/watch?v=iyd3GGYgOAY)
+
+- **Claude Code Channels Just Replaced OpenClaw (Run It From Your Phone)** `video` — Claude Code Channels now provides remote access functionality directly from mobile devices, replacing the need for OpenClaw's separate remote execution tool. This matters because it consolidates your automation infrastructure into a single platform with native mobile support.
+  Relevance: *Directly addresses your daily digest automation project and workflow automation goals by enabling remote execution without additional tools.*
+  16 views | NEW | [Link](https://www.youtube.com/watch?v=fkSAE0wkGUU)
+
+- **Claude Code Just Added Recurring Cloud Tasks That Run Without Your Laptop** `video` — Claude Code introduced recurring cloud tasks that run autonomously without your laptop, shown in a Noah Zweben demo. This matters because it shifts Claude Code from synchronous assistance to asynchronous background agents—enabling true automation workflows.
+  Relevance: *Cloud-based recurring tasks fundamentally change what's possible with your daily digest automation; no longer requires your machine to stay on.*
+  3 views | NEW | [Link](https://www.youtube.com/watch?v=hbu1sI3PxlQ)
+
+- **Setting up Claude Code security guardrails** `video` — This guide provides step-by-step implementation of security guardrails for Claude Code projects with hands-on exercises. This matters because hardening your automation workflows prevents unintended code execution and data exposure in production environments.
+  Relevance: *Essential for your daily digest automation project to ensure safe, controlled execution of AI-powered workflows at scale.*
   3 views | NEW | [Link](https://www.youtube.com/watch?v=-Awaa2oUWYY)
 
-- **Claude Code + NotebookLM = Ultimate AI Agent 🚀** — Combines Claude Code's autonomous coding with Google's NotebookLM for research/analysis integration, creating a multi-agent workflow. Matters because it demonstrates MCP-adjacent patterns for composing AI capabilities beyond pure code generation.
-  Relevance: *Relevant to exploring advanced Claude Code workflows and automation patterns, though less directly applicable to your current daily digest automation focus.*
-  0 views | NEW | [Link](https://www.youtube.com/watch?v=CkdzNKbRtaU)
+- **OpenClaw und Claude Code - KI-Agenten zwischen Technologie-Hype und professioneller Realität** `video` — German-language discussion of OpenClaw and Claude Code maturity, comparing hype versus real-world deployment readiness for autonomous AI agents. This matters if you're evaluating production-readiness of agent workflows.
+  Relevance: *Useful reality-check on Claude Code agents before shipping automation, though German-language content may require translation.*
+  1 views | NEW | [Link](https://www.youtube.com/watch?v=ROuaWqHmFW8)
 
-- **🚀 Claude Code Guide: Vom Chatbot zum autonomen Agenten-System** — German-language guide on building autonomous software factories with Claude Code, distinguishing professional implementation from low-quality outputs. Matters because it addresses the quality/reliability gap between toy automation and production-grade systems.
-  Relevance: *Supports your automation skills goal and understanding of Claude Code ecosystem maturity, though language barrier limits immediate applicability.*
-  2 views | NEW | [Link](https://www.youtube.com/watch?v=ZVtG1CZ07YE)
+- **Claude Code + NotebookLM = Ultimate AI Agent 🚀** `video` — Claude Code combined with NotebookLM creates an autonomous AI agent capable of both coding and research synthesis tasks. This matters because it extends Claude Code beyond code generation into multi-modal automation, amplifying productivity for complex workflows.
+  Relevance: *Aligns with your automation workflows and productivity goals by showing how to combine Claude Code with other AI systems for enhanced agent capabilities.*
+  1 views | NEW | [Link](https://www.youtube.com/watch?v=CkdzNKbRtaU)
 
-- **NEW Claude Code Channels Update is INSANE! 🤯** — Covers Claude Code Channels—a new research preview allowing interaction with Claude Code via Telegram and other messaging platforms. Matters because it expands deployment channels for automated workflows beyond traditional interfaces, enabling workflow triggers from messaging apps.
-  Relevance: *Directly relevant to your daily digest automation project; Channels offer new ways to trigger and integrate Claude Code workflows into existing productivity systems.*
-  294 views | NEW | [Link](https://www.youtube.com/watch?v=qGzkor5Vfw0)
+- **🚀 Claude Code Guide: Vom Chatbot zum autonomen Agenten-System** `video` — This German-language guide covers building autonomous software factories using Claude Code as the execution engine, emphasizing avoiding low-quality AI outputs. This matters because it frames Claude Code as infrastructure for scaling development rather than a single-task tool.
+  Relevance: *Relevant to your automation and workflow interests, though language barrier and enterprise focus may limit immediate applicability to your current projects.*
+  1 views | NEW | [Link](https://www.youtube.com/watch?v=ZVtG1CZ07YE)
 
-- **Claude Code 2.0 is FINALLY here (4 tips)** — Covers Claude Code 2.0 release with 4 actionable implementation tips and references GSD Mode and Vibe Combine GitHub repos. Matters because it unpacks the latest Claude Code capabilities and immediately applicable patterns with documented, cloneable implementations.
-  Relevance: *Highest engagement (606 views) signals validated content; directly supports staying current on Claude Code ecosystem and discovering specific repos for skill exploration.*
-  606 views | NEW | [Link](https://www.youtube.com/watch?v=fUShvacDLtw)
+- **Claude Code Skills Setup: 10 Must-Have Skills Every Dev Needs** `video` — "Claude Code Skills Setup" covers the 26,000+ available Claude Code Skills and how to select the 10 essential ones for developers. This matters because most developers don't know skills exist—this video maps the skill ecosystem for practical selection.
+  Relevance: *Directly addresses your goal to stay current on Claude Code ecosystem and explore available skills systematically.*
+  0 views | NEW | [Link](https://www.youtube.com/watch?v=SPlIackGBUQ)
 
-- **Incepe sa inveti programare acum! Foloseste Claude Skills #claude #claudecode #code #skills** — Romanian-language intro to learning programming using Claude Skills—positioning AI as a learning accelerator for coding fundamentals. Matters because it demonstrates how Claude's skill-learning capabilities reduce friction for upskilling, relevant to intermediate developers expanding their toolkit.
-  Relevance: *Aligns with your goal to learn automation workflows through Claude Code, though language barrier and beginner-focused content limit direct utility.*
-  40 views | NEW | [Link](https://www.youtube.com/watch?v=B2M5OxAbUPo)
-
-- **Claude Code Channels: Setup & What You Should Know** — Setup guide for Claude Code Channels research preview—covering configuration and operational requirements for messaging platform integration. Matters because Channels represent the operational boundary for deploying autonomous workflows outside traditional development environments.
-  Relevance: *Complements your daily digest automation project; Channels enable trigger-based workflow activation from messaging platforms you likely already use.*
-  156 views | NEW | [Link](https://www.youtube.com/watch?v=jiwuKOWZG2I)
+- **Claude Code: Understand ANY Project, Even If You Don't Code! #shorts** `video` — Claude Code can analyze and explain complex projects without requiring coding knowledge from the user. This matters because it democratizes code comprehension, enabling non-coders to understand architecture and make informed decisions about automation workflows.
+  Relevance: *Supports your goal to explore Claude Code capabilities, though you're already intermediate-skilled and focused on coding speed rather than project comprehension.*
+  0 views | NEW | [Link](https://www.youtube.com/watch?v=RqTrVHujMFA)
 
 
 ## Community Pulse
@@ -444,4 +417,4 @@ No Claude Code discussions trending today.
 ---
 
 > [!info] Digest Health
-> Sources: GitHub ✓ YouTube ✓ Reddit ✓ | Items: 54 | Summarized: 53 | Runtime: 89s
+> Sources: GitHub ✓ YouTube ✓ Reddit ✓ | Items: 53 | Summarized: 52 | Runtime: 89s
