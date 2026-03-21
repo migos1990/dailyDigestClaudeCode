@@ -42,7 +42,8 @@ jobs:
         run: |
           git config user.name "Daily Digest Bot"
           git config user.email "digest-bot@users.noreply.github.com"
-          git add Daily/ Weekly/ data/ --ignore-missing
+          git add Daily/ data/
+          [ -d Weekly ] && git add Weekly/ || true
 
           # Check if there are changes to commit
           if git diff --staged --quiet; then
