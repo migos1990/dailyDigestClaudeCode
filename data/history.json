@@ -3209,6 +3209,161 @@
           "comments": 16
         }
       }
+    },
+    "2026-04-07": {
+      "github": {
+        "github:affaan-m/everything-claude-code": {
+          "stars": 143854,
+          "forks": 22010,
+          "watchers": 143854
+        },
+        "github:hesreallyhim/awesome-claude-code": {
+          "stars": 37101,
+          "forks": 2955,
+          "watchers": 37101
+        },
+        "github:sickn33/antigravity-awesome-skills": {
+          "stars": 31229,
+          "forks": 5205,
+          "watchers": 31229
+        },
+        "github:coreyhaines31/marketingskills": {
+          "stars": 19310,
+          "forks": 2991,
+          "watchers": 19310
+        },
+        "github:OthmanAdi/planning-with-files": {
+          "stars": 18221,
+          "forks": 1644,
+          "watchers": 18221
+        },
+        "github:anthropics/claude-code": {
+          "stars": 110350,
+          "forks": 18349,
+          "watchers": 110350
+        },
+        "github:garrytan/gstack": {
+          "stars": 65986,
+          "forks": 9080,
+          "watchers": 65986
+        },
+        "github:nextlevelbuilder/ui-ux-pro-max-skill": {
+          "stars": 60340,
+          "forks": 5995,
+          "watchers": 60340
+        },
+        "github:shareAI-lab/learn-claude-code": {
+          "stars": 49423,
+          "forks": 8000,
+          "watchers": 49423
+        },
+        "github:asgeirtj/system_prompts_leaks": {
+          "stars": 37718,
+          "forks": 6214,
+          "watchers": 37718
+        },
+        "github:davila7/claude-code-templates": {
+          "stars": 24258,
+          "forks": 2386,
+          "watchers": 24258
+        },
+        "github:jarrodwatts/claude-hud": {
+          "stars": 17392,
+          "forks": 742,
+          "watchers": 17392
+        },
+        "github:santifer/career-ops": {
+          "stars": 13611,
+          "forks": 2652,
+          "watchers": 13611
+        },
+        "github:siteboon/claudecodeui": {
+          "stars": 9558,
+          "forks": 1260,
+          "watchers": 9558
+        },
+        "github:mcp-use/mcp-use": {
+          "stars": 9688,
+          "forks": 1235,
+          "watchers": 9688
+        },
+        "github:firecrawl/firecrawl-mcp-server": {
+          "stars": 5964,
+          "forks": 671,
+          "watchers": 5964
+        },
+        "github:wonderwhy-er/DesktopCommanderMCP": {
+          "stars": 5861,
+          "forks": 683,
+          "watchers": 5861
+        },
+        "github:bytebase/dbhub": {
+          "stars": 2509,
+          "forks": 210,
+          "watchers": 2509
+        },
+        "github:jgravelle/jcodemunch-mcp": {
+          "stars": 1466,
+          "forks": 252,
+          "watchers": 1466
+        }
+      },
+      "youtube": {
+        "youtube:U_8QyUvl-J4": {
+          "views": 24484,
+          "likes": 851
+        },
+        "youtube:stZr6U_7S90": {
+          "views": 155723,
+          "likes": 6638
+        },
+        "youtube:eEYbwJWVQtQ": {
+          "views": 6449,
+          "likes": 177
+        },
+        "youtube:9MlqODKAlK4": {
+          "views": 10287,
+          "likes": 354
+        },
+        "youtube:MzhIr7BfpI0": {
+          "views": 15215,
+          "likes": 826
+        },
+        "youtube:h3EvO8YWNFk": {
+          "views": 3343,
+          "likes": 257
+        },
+        "youtube:-F0dZ2GxSuA": {
+          "views": 3305,
+          "likes": 175
+        },
+        "youtube:5AD87VJ1ABM": {
+          "views": 8657,
+          "likes": 848
+        },
+        "youtube:Y2rpFa43jTo": {
+          "views": 8107,
+          "likes": 219
+        }
+      },
+      "hackernews": {
+        "hackernews:47660925": {
+          "points": 1130,
+          "comments": 621
+        },
+        "hackernews:47651540": {
+          "points": 399,
+          "comments": 98
+        },
+        "hackernews:47649742": {
+          "points": 214,
+          "comments": 26
+        },
+        "hackernews:47662112": {
+          "points": 83,
+          "comments": 72
+        }
+      }
     }
   }
 }
