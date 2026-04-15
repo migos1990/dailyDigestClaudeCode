@@ -4482,6 +4482,164 @@
           "comments": 16
         }
       }
+    },
+    "2026-04-15": {
+      "github": {
+        "github:affaan-m/everything-claude-code": {
+          "stars": 156775,
+          "forks": 24338,
+          "watchers": 156775
+        },
+        "github:hesreallyhim/awesome-claude-code": {
+          "stars": 38837,
+          "forks": 3187,
+          "watchers": 38837
+        },
+        "github:forrestchang/andrej-karpathy-skills": {
+          "stars": 38454,
+          "forks": 3139,
+          "watchers": 38454
+        },
+        "github:santifer/career-ops": {
+          "stars": 33527,
+          "forks": 6620,
+          "watchers": 33527
+        },
+        "github:sickn33/antigravity-awesome-skills": {
+          "stars": 33129,
+          "forks": 5503,
+          "watchers": 33129
+        },
+        "github:anthropics/claude-code": {
+          "stars": 114244,
+          "forks": 19082,
+          "watchers": 114244
+        },
+        "github:NousResearch/hermes-agent": {
+          "stars": 87644,
+          "forks": 11882,
+          "watchers": 87644
+        },
+        "github:garrytan/gstack": {
+          "stars": 72889,
+          "forks": 10274,
+          "watchers": 72889
+        },
+        "github:thedotmack/claude-mem": {
+          "stars": 56766,
+          "forks": 4577,
+          "watchers": 56766
+        },
+        "github:asgeirtj/system_prompts_leaks": {
+          "stars": 38369,
+          "forks": 6321,
+          "watchers": 38369
+        },
+        "github:davila7/claude-code-templates": {
+          "stars": 24607,
+          "forks": 2433,
+          "watchers": 24607
+        },
+        "github:jarrodwatts/claude-hud": {
+          "stars": 19305,
+          "forks": 862,
+          "watchers": 19305
+        },
+        "github:siteboon/claudecodeui": {
+          "stars": 9849,
+          "forks": 1312,
+          "watchers": 9849
+        },
+        "github:mcp-use/mcp-use": {
+          "stars": 9772,
+          "forks": 1242,
+          "watchers": 9772
+        },
+        "github:firecrawl/firecrawl-mcp-server": {
+          "stars": 6058,
+          "forks": 680,
+          "watchers": 6058
+        },
+        "github:wonderwhy-er/DesktopCommanderMCP": {
+          "stars": 5898,
+          "forks": 692,
+          "watchers": 5898
+        },
+        "github:bytebase/dbhub": {
+          "stars": 2579,
+          "forks": 216,
+          "watchers": 2579
+        },
+        "github:timescale/pg-aiguide": {
+          "stars": 1686,
+          "forks": 82,
+          "watchers": 1686
+        }
+      },
+      "youtube": {
+        "youtube:uogzSxOw4LU": {
+          "views": 30276,
+          "likes": 824
+        },
+        "youtube:pHr1O_Af5NA": {
+          "views": 15191,
+          "likes": 594
+        },
+        "youtube:z9CwM-DAe5Q": {
+          "views": 21318,
+          "likes": 873
+        },
+        "youtube:ehg4fhydTgs": {
+          "views": 31073,
+          "likes": 736
+        },
+        "youtube:rVzGu5OYYS0": {
+          "views": 16567,
+          "likes": 859
+        },
+        "youtube:Xg55nTrbYYY": {
+          "views": 9103,
+          "likes": 317
+        },
+        "youtube:pUykUYkFVTM": {
+          "views": 2929,
+          "likes": 128
+        },
+        "youtube:CdtJyjCWISI": {
+          "views": 10287,
+          "likes": 352
+        },
+        "youtube:gzt52Trk9w0": {
+          "views": 21483,
+          "likes": 1417
+        },
+        "youtube:NSKXCFdvQ1s": {
+          "views": 609,
+          "likes": 5
+        }
+      },
+      "hackernews": {
+        "hackernews:47768133": {
+          "points": 628,
+          "comments": 359
+        },
+        "hackernews:47749674": {
+          "points": 186,
+          "comments": 130
+        },
+        "hackernews:47756569": {
+          "points": 173,
+          "comments": 44
+        },
+        "hackernews:47766370": {
+          "points": 134,
+          "comments": 46
+        },
+        "hackernews:47741889": {
+          "points": 118,
+          "comments": 44
+        }
+      }
     }
   }
 }
