@@ -5730,6 +5730,160 @@
           "comments": 25
         }
       }
+    },
+    "2026-04-23": {
+      "github": {
+        "github:affaan-m/everything-claude-code": {
+          "stars": 164826,
+          "forks": 25585,
+          "watchers": 164826
+        },
+        "github:forrestchang/andrej-karpathy-skills": {
+          "stars": 78456,
+          "forks": 7376,
+          "watchers": 78456
+        },
+        "github:JuliusBrussee/caveman": {
+          "stars": 44053,
+          "forks": 2293,
+          "watchers": 44053
+        },
+        "github:hesreallyhim/awesome-claude-code": {
+          "stars": 40473,
+          "forks": 3358,
+          "watchers": 40473
+        },
+        "github:santifer/career-ops": {
+          "stars": 38680,
+          "forks": 7866,
+          "watchers": 38680
+        },
+        "github:x1xhlol/system-prompts-and-models-of-ai-tools": {
+          "stars": 135828,
+          "forks": 34027,
+          "watchers": 135828
+        },
+        "github:anthropics/claude-code": {
+          "stars": 117161,
+          "forks": 19501,
+          "watchers": 117161
+        },
+        "github:NousResearch/hermes-agent": {
+          "stars": 112140,
+          "forks": 16288,
+          "watchers": 112140
+        },
+        "github:garrytan/gstack": {
+          "stars": 80855,
+          "forks": 11695,
+          "watchers": 80855
+        },
+        "github:asgeirtj/system_prompts_leaks": {
+          "stars": 38746,
+          "forks": 6375,
+          "watchers": 38746
+        },
+        "github:davila7/claude-code-templates": {
+          "stars": 24978,
+          "forks": 2470,
+          "watchers": 24978
+        },
+        "github:jarrodwatts/claude-hud": {
+          "stars": 20414,
+          "forks": 908,
+          "watchers": 20414
+        },
+        "github:siteboon/claudecodeui": {
+          "stars": 10143,
+          "forks": 1357,
+          "watchers": 10143
+        },
+        "github:mcp-use/mcp-use": {
+          "stars": 9796,
+          "forks": 1250,
+          "watchers": 9796
+        },
+        "github:firecrawl/firecrawl-mcp-server": {
+          "stars": 6122,
+          "forks": 687,
+          "watchers": 6122
+        },
+        "github:wonderwhy-er/DesktopCommanderMCP": {
+          "stars": 5938,
+          "forks": 696,
+          "watchers": 5938
+        },
+        "github:bytebase/dbhub": {
+          "stars": 2618,
+          "forks": 220,
+          "watchers": 2618
+        },
+        "github:timescale/pg-aiguide": {
+          "stars": 1698,
+          "forks": 84,
+          "watchers": 1698
+        }
+      },
+      "youtube": {
+        "youtube:pfPi04pIfaw": {
+          "views": 17242,
+          "likes": 552
+        },
+        "youtube:jeA-KBv0b68": {
+          "views": 684368,
+          "likes": 23079
+        },
+        "youtube:KzqpK1uCczw": {
+          "views": 2862,
+          "likes": 40
+        },
+        "youtube:2vWVGIQF5S0": {
+          "views": 31397,
+          "likes": 722
+        },
+        "youtube:vTkZK8PK114": {
+          "views": 8950,
+          "likes": 342
+        },
+        "youtube:A5a-0Tq795A": {
+          "views": 1840,
+          "likes": 104
+        },
+        "youtube:gxzMLBi6kJY": {
+          "views": 21628,
+          "likes": 802
+        },
+        "youtube:YTGT4HqEMSo": {
+          "views": 5704,
+          "likes": 198
+        },
+        "youtube:QvXRNdxAsT8": {
+          "views": 9813,
+          "likes": 230
+        },
+        "youtube:arPyNnENPrU": {
+          "views": 9806,
+          "likes": 215
+        }
+      },
+      "hackernews": {
+        "hackernews:47854477": {
+          "points": 669,
+          "comments": 633
+        },
+        "hackernews:47844269": {
+          "points": 505,
+          "comments": 292
+        },
+        "hackernews:47855832": {
+          "points": 77,
+          "comments": 37
+        },
+        "hackernews:47836740": {
+          "points": 72,
+          "comments": 27
+        }
+      }
     }
   }
 }
