@@ -13335,6 +13335,164 @@
           "comments": 4
         }
       }
+    },
+    "2026-06-13": {
+      "github": {
+        "github:affaan-m/ECC": {
+          "stars": 214559,
+          "forks": 32974,
+          "watchers": 214559
+        },
+        "github:JuliusBrussee/caveman": {
+          "stars": 72051,
+          "forks": 4057,
+          "watchers": 72051
+        },
+        "github:safishamsi/graphify": {
+          "stars": 66480,
+          "forks": 6721,
+          "watchers": 66480
+        },
+        "github:nexu-io/open-design": {
+          "stars": 64171,
+          "forks": 7161,
+          "watchers": 64171
+        },
+        "github:santifer/career-ops": {
+          "stars": 53418,
+          "forks": 10654,
+          "watchers": 53418
+        },
+        "github:NousResearch/hermes-agent": {
+          "stars": 192354,
+          "forks": 33534,
+          "watchers": 192354
+        },
+        "github:x1xhlol/system-prompts-and-models-of-ai-tools": {
+          "stars": 140165,
+          "forks": 34649,
+          "watchers": 140165
+        },
+        "github:anthropics/claude-code": {
+          "stars": 132152,
+          "forks": 21395,
+          "watchers": 132152
+        },
+        "github:garrytan/gstack": {
+          "stars": 109650,
+          "forks": 16291,
+          "watchers": 109650
+        },
+        "github:wshobson/agents": {
+          "stars": 36685,
+          "forks": 3971,
+          "watchers": 36685
+        },
+        "github:davila7/claude-code-templates": {
+          "stars": 28022,
+          "forks": 2905,
+          "watchers": 28022
+        },
+        "github:jarrodwatts/claude-hud": {
+          "stars": 25099,
+          "forks": 1141,
+          "watchers": 25099
+        },
+        "github:can1357/oh-my-pi": {
+          "stars": 12172,
+          "forks": 1031,
+          "watchers": 12172
+        },
+        "github:mcp-use/mcp-use": {
+          "stars": 10096,
+          "forks": 1329,
+          "watchers": 10096
+        },
+        "github:yzfly/Awesome-MCP-ZH": {
+          "stars": 7277,
+          "forks": 595,
+          "watchers": 7277
+        },
+        "github:firecrawl/firecrawl-mcp-server": {
+          "stars": 6555,
+          "forks": 756,
+          "watchers": 6555
+        },
+        "github:wonderwhy-er/DesktopCommanderMCP": {
+          "stars": 6163,
+          "forks": 727,
+          "watchers": 6163
+        },
+        "github:Manavarya09/design-extract": {
+          "stars": 3184,
+          "forks": 299,
+          "watchers": 3184
+        }
+      },
+      "youtube": {
+        "youtube:mNawxNjrR_E": {
+          "views": 5692,
+          "likes": 242
+        },
+        "youtube:DkClEbyXyq4": {
+          "views": 158993,
+          "likes": 8909
+        },
+        "youtube:qqhQ9QPL_CY": {
+          "views": 26874,
+          "likes": 1160
+        },
+        "youtube:MtiW_VJoq5M": {
+          "views": 4831,
+          "likes": 160
+        },
+        "youtube:BaAy1DodIcQ": {
+          "views": 1032,
+          "likes": 54
+        },
+        "youtube:WVT2FCjhDDY": {
+          "views": 133542,
+          "likes": 9561
+        },
+        "youtube:zLfGiFuJiEc": {
+          "views": 9270,
+          "likes": 0
+        },
+        "youtube:jcUqsNpDDDk": {
+          "views": 9211,
+          "likes": 423
+        },
+        "youtube:6OzwwYLK8ys": {
+          "views": 661,
+          "likes": 0
+        },
+        "youtube:IN-YYcNgUSU": {
+          "views": 1036,
+          "likes": 57
+        }
+      },
+      "hackernews": {
+        "hackernews:48489229": {
+          "points": 503,
+          "comments": 440
+        },
+        "hackernews:48486370": {
+          "points": 30,
+          "comments": 7
+        },
+        "hackernews:48492579": {
+          "points": 18,
+          "comments": 10
+        },
+        "hackernews:48491534": {
+          "points": 14,
+          "comments": 6
+        },
+        "hackernews:48493786": {
+          "points": 10,
+          "comments": 8
+        }
+      }
     }
   }
 }
