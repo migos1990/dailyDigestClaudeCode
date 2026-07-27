@@ -1,159 +1,5 @@
 {
   "snapshots": {
-    "2026-04-27": {
-      "github": {
-        "github:affaan-m/everything-claude-code": {
-          "stars": 168046,
-          "forks": 26038,
-          "watchers": 168046
-        },
-        "github:hesreallyhim/awesome-claude-code": {
-          "stars": 41429,
-          "forks": 3480,
-          "watchers": 41429
-        },
-        "github:santifer/career-ops": {
-          "stars": 40160,
-          "forks": 8299,
-          "watchers": 40160
-        },
-        "github:safishamsi/graphify": {
-          "stars": 36052,
-          "forks": 4001,
-          "watchers": 36052
-        },
-        "github:sickn33/antigravity-awesome-skills": {
-          "stars": 35314,
-          "forks": 5807,
-          "watchers": 35314
-        },
-        "github:NousResearch/hermes-agent": {
-          "stars": 119635,
-          "forks": 17758,
-          "watchers": 119635
-        },
-        "github:anthropics/claude-code": {
-          "stars": 118355,
-          "forks": 19683,
-          "watchers": 118355
-        },
-        "github:garrytan/gstack": {
-          "stars": 84806,
-          "forks": 12387,
-          "watchers": 84806
-        },
-        "github:thedotmack/claude-mem": {
-          "stars": 68227,
-          "forks": 5811,
-          "watchers": 68227
-        },
-        "github:asgeirtj/system_prompts_leaks": {
-          "stars": 38989,
-          "forks": 6412,
-          "watchers": 38989
-        },
-        "github:davila7/claude-code-templates": {
-          "stars": 25626,
-          "forks": 2570,
-          "watchers": 25626
-        },
-        "github:jarrodwatts/claude-hud": {
-          "stars": 20842,
-          "forks": 927,
-          "watchers": 20842
-        },
-        "github:siteboon/claudecodeui": {
-          "stars": 10277,
-          "forks": 1382,
-          "watchers": 10277
-        },
-        "github:mcp-use/mcp-use": {
-          "stars": 9832,
-          "forks": 1258,
-          "watchers": 9832
-        },
-        "github:0x4m4/hexstrike-ai": {
-          "stars": 8307,
-          "forks": 1811,
-          "watchers": 8307
-        },
-        "github:firecrawl/firecrawl-mcp-server": {
-          "stars": 6147,
-          "forks": 693,
-          "watchers": 6147
-        },
-        "github:wonderwhy-er/DesktopCommanderMCP": {
-          "stars": 5956,
-          "forks": 700,
-          "watchers": 5956
-        },
-        "github:bytebase/dbhub": {
-          "stars": 2646,
-          "forks": 223,
-          "watchers": 2646
-        }
-      },
-      "youtube": {
-        "youtube:16iDVIlwBq4": {
-          "views": 2567,
-          "likes": 54
-        },
-        "youtube:jY2kHsaBgjM": {
-          "views": 4663,
-          "likes": 67
-        },
-        "youtube:WR-kVYU-lBU": {
-          "views": 20156,
-          "likes": 569
-        },
-        "youtube:GbuwosWEvHo": {
-          "views": 6593,
-          "likes": 202
-        },
-        "youtube:rW7NvKnIEqk": {
-          "views": 90260,
-          "likes": 2007
-        },
-        "youtube:Hq6iJ5T17uQ": {
-          "views": 3013,
-          "likes": 150
-        },
-        "youtube:bji41uwqflk": {
-          "views": 7945,
-          "likes": 849
-        },
-        "youtube:2vKU3J29FJw": {
-          "views": 104609,
-          "likes": 4226
-        },
-        "youtube:Z3hAM33iksU": {
-          "views": 1430,
-          "likes": 37
-        }
-      },
-      "hackernews": {
-        "hackernews:47899844": {
-          "points": 255,
-          "comments": 113
-        },
-        "hackernews:47894690": {
-          "points": 82,
-          "comments": 132
-        },
-        "hackernews:47916909": {
-          "points": 76,
-          "comments": 35
-        },
-        "hackernews:47893620": {
-          "points": 67,
-          "comments": 34
-        },
-        "hackernews:47895093": {
-          "points": 21,
-          "comments": 5
-        }
-      }
-    },
     "2026-04-28": {
       "github": {
         "github:affaan-m/everything-claude-code": {
@@ -13799,6 +13645,161 @@
         "hackernews:49042653": {
           "points": 20,
           "comments": 16
+        },
+        "hackernews:49043889": {
+          "points": 20,
+          "comments": 2
+        }
+      }
+    },
+    "2026-07-27": {
+      "github": {
+        "github:affaan-m/ECC": {
+          "stars": 233831,
+          "forks": 35652,
+          "watchers": 233831
+        },
+        "github:Graphify-Labs/graphify": {
+          "stars": 96785,
+          "forks": 9377,
+          "watchers": 96785
+        },
+        "github:JuliusBrussee/caveman": {
+          "stars": 93367,
+          "forks": 5329,
+          "watchers": 93367
+        },
+        "github:hesreallyhim/awesome-claude-code": {
+          "stars": 51041,
+          "forks": 4448,
+          "watchers": 51041
+        },
+        "github:calesthio/OpenMontage": {
+          "stars": 42584,
+          "forks": 5110,
+          "watchers": 42584
+        },
+        "github:NousResearch/hermes-agent": {
+          "stars": 221187,
+          "forks": 42203,
+          "watchers": 221187
+        },
+        "github:anthropics/claude-code": {
+          "stars": 139263,
+          "forks": 22375,
+          "watchers": 139263
+        },
+        "github:farion1231/cc-switch": {
+          "stars": 121601,
+          "forks": 8185,
+          "watchers": 121601
+        },
+        "github:nextlevelbuilder/ui-ux-pro-max-skill": {
+          "stars": 110603,
+          "forks": 11798,
+          "watchers": 110603
+        },
+        "github:santifer/career-ops": {
+          "stars": 61773,
+          "forks": 12163,
+          "watchers": 61773
+        },
+        "github:wshobson/agents": {
+          "stars": 38281,
+          "forks": 4097,
+          "watchers": 38281
+        },
+        "github:davila7/claude-code-templates": {
+          "stars": 29934,
+          "forks": 3235,
+          "watchers": 29934
+        },
+        "github:jarrodwatts/claude-hud": {
+          "stars": 26847,
+          "forks": 1243,
+          "watchers": 26847
+        },
+        "github:can1357/oh-my-pi": {
+          "stars": 20091,
+          "forks": 1881,
+          "watchers": 20091
+        },
+        "github:mcp-use/mcp-use": {
+          "stars": 10395,
+          "forks": 1383,
+          "watchers": 10395
+        },
+        "github:wonderwhy-er/DesktopCommanderMCP": {
+          "stars": 8875,
+          "forks": 1003,
+          "watchers": 8875
+        },
+        "github:google-labs-code/stitch-skills": {
+          "stars": 7829,
+          "forks": 955,
+          "watchers": 7829
+        },
+        "github:firecrawl/firecrawl-mcp-server": {
+          "stars": 7052,
+          "forks": 822,
+          "watchers": 7052
+        },
+        "github:FlorianBruniaux/claude-code-ultimate-guide": {
+          "stars": 5568,
+          "forks": 735,
+          "watchers": 5568
+        }
+      },
+      "youtube": {
+        "youtube:eR1Ec5-leiM": {
+          "views": 10130,
+          "likes": 309
+        },
+        "youtube:K__4uua27u8": {
+          "views": 4181,
+          "likes": 373
+        },
+        "youtube:DmEyWxfjpVI": {
+          "views": 9079,
+          "likes": 178
+        },
+        "youtube:BY8cl-cXf6I": {
+          "views": 5375,
+          "likes": 266
+        },
+        "youtube:YSYqFBq68Wk": {
+          "views": 21245,
+          "likes": 707
+        },
+        "youtube:bkTY9gYkWis": {
+          "views": 9938,
+          "likes": 429
+        },
+        "youtube:xOhh274Ayac": {
+          "views": 3982,
+          "likes": 292
+        },
+        "youtube:Wf1hgNfGtEs": {
+          "views": 26799,
+          "likes": 677
+        },
+        "youtube:A8h8W5hf0ko": {
+          "views": 1434,
+          "likes": 46
+        }
+      },
+      "hackernews": {
+        "hackernews:49038433": {
+          "points": 1771,
+          "comments": 1318
+        },
+        "hackernews:49056022": {
+          "points": 27,
+          "comments": 13
+        },
+        "hackernews:49042653": {
+          "points": 20,
+          "comments": 22
         },
         "hackernews:49043889": {
           "points": 20,
