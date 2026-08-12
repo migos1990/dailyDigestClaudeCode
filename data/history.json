@@ -1,146 +1,5 @@
 {
   "snapshots": {
-    "2026-05-13": {
-      "github": {
-        "github:affaan-m/everything-claude-code": {
-          "stars": 181002,
-          "forks": 27906,
-          "watchers": 181002
-        },
-        "github:JuliusBrussee/caveman": {
-          "stars": 59349,
-          "forks": 3281,
-          "watchers": 59349
-        },
-        "github:safishamsi/graphify": {
-          "stars": 47451,
-          "forks": 5146,
-          "watchers": 47451
-        },
-        "github:santifer/career-ops": {
-          "stars": 44369,
-          "forks": 9318,
-          "watchers": 44369
-        },
-        "github:nexu-io/open-design": {
-          "stars": 38945,
-          "forks": 4421,
-          "watchers": 38945
-        },
-        "github:NousResearch/hermes-agent": {
-          "stars": 147926,
-          "forks": 23255,
-          "watchers": 147926
-        },
-        "github:x1xhlol/system-prompts-and-models-of-ai-tools": {
-          "stars": 137295,
-          "forks": 34214,
-          "watchers": 137295
-        },
-        "github:anthropics/claude-code": {
-          "stars": 123130,
-          "forks": 20310,
-          "watchers": 123130
-        },
-        "github:garrytan/gstack": {
-          "stars": 95319,
-          "forks": 14136,
-          "watchers": 95319
-        },
-        "github:asgeirtj/system_prompts_leaks": {
-          "stars": 40157,
-          "forks": 6672,
-          "watchers": 40157
-        },
-        "github:davila7/claude-code-templates": {
-          "stars": 27239,
-          "forks": 2766,
-          "watchers": 27239
-        },
-        "github:jarrodwatts/claude-hud": {
-          "stars": 22619,
-          "forks": 1001,
-          "watchers": 22619
-        },
-        "github:mcp-use/mcp-use": {
-          "stars": 9942,
-          "forks": 1282,
-          "watchers": 9942
-        },
-        "github:idosal/git-mcp": {
-          "stars": 8075,
-          "forks": 708,
-          "watchers": 8075
-        },
-        "github:firecrawl/firecrawl-mcp-server": {
-          "stars": 6299,
-          "forks": 718,
-          "watchers": 6299
-        },
-        "github:wonderwhy-er/DesktopCommanderMCP": {
-          "stars": 6036,
-          "forks": 709,
-          "watchers": 6036
-        },
-        "github:google-labs-code/stitch-skills": {
-          "stars": 5379,
-          "forks": 650,
-          "watchers": 5379
-        }
-      },
-      "youtube": {
-        "youtube:7zxIeRWasbc": {
-          "views": 47979,
-          "likes": 979
-        },
-        "youtube:bzV2EwDyxpk": {
-          "views": 6247,
-          "likes": 190
-        },
-        "youtube:J6tPNRc9m2Q": {
-          "views": 20393,
-          "likes": 331
-        },
-        "youtube:jeG9H9yICSc": {
-          "views": 12364,
-          "likes": 0
-        },
-        "youtube:ZAaxx3qyT8g": {
-          "views": 53448,
-          "likes": 1332
-        },
-        "youtube:ZRb7D6R64hM": {
-          "views": 45902,
-          "likes": 1894
-        },
-        "youtube:VbSF8TUpsjE": {
-          "views": 7503,
-          "likes": 0
-        },
-        "youtube:jZzETkErVuA": {
-          "views": 26450,
-          "likes": 700
-        },
-        "youtube:uxCl5FNH444": {
-          "views": 1853,
-          "likes": 46
-        },
-        "youtube:-jINRoST0mk": {
-          "views": 18124,
-          "likes": 351
-        }
-      },
-      "hackernews": {
-        "hackernews:48090276": {
-          "points": 83,
-          "comments": 55
-        },
-        "hackernews:48083919": {
-          "points": 82,
-          "comments": 24
-        }
-      }
-    },
     "2026-05-14": {
       "github": {
         "github:affaan-m/everything-claude-code": {
@@ -13838,6 +13697,161 @@
         },
         "hackernews:49227253": {
           "points": 17,
+          "comments": 5
+        }
+      }
+    },
+    "2026-08-12": {
+      "github": {
+        "github:affaan-m/ECC": {
+          "stars": 239600,
+          "forks": 36369,
+          "watchers": 239600
+        },
+        "github:Graphify-Labs/graphify": {
+          "stars": 105487,
+          "forks": 10283,
+          "watchers": 105487
+        },
+        "github:JuliusBrussee/caveman": {
+          "stars": 97649,
+          "forks": 5629,
+          "watchers": 97649
+        },
+        "github:hesreallyhim/awesome-claude-code": {
+          "stars": 52178,
+          "forks": 4559,
+          "watchers": 52178
+        },
+        "github:Imbad0202/academic-research-skills": {
+          "stars": 42120,
+          "forks": 3355,
+          "watchers": 42120
+        },
+        "github:NousResearch/hermes-agent": {
+          "stars": 229320,
+          "forks": 45233,
+          "watchers": 229320
+        },
+        "github:x1xhlol/system-prompts-and-models-of-ai-tools": {
+          "stars": 142747,
+          "forks": 34835,
+          "watchers": 142747
+        },
+        "github:anthropics/claude-code": {
+          "stars": 141153,
+          "forks": 22680,
+          "watchers": 141153
+        },
+        "github:garrytan/gstack": {
+          "stars": 127639,
+          "forks": 19222,
+          "watchers": 127639
+        },
+        "github:santifer/career-ops": {
+          "stars": 63583,
+          "forks": 12537,
+          "watchers": 63583
+        },
+        "github:davila7/claude-code-templates": {
+          "stars": 30208,
+          "forks": 3392,
+          "watchers": 30208
+        },
+        "github:mukul975/Anthropic-Cybersecurity-Skills": {
+          "stars": 27639,
+          "forks": 3352,
+          "watchers": 27639
+        },
+        "github:jarrodwatts/claude-hud": {
+          "stars": 27323,
+          "forks": 1266,
+          "watchers": 27323
+        },
+        "github:can1357/oh-my-pi": {
+          "stars": 24106,
+          "forks": 2290,
+          "watchers": 24106
+        },
+        "github:mcp-use/mcp-use": {
+          "stars": 10479,
+          "forks": 1408,
+          "watchers": 10479
+        },
+        "github:wonderwhy-er/DesktopCommanderMCP": {
+          "stars": 9301,
+          "forks": 1119,
+          "watchers": 9301
+        },
+        "github:firecrawl/firecrawl-mcp-server": {
+          "stars": 7216,
+          "forks": 845,
+          "watchers": 7216
+        },
+        "github:FlorianBruniaux/claude-code-ultimate-guide": {
+          "stars": 5713,
+          "forks": 750,
+          "watchers": 5713
+        },
+        "github:Q00/ouroboros": {
+          "stars": 5390,
+          "forks": 542,
+          "watchers": 5390
+        }
+      },
+      "youtube": {
+        "youtube:BZiDyXBzSG0": {
+          "views": 8829,
+          "likes": 0
+        },
+        "youtube:LVAHYV4Xrto": {
+          "views": 26133,
+          "likes": 1086
+        },
+        "youtube:KtkSOtxMA20": {
+          "views": 20757,
+          "likes": 469
+        },
+        "youtube:xyV7Fg1KFAs": {
+          "views": 3720,
+          "likes": 179
+        },
+        "youtube:b9k-AE4v5yI": {
+          "views": 10485,
+          "likes": 386
+        },
+        "youtube:9oJySubZRSA": {
+          "views": 34648,
+          "likes": 1501
+        },
+        "youtube:rTYe9S0vMpk": {
+          "views": 12580,
+          "likes": 728
+        },
+        "youtube:41DRNSJfdD8": {
+          "views": 2739,
+          "likes": 67
+        }
+      },
+      "hackernews": {
+        "hackernews:49239021": {
+          "points": 289,
+          "comments": 310
+        },
+        "hackernews:49258881": {
+          "points": 38,
+          "comments": 29
+        },
+        "hackernews:49256258": {
+          "points": 35,
+          "comments": 26
+        },
+        "hackernews:49254999": {
+          "points": 31,
+          "comments": 10
+        },
+        "hackernews:49243358": {
+          "points": 15,
           "comments": 5
         }
       }
