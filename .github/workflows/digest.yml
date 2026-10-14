@@ -1,9 +1,10 @@
 name: Daily Claude Code Digest
 
 on:
-  schedule:
-    # 10:00 UTC = 6 AM EDT / 5 AM EST
-    - cron: "0 10 * * *"
+  # Daily schedule paused. To resume, restore:
+  # schedule:
+  #   # 10:00 UTC = 6 AM EDT / 5 AM EST
+  #   - cron: "0 10 * * *"
   workflow_dispatch: # Allow manual trigger
 
 concurrency:
